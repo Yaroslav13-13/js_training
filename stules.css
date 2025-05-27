@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(198, 243, 204);
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: yellow solid 4px;
+  width: 350px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
+  display: block;
+  font-family: Honk, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-variant-caps: small-caps;
+}
+span {
+  color: yellow;
+  padding: 5px;
+  font-variant-caps: small-caps;
+}
