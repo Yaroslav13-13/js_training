@@ -740,7 +740,7 @@
 //!______________Метод slice()________________\\
 
 // const planets = ["Earth", "Mars", "Venus", "Jupiter", "Saturn"];
-// //                     begin, end)
+//                         (begin, end)
 // console.log(planets.slice(0, 4));
 // console.log(planets.slice(1, 3));
 // console.log(planets.slice());
@@ -1006,7 +1006,7 @@
 // }
 // console.log(min);
 
-//!______________ Відео-лекція 6_____________
+//!______________  Відео-лекція 6  _____________
 
 // function foo() {
 //   const arr = Array.from(arguments);
@@ -1102,28 +1102,49 @@
 // console.log(apartment.tags);
 // console.log(apartment.owner.name);
 
-//!----------------Додавання властивостей--------------------
+//!----------------Додавання властивостей-------------------!\\
 
-const apartment = {
-  imgUrl: "https://via.placeholder.com/640x480",
-  descr: "Spacious apartment in the city center",
-  rating: 4.7,
-  price: 5000,
-  tags: ["premium", "promoted", "top", "trusted"],
-  owner: {
-    name: "Henry Sibola",
-    phone: "982-126-1588",
-    email: "henry.carter@aptmail.com",
-  },
-};
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4.7,
+//   price: 5000,
+//   tags: ["premium", "promoted", "top", "trusted"],
+//   owner: {
+//     name: "Henry Sibola",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = {
+//   country: "Jamaica",
+//   city: "Kingston",
+// };
+// console.log(apartment);
 
-apartment.area = 60;
-apartment.rooms = 3;
-apartment.location = {
-  country: "Jamaica",
-  city: "Kingston",
-};
+//?---------------------------------------------------------?\\
 
-console.log(apartment);
+//!---Синтаксис коротких властивостей (shorthand properties)---!\\
 
-//?---------------------------------------------------------
+// const name = "Henry Sibola";
+// const age = 25;
+// const user = {
+//   name: name,
+//   age: age,
+// };
+// console.log(user.name);
+// console.log(user.age);
+
+//* const name = "Henry Sibola";
+//* const age = 25;
+//* const user = {
+//?   name,  // Замість name:name, використали name
+//?   age,   // Замість age:age, використали age.
+//* };
+//* console.log(user.name);
+//* console.log(user.age);
+//?---------------------------------------------------------?\\
+
+//!---Синтаксис коротких властивостей (shorthand properties)---!\\
