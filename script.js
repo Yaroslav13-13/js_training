@@ -1124,7 +1124,7 @@
 // };
 // console.log(apartment);
 
-//?---------------------------------------------------------?\\
+//?____________________________________________________________?\\
 
 //!---Синтаксис коротких властивостей (shorthand properties)---!\\
 
@@ -1145,6 +1145,56 @@
 //* };
 //* console.log(user.name);
 //* console.log(user.age);
-//?---------------------------------------------------------?\\
 
-//!---Синтаксис коротких властивостей (shorthand properties)---!\\
+//TODO   Доповни код оголошення об'єкта таким чином, щоб у нього були властивості
+//TODO   name, price, image і tags зі значеннями зі змінних з аналогічними іменами.
+//TODO   Обов'язково використовуй синтаксис коротких властивостей.
+
+//* const name = "Repair Droid";
+//* const price = 2500;
+//* const image = "https://via.placeholder.com/640x480";
+//* const tags = ["on sale", "trending", "best buy"];
+//* const product = {
+//*   name,
+//*   price,
+//*   image,
+//*   tags,
+//* };
+//* console.log(product);
+
+//?__________________________________________________________?\\
+
+//!---Синтаксис обчислювальних властивостей (computed properties)---!\\
+
+// const propName = "name";
+// const user = {
+//   age: 25,
+// };
+// user[propName] = "Henry Sibola";
+// console.log(user.name);
+
+//* const propName = "name";
+//* const user = {
+//*   age: 25,
+//*   [propName]: "Henry Sibola",
+//* };
+//* console.log(user.name);
+
+//TODO   Використовуючи синтаксис обчислювальних властивостей,
+//TODO   доповни код оголошення об'єкта credentials таким чином,
+//TODO   щоб в результаті у нього були дві властивості:
+//TODO   email і password, ключі яких зберігаються у змінних emailInputName і passwordInputName.
+//TODO   Значенням властивості email повинен бути рядок "henry.carter@aptmail.com",
+//TODO   а значенням властивості password - рядок "jqueryismyjam".
+
+//* const emailInputName = "email";
+//* const passwordInputName = "password";
+//* const credentials = {
+//*   [emailInputName]: "henry.carter@aptmail.com",
+//*   [passwordInputName]: "jqueryismyjam",
+//* };
+//* console.log(credentials.email);
+//* console.log(credentials.password);
+
+//?__________________________________________________________?\\
+//!---Синтаксис обчислювальних властивостей (computed properties)---!\\
