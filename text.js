@@ -1,27 +1,27 @@
-//!        Оператор typeof
+//!==================== Оператор typeof ====================!\\
 
-const quantity = 17;
-console.log(typeof quantity); // виведе "number"
-const message = "JavaScript is awesome!";
-console.log(typeof message); // виведе "string"
-const isSidebarOpen = false;
-console.log(typeof isSidebarOpen); // виведе "boolean"
-let username;
-console.log(typeof username); // виведе "undefined"
-let status = null;
-console.log(typeof status); // виведе "object"
-// !____________________________________________________________
+//* const quantity = 17;
+//* console.log(typeof quantity); // виведе "number"
+//* const message = "JavaScript is awesome!";
+//* console.log(typeof message); // виведе "string"
+//* const isSidebarOpen = false;
+//* console.log(typeof isSidebarOpen); // виведе "boolean"
+//* let username;
+//* console.log(typeof username); // виведе "undefined"
+//* let status = null;
+//* console.log(typeof status); // виведе "object"
+//!____________________________________________________________!\\
 
-//!        Комбіновані оператори
+//!================== Комбіновані оператори ==================!\\
 
 //* Додавання: +=. Приклад: x += y еквівалентно x = x + y
 //* Віднімання: -=. Приклад: x -= y еквівалентно x = x - y
 //* Множення: *=. Приклад: x *= y еквівалентно x = x * y
 //* Ділення: /=. Приклад: x /= y еквівалентно x = x / y
 //* Остача від ділення: %=. Приклад: x %= y еквівалентно x = x % y
-// !____________________________________________________________
+//!____________________________________________________________!\\
 
-//!        Перетворення типів:
+//!===================== Перетворення типів ===================!\\
 
 //TODO     Явне перетворення (Explicit Conversion):
 
@@ -59,3 +59,7 @@ console.log(typeof status); // виведе "object"
 //?    false + "1"; // "false1" (false → "false")
 //?    null + 1; // 1
 //?    undefined + 1; // NaN
+
+//!____________________________________________________________!\\
+
+//!===================== Перетворення типів ===================!\\
