@@ -1219,3 +1219,15 @@
 // console.log(values);
 
 //TODO --------------- Метод Object.keys() ----------------!\\
+
+// function isAdult(age) {
+//   return age >= 18;
+// }
+// console.log(isAdult(20));
+// console.log(isAdult(15));
+
+// function isEven(number) {
+//   return number % 2 === 0 ? "парне" : "непарне";
+// }
+// console.log(isEven(4));
+// console.log(isEven(7));
