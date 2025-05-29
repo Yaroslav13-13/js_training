@@ -1268,3 +1268,30 @@
 // }
 // console.log(sumArray([1, 2, 3])); // 6
 // console.log(sumArray([10, 20, 30, 40])); // 100
+
+// function countEven(arr) {
+//   let total = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//       total += 1;
+//     }
+//   }
+//   return total;
+// }
+// console.log(countEven([1, 2, 3, 4, 5, 6])); // 3
+// console.log(countEven([11, 13, 15])); // 0
+// console.log(countEven([2, 4, 8, 10])); // 4
+
+// function sumEven(arr) {
+//   let total = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//       total += arr[i];
+//     }
+//   }
+//   return total;
+// }
+
+// console.log(sumEven([1, 2, 3, 4, 5, 6])); // 12 (2+4+6)
+// console.log(sumEven([10, 11, 12])); // 22 (10+12)
+// console.log(sumEven([1, 3, 5])); // 0
