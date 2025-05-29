@@ -1231,3 +1231,19 @@
 // }
 // console.log(isEven(4));
 // console.log(isEven(7));
+
+// function getGrade(points) {
+//   if (points >= 90 && points <= 100) {
+//     return "Відмінно";
+//   } else if (points >= 70 && points <= 89) {
+//     return "Добре";
+//   } else if (points >= 50 && points <= 69) {
+//     return "Задовільно";
+//   } else {
+//     return "Незадовільно";
+//   }
+// }
+// console.log(getGrade(95)); // "Відмінно"
+// console.log(getGrade(73)); // "Добре"
+// console.log(getGrade(51)); // "Задовільно"
+// console.log(getGrade(30)); // "Незадовільно"
