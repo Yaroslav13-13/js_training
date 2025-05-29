@@ -121,20 +121,36 @@
 
 //TODO      Доступ до елементів
 
-//* const planets = ["Earth", "Mars", "Venus"];
-//* console.log(planets[0]); // 'Earth'
-//* console.log(planets[1]); // 'Mars'
-//* console.log(planets[2]); // 'Venus'
+//*    const planets = ["Earth", "Mars", "Venus"];
+//*    console.log(planets[0]); // 'Earth'
 
-//* const planets = ['Earth', 'Mars', 'Venus'];
-//* const firstElement = planets[0];
-//* console.log(firstElement); // 'Earth'
+//*    const planets = ['Earth', 'Mars', 'Venus'];
+//*    const firstElement = planets[0];
+//*    console.log(firstElement); // 'Earth'
 
 //TODO      Перевизначення значення елемента
 
-//* const planets = ['Earth', 'Mars', 'Venus', 'Uranus'];
-//* planets[0] = 'Jupiter';
-//* planets[2] = 'Neptune';
-//* console.log(planets); // ['Jupiter', 'Mars', 'Neptune', 'Uranus']
+//*    const planets = ['Earth', 'Mars', 'Venus', 'Uranus'];
+//*    planets[0] = 'Jupiter';
+//*    planets[2] = 'Neptune';
+//*    console.log(planets); // ['Jupiter', 'Mars', 'Neptune', 'Uranus']
 
-//TODO      Перевизначення значення елемента
+//TODO                 Довжина масиву
+
+//*   const planets = ["Earth", "Mars", "Venus"];
+//*   console.log(planets.length); // 3
+//*   const planets = ["Earth", "Mars", "Venus"];
+
+//*      if (planets.length >= 3) {
+//*        console.log("3 or more elements");
+//*      } else {
+//*        console.log("3 or less elements");
+//*      }
+
+//TODO                 Індекс останнього елемента
+
+//*     const planets = ["Earth", "Mars", "Venus"];
+//*     const lastElementIndex = planets.length - 1;
+//*     console.log(planets[lastElementIndex]); // "Venus"
+
+//TODO                 Індекс останнього елемента
