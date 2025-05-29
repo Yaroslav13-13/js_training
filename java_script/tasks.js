@@ -85,6 +85,15 @@
 //?        Приймає масив чисел
 //?        Повертає найбільше число
 
-function findMax(maxNumber) {
-  for (let i = 0; i < maxNumber.length; i++) {}
-}
+//*   function findMax(arr) {
+//*     let maxNumber = arr[0];
+//*     for (let i = 1; i < arr.length; i++) {
+//*       if (arr[i] > maxNumber) {
+//*         maxNumber = arr[i];
+//*       }
+//*     }
+//*     return maxNumber;
+//*   }
+//*   console.log(findMax([3, 7, 2, 9, 5])); // 9
+//*   console.log(findMax([-10, -3, -1])); // -1
+//!______________________________________________________________
