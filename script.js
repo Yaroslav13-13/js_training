@@ -1247,3 +1247,24 @@
 // console.log(getGrade(73)); // "Добре"
 // console.log(getGrade(51)); // "Задовільно"
 // console.log(getGrade(30)); // "Незадовільно"
+
+// function login(username, password) {
+//   if (username === "admin" && password === "1234") {
+//     return "Вхід успішний";
+//   } else {
+//     return "Невірні дані";
+//   }
+// }
+
+// console.log(login("admin", "1234")); // Вхід успішний
+// console.log(login("user", "0000")); // Невірні дані
+
+// function sumArray(arr) {
+//   let total = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     total += arr[i];
+//   }
+//   return total;
+// }
+// console.log(sumArray([1, 2, 3])); // 6
+// console.log(sumArray([10, 20, 30, 40])); // 100
