@@ -115,3 +115,26 @@
 //TODO  Math.random()
 //TODO  повертає випадкове число в діапазоні від 0 (включно) до 1 (за винятком):
 //*console.log(Math.random()); // випадкове число між 0 і 1, наприклад 0.2 ... 0.9166353649342294
+//!____________________________________________________________!\\
+
+//!=======================  МАСИВИ  =======================!\\
+
+//TODO      Доступ до елементів
+
+//* const planets = ["Earth", "Mars", "Venus"];
+//* console.log(planets[0]); // 'Earth'
+//* console.log(planets[1]); // 'Mars'
+//* console.log(planets[2]); // 'Venus'
+
+//* const planets = ['Earth', 'Mars', 'Venus'];
+//* const firstElement = planets[0];
+//* console.log(firstElement); // 'Earth'
+
+//TODO      Перевизначення значення елемента
+
+//* const planets = ['Earth', 'Mars', 'Venus', 'Uranus'];
+//* planets[0] = 'Jupiter';
+//* planets[2] = 'Neptune';
+//* console.log(planets); // ['Jupiter', 'Mars', 'Neptune', 'Uranus']
+
+//TODO      Перевизначення значення елемента

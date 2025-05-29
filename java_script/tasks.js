@@ -97,3 +97,20 @@
 //*   console.log(findMax([3, 7, 2, 9, 5])); // 9
 //*   console.log(findMax([-10, -3, -1])); // -1
 //!______________________________________________________________
+
+//TODO   Використовуючи синтаксис обчислювальних властивостей,
+//TODO   доповни код оголошення об'єкта credentials таким чином,
+//TODO   щоб в результаті у нього були дві властивості:
+//TODO   email і password, ключі яких зберігаються у змінних emailInputName і passwordInputName.
+//TODO   Значенням властивості email повинен бути рядок "henry.carter@aptmail.com",
+//TODO   а значенням властивості password - рядок "jqueryismyjam".
+
+//* const emailInputName = "email";
+//* const passwordInputName = "password";
+//* const credentials = {
+//*   [emailInputName]: "henry.carter@aptmail.com",
+//*   [passwordInputName]: "jqueryismyjam",
+//* };
+//* console.log(credentials.email);
+//* console.log(credentials.password);
+//!______________________________________________________________
