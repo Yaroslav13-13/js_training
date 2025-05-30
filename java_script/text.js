@@ -117,6 +117,48 @@
 //*console.log(Math.random()); // випадкове число між 0 і 1, наприклад 0.2 ... 0.9166353649342294
 //!____________________________________________________________!\\
 
+//!======================= РОЗГАЛУЖЕННЯ =======================!\\
+
+//TODO      Інструкції if...else
+//*    if (grade >= 90) {
+//*      console.log("Perfectly");
+//*    } else if (grade >= 80) {
+//*      console.log("Good");
+//*    } else if (grade >= 70) {
+//*      console.log("Satisfactorily");
+//*    } else {
+//*      console.log("Unsatisfactorily");
+//*    }
+
+//TODO      Тернарний оператор
+//*   const age = 20;
+//*   const type = age >= 18 ? 'Дорослий' : 'Дитина';
+//*   console.log(type); // 'Дорослий'
+
+//*   const a = 5;
+//*   const b = 10;
+//*   const biggerNumber = a > b ? a : b;
+//*   console.log(biggerNumber); // 10
+
+//TODO      Оператор switch
+const fruit = "apple";
+
+switch (fruit) {
+  case "apple":
+    console.log("Apple selected");
+    break;
+  case "banana":
+    console.log("Banana selected");
+    break;
+  case "orange":
+    console.log("Orange selected");
+    break;
+  default:
+    console.log("The fruit is unknown");
+}
+
+//!____________________________________________________________!\\
+
 //!=======================  МАСИВИ  =======================!\\
 
 //TODO      Доступ до елементів
