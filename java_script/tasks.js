@@ -153,9 +153,22 @@
 //* console.log(getGrade(-44));
 //!______________________________________________________________
 
-function walking(distance, fuel) {
-  let result = (fuel / distance) * 100;
-  return `Your average is ${Math.round(result)} L/100km`;
+// function walking(distance, fuel) {
+//   let result = (fuel / distance) * 100;
+//   return `Your average is ${Math.round(result)} L/100km`;
+// }
+// console.log(walking(456, 67));
+
+let totalDistance = 0;
+let totalFuel = 0;
+
+for (const trip of trips) {
+  totalDistance += trip.distance;
+  totalFuel += trip.fuel;
 }
 
-console.log(walking(456, 67));
+const trips = [
+  { distance: 100, fuel: 10 },
+  { distance: 200, fuel: 25 },
+  { distance: 150, fuel: 15 },
+];
