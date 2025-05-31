@@ -159,12 +159,19 @@
 // }
 // console.log(walking(456, 67));
 
-let totalDistance = 0;
-let totalFuel = 0;
+function averageConsumption(trips) {
+  let totalDistance = 0;
+  let totalFuel = 0;
 
-for (const trip of trips) {
-  totalDistance += trip.distance;
-  totalFuel += trip.fuel;
+  for (const trip of trips) {
+    totalDistance += trip.distance;
+    totalFuel += trip.fuel;
+  }
+  if (totalDistance === 0) {
+    return "Invalid input: total distance is zero";
+  }
+  const average = (totalFuel / totalDistance) * 100;
+  return `Average consumption for all trips: ${average.toFixed(2)} L/100km`;
 }
 
 const trips = [
@@ -172,3 +179,6 @@ const trips = [
   { distance: 200, fuel: 25 },
   { distance: 150, fuel: 15 },
 ];
+
+console.log(averageConsumption(trips));
+//!______________________________________________________________
