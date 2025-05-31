@@ -114,3 +114,48 @@
 //* console.log(credentials.email);
 //* console.log(credentials.password);
 //!______________________________________________________________
+
+// let name = "Yaroslav";
+// const age = 40;
+// let text = `My name is ${name} and I am ${age} years old`;
+// console.log(text);
+
+// const userAge = function user(age) {
+//   if (age >= 18) {
+//     return "Access granted";
+//   } else {
+//     return "Access denied";
+//   }
+// };
+// console.log(userAge(16));
+
+// let age = 17;
+// const userAge = age >= 18 ? "Access granted" : "Access denied";
+// console.log(userAge);
+
+//* function getGrade(score) {
+//*   if (score >= 90 && score <= 100) {
+//*     return "Excellent";
+//*   } else if (score >= 75 && score <= 89) {
+//*     return "Good";
+//*   } else if (score >= 60 && score <= 74) {
+//*     return "Satisfactory";
+//*   } else if (score >= 0 && score <= 59) {
+//*     return "Fail";
+//*   } else {
+//*     return "Invalid score";
+//*   }
+//* }
+//* console.log(getGrade(95));
+//* console.log(getGrade(82));
+//* console.log(getGrade(68));
+//* console.log(getGrade(43));
+//* console.log(getGrade(-44));
+//!______________________________________________________________
+
+function walking(distance, fuel) {
+  let result = (fuel / distance) * 100;
+  return `Your average is ${Math.round(result)} L/100km`;
+}
+
+console.log(walking(456, 67));
