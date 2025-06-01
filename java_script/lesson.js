@@ -85,6 +85,108 @@
 
 //?          цикл for...in
 
+// const feedback = {
+//   good: 3,
+//   neutral: 5,
+//   bad: 10,
+// };
+
+// let total = 0;
+// for (const key in feedback) {
+//   total += feedback[key];
+// }
+
+// console.log(total);
+
 //?          метод Object.keys
 
-//?          метод Object.value
+// const feedback = {
+//   good: 3,
+//   neutral: 5,
+//   bad: 10,
+// };
+
+// let total = 0;
+
+//*   const keys = Object.keys(feedback); //метод Object.keys створив масив з ключами ['good', 'neutral', 'bad']
+//*   for (const key of keys) {
+//*     //   console.log(feedback[key]);
+//*     total += feedback[key];
+//*   }
+//*   console.log(total);
+
+//?          метод Object.values
+
+//*  const values = Object.values(feedback); //метод Object.values створив масив зі значення ключів [3, 34, 10]
+
+//*  for (const item of values) {
+//*    total += item;
+//*  }
+//*  console.log(total);
+
+//*  const animal = {
+//*    legt: 4,
+//*  };
+//*  const dog = Object.create(animal);
+//*  dog.name = "Patron";
+
+// for (const key in dog) {
+//   if (dog.hasOwnProperty(key)) {
+//     console.log(dog[key]);
+//   }
+// }
+
+//*   const keys = Object.keys(dog);
+//*   for (const key of keys) {
+//*     console.log(dog[key]);
+//*   }
+
+//TODO   Завдання
+
+//*  const user = {
+//*    name: "Yaroslav",
+//*    age: 37,
+//*    hobby: "html",
+//*    premium: true,
+//*  };
+//*  const user1 = {
+//*    name: "Maria",
+//*    age: 36,
+//*    hobby: "css",
+//*    premium: true,
+//*  };
+
+// user.mood = "happy";
+// user.hobby = `skydiving`;
+// user.premium = false;
+
+// const keys = Object.keys(user);
+// for (const key of keys) {
+//   console.log(key + " : " + user[key]);
+// }
+
+//* function foo(obj) {
+//*   obj.mood = "happy";
+//*   obj.hobby = `skydiving`;
+//*   obj.premium = false;
+
+//*   const keys = Object.keys(obj);
+//*   for (const key of keys) {
+//*     console.log(key + " : " + user[key]);
+//*   }
+//* }
+
+//* foo(user);
+//* foo(user1);
+
+// //TODO   Завдання
+const salaries = {
+  Yaroslav: 160,
+  Maria: 120,
+  Viktoria: 90,
+};
+
+function summa(obj) {
+  let sum = 0;
+}
+summa(salaries);
