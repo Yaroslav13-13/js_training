@@ -1103,13 +1103,6 @@
 // console.log(apartment.owner.name);
 
 // сonst playlist = ["My playlist", 5];
-const playlist = {
-  name: "My playlist",
-  rating: 5,
-  tracks: ["tracks - 1, tracks - 2, tracks - 3"],
-  isFavorite: true,
-};
-console.log(playlist.name);
 
 //!----------------Додавання властивостей-------------------!\\
 
