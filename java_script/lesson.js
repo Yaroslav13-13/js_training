@@ -180,13 +180,64 @@
 //* foo(user1);
 
 // //TODO   Завдання
-const salaries = {
-  Yaroslav: 160,
-  Maria: 120,
-  Viktoria: 90,
-};
+//*  const salaries = {
+//*    Yaroslav: 160,
+//*    Maria: 120,
+//*    Viktoria: 90,
+//*  };
 
-function summa(obj) {
-  let sum = 0;
+//*  function summa(obj) {
+//*    let sum = 0;
+//*    const values = Object.values(salaries);
+//*    for (const value of values) {
+//*      sum += value;
+//*    }
+//*    return sum;
+//*  }
+//*  console.log(summa(salaries));
+
+// //TODO   Завдання
+//?  Функція countTotalSalary(salaries) приймає об'єкт зарплат (salaries) в якості параметра.
+//?  Кожна властивість об'єкта salaries — це ключ, що містить ім'я співробітника,
+//?  та значення - його відповідна зарплатня.
+//?  Доповни код функції countTotalSalary(salaries) так,
+//?  щоб вона повертала загальну суму зарплат всіх співробітників.
+
+//* function countTotalSalary(salaries) {
+//*   let totalSalary = 0;
+//*   const values = Object.values(salaries);
+//*   for (const value of values) {
+//*     totalSalary += value;
+//*   }
+//*   return totalSalary;
+//* }
+
+//* console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+
+//!_________________________________________________________________________________________
+
+//!        Урок 2. Модуль 4. Об'єкти:
+
+// TODO    Масив об'єктів: перебір масивів, пошук об'єкта за значенням властивості, колекція значень властивості
+// ?       Перебір масивів
+
+const friends = [
+  { name: "Ross", online: false },
+  { name: "Rachel", online: true },
+  { name: "Joey", online: false },
+  { name: "Monica", online: true },
+  { name: "Phoebe", online: true },
+  { name: "Chandler", online: false },
+];
+
+function findByName(arr, userName) {
+  for (const item of arr) {
+    if (item.name === userName) {
+      console.log(item.name);
+      return item;
+    }
+  }
+  return "Not found";
 }
-summa(salaries);
+
+console.log(findByName(friends, "Rachel"));
