@@ -1,3 +1,24 @@
+// {
+//   "editor.defaultFormatter": "esbenp.prettier-vscode"
+// }
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // Увімкнення автоформатування при збереженні
+  "editor.formatOnSave": true,
+
+  // Форматер за замовчуванням
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Автовиправлення ESLint при збереженні (опційно)
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  }
 }

@@ -130,11 +130,11 @@
 //*  const dog = Object.create(animal);
 //*  dog.name = "Patron";
 
-// for (const key in dog) {
-//   if (dog.hasOwnProperty(key)) {
-//     console.log(dog[key]);
+//   for (const key in dog) {
+//     if (dog.hasOwnProperty(key)) {
+//       console.log(dog[key]);
+//     }
 //   }
-// }
 
 //*   const keys = Object.keys(dog);
 //*   for (const key of keys) {
@@ -221,14 +221,14 @@
 // TODO    Масив об'єктів: перебір масивів, пошук об'єкта за значенням властивості, колекція значень властивості
 // ?       Перебір масивів
 
-const friends = [
-  { name: "Ross", online: false },
-  { name: "Rachel", online: true },
-  { name: "Joey", online: false },
-  { name: "Monica", online: true },
-  { name: "Phoebe", online: true },
-  { name: "Chandler", online: false },
-];
+//*   const friends = [
+//*     { name: "Ross", online: false },
+//*     { name: "Rachel", online: true },
+//*     { name: "Joey", online: false },
+//*     { name: "Monica", online: true },
+//*     { name: "Phoebe", online: true },
+//*     { name: "Chandler", online: false },
+//*   ];
 
 //? пошук друга за іменем:
 
@@ -257,22 +257,51 @@ const friends = [
 
 //? отримаємо імена тих друзів які зараз online і тих хто offlain  :
 
-function getOnlineandOffline(arr) {
-  const online = [];
-  const offline = [];
-  for (const item of arr) {
-    if (item.online) {
-      online.push(item);
-    } else {
-      offline.push(item);
-    }
-  }
-  return { online, offline };
-}
+//*   function getOnlineandOffline(arr) {
+//*     const online = [];
+//*     const offline = [];
+//*     for (const item of arr) {
+//*       if (item.online) {
+//*         online.push(item);
+//*       } else {
+//*         offline.push(item);
+//*       }
+//*     }
+//*     return { online, offline };
+//*   }
 
-const result = getOnlineandOffline(friends);
-console.log("Онлайн друзі:", result.online);
-console.log("Офлайн друзі:", result.offline);
-// console.log(getOnline(friends));
+//*   const result = getOnlineandOffline(friends);
+//*   console.log("Онлайн друзі:", result.online);
+//*   console.log("Офлайн друзі:", result.offline);
 
 //?_________________________________________________________________
+
+//* const stones = [
+//*   { name: "Смарагд", price: 1300, quantity: 4 },
+//*   { name: "Рубін", price: 900, quantity: 2 },
+//*   { name: "Сапфір", price: 1200, quantity: 5 },
+//*   { name: "Діамант", price: 2500, quantity: 1 },
+//* ];
+
+//* function calcTotalPrice(stones, stoneName) {
+//*   let sum = 0;
+//*   for (const item of stones) {
+//*     if (item.name === stoneName) {
+//*       return item.quantity * item.price;
+//*     }
+//*   }
+//* }
+//* console.log(calcTotalPrice(stones, "Сапфір"));
+
+//?_________________________________________________________________
+
+const playlist = {
+  name: "My playlist",
+  rating: 5,
+  tracks: ["track-1", "track-2", "track-3"],
+  changeName(newName) {
+    console.log(playlist);
+  },
+};
+
+playlist.changeName("");
