@@ -230,14 +230,49 @@ const friends = [
   { name: "Chandler", online: false },
 ];
 
-function findByName(arr, userName) {
+//? пошук друга за іменем:
+
+//*   function findByName(arr, userName) {
+//*     for (const item of arr) {
+//*       if (item.name.toLowerCase() === userName.toLowerCase()) {
+//*         console.log(item.name);
+//*         return item;
+//*       }
+//*     }
+//*     return "Not found";
+//*   }
+//*   console.log(findByName(friends, "RosS"));
+
+//? отримаємо імена всіх друзів:
+
+//*   function getAllNames(arr) {
+//*     const names = [];
+//*     for (const item of arr) {
+//*       console.log(item.name);
+//*       names.push(item.name);
+//*     }
+//*     return names;
+//*   }
+//*   console.log(getAllNames(friends));
+
+//? отримаємо імена тих друзів які зараз online і тих хто offlain  :
+
+function getOnlineandOffline(arr) {
+  const online = [];
+  const offline = [];
   for (const item of arr) {
-    if (item.name === userName) {
-      console.log(item.name);
-      return item;
+    if (item.online) {
+      online.push(item);
+    } else {
+      offline.push(item);
     }
   }
-  return "Not found";
+  return { online, offline };
 }
 
-console.log(findByName(friends, "Rachel"));
+const result = getOnlineandOffline(friends);
+console.log("Онлайн друзі:", result.online);
+console.log("Офлайн друзі:", result.offline);
+// console.log(getOnline(friends));
+
+//?_________________________________________________________________
