@@ -300,8 +300,31 @@ const playlist = {
   rating: 5,
   tracks: ["track-1", "track-2", "track-3"],
   changeName(newName) {
-    console.log(playlist);
+    console.log(this);
+    playlist.name = newName;
   },
 };
 
-playlist.changeName("");
+// playlist.changeName("Playlist gooood");
+// console.log(playlist);
+
+const playlist2 = {
+  name: "Sports playlist",
+  rating: 4,
+  tracks: ["track-4", "track-5"],
+  changeName(newName) {
+    playlist.name = newName;
+  },
+};
+playlist.changeName("Playlist gooood-2");
+const atTheOldToad = {
+  potions: [],
+  getPotions() {
+    return "List of all available potions";
+  },
+  addPotion(potionName) {
+    return `Adding ${potionName}`;
+  },
+};
+
+console.log(atTheOldToad.addPotion("Invisibility"));
