@@ -295,18 +295,82 @@
 
 //?_________________________________________________________________
 
-const playlist = {
-  name: "My playlist",
-  rating: 5,
-  tracks: ["track-1", "track-2", "track-3"],
-  changeName(newName) {
-    console.log(this);
-    playlist.name = newName;
-  },
-  addTrack(newTrack) {
-    this.tracks.push(newTrack);
-  },
+//? Доступ до властивостей об'єкта:  ключове слово this
+
+//* const playlist = {
+//*   name: "My playlist",
+//*   rating: 5,
+//*   tracks: ["track-1", "track-2", "track-3"],
+//*   changeName(newName) {
+//*     console.log(this);
+//*     playlist.name = newName;
+//*   },
+//*   addTrack(newTrack) {
+//*     this.tracks.push(newTrack);
+//*   },
+//*   updateRating(newRaiting) {
+//*     this.rating = newRaiting;
+//*   },
+//*   getName() {
+//*     return this.name;
+//*   },
+//* };
+
+//* playlist.changeName("Playlist NICE");
+//* playlist.addTrack("track-4");
+//* playlist.updateRating(9);
+//* console.log(playlist.getName());
+
+// TODO    Синтаксис spread i rest:
+//?           spread
+
+//* function foo(a, b, ...arrey) {
+//*   console.log(a, b);
+//* }
+//* foo(1, 2, 3);
+//* foo(10, 20, 3, 4, 5);
+
+//* function foo(...rets) {
+//*   console.log(rets);
+//* }
+
+//?           rest:
+
+//* const numbers = [1000, ...[1, 2, 3], 2000, ...[4, 5, 6], 3000];
+//*  console.log(numbers);
+
+// //TODO   Завдання
+//?  Пошук найменшої або найбільшої температури (числа)
+
+//* const temps = [18, 14, 12, 21, 17, 29, 24];
+
+//* console.log(Math.min(...temps));
+//* console.log(Math.max(...temps));
+//?____________________________________________________
+
+// const a = [{ x: 1 }, { y: 2 }];
+// const b = [...a];
+// a[0].x = 100;
+// console.log("a", a);
+// console.log("b", b);
+
+//?  Поєднюєм кілька масивів в один через spread
+//* const arrey1 = [1, 2, 3];
+//* const arrey2 = [4, 5, 6, 7];
+//* const arrey3 = [8, 9, 10];
+
+//* const allArrey = [...arrey1, ...arrey2, ...arrey3]; //[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//* console.log(allArrey);
+//?____________________________________________________
+
+const objA = { x: 1, y: 2 };
+const objB = { x: 0, q: 3 };
+
+const objC = {
+  ...objA, //!x: 1, y: 2
+  x: 10, //!x: 10, y: 2
+  ...objB, //!x: 0, y: 20, q:3
+  y: 20, //!x: 0, y: 20, q:3
 };
 
-playlist.changeName("Playlist gooood-2");
-playlist.addTrack("track-4");
+console.log(objC);
