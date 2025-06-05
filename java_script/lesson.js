@@ -339,7 +339,7 @@
 //* const numbers = [1000, ...[1, 2, 3], 2000, ...[4, 5, 6], 3000];
 //*  console.log(numbers);
 
-// //TODO   Завдання
+// TODO   Завдання
 //?  Пошук найменшої або найбільшої температури (числа)
 
 //* const temps = [18, 14, 12, 21, 17, 29, 24];
@@ -363,14 +363,19 @@
 //* console.log(allArrey);
 //?____________________________________________________
 
-const objA = { x: 1, y: 2 };
-const objB = { x: 0, q: 3 };
+// const objA = { x: 1, y: 2 };
+// const objB = { x: 0, q: 3 };
 
-const objC = {
-  ...objA, //!x: 1, y: 2
-  x: 10, //!x: 10, y: 2
-  ...objB, //!x: 0, y: 20, q:3
-  y: 20, //!x: 0, y: 20, q:3
+// const objC = {
+//   ...objA, //!x: 1, y: 2
+//   x: 10, //!x: 10, y: 2
+//   ...objB, //!x: 0, y: 20, q:3
+//   y: 20, //!x: 0, y: 20, q:3
+// };
+
+// console.log(objC);
+
+const Transaction = {
+  DEPOSIT: "deposide",
+  WITHDRAW: " withdraw",
 };
-
-console.log(objC);
