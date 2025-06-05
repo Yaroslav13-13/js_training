@@ -241,15 +241,29 @@
 //   console.log(`Index ${index}, value ${number}`);
 // });
 
-function calculateTotalPrice(orderedItems) {
-  let totalPrice = 0;
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
 
-  orderedItems.forEach(function (item) {
-    console.log(item);
+//   orderedItems.forEach(function (item) {
+//     console.log(item);
+//   });
+//   return totalPrice;
+// }
+
+// calculateTotalPrice([12, 85, 37, 4]);
+// calculateTotalPrice([164, 48, 291]);
+// calculateTotalPrice([412, 371, 94, 63, 176]);
+
+function filterArray(numbers, value) {
+    const result = [];
+    const 
+  numbers.forEach(function (item) {
+    result.push(item > value);
+    console.log(result);
   });
-  return totalPrice;
 }
-
-calculateTotalPrice([12, 85, 37, 4]);
-calculateTotalPrice([164, 48, 291]);
-calculateTotalPrice([412, 371, 94, 63, 176]);
+filterArray([1, 2, 3, 4, 5], 3);
+filterArray([1, 2, 3, 4, 5], 4);
+filterArray([1, 2, 3, 4, 5], 5);
+filterArray([12, 24, 8, 41, 76], 38);
+filterArray([12, 24, 8, 41, 76], 20);
