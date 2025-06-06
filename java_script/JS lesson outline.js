@@ -1,5 +1,5 @@
-//! Модуль 5. Перебираючі методи масивів
-//  TODO Колбек-функції
+//!       Модуль 5. Перебираючі методи масивів
+//TODO    Колбек-функції
 
 // function makePizza() {
 //   return "Your pizza is being prepared, please wait.";
@@ -60,3 +60,23 @@
 //*   }
 //*   console.log(filterArray([1, 2, 3, 4, 5], 3));
 //*   console.log(filterArray([1, 2, 3, 4, 5], 4));
+
+//TODO     Стрілочні функції
+
+// const calculateTotalPrice = (orderedItems) => {
+//   let totalPrice = 0;
+//   orderedItems.forEach((item) => {
+//     totalPrice += item;
+//   });
+//   return totalPrice;
+// };
+
+// const calculateTotalPrice = (orderedItems) => {
+//   let totalPrice = 0;
+//   orderedItems.forEach((item) => {
+//     totalPrice += item;
+//   });
+//   return totalPrice;
+// };
+
+//TODO     Методи map і flatMap

@@ -379,3 +379,20 @@ const Transaction = {
   DEPOSIT: "deposide",
   WITHDRAW: " withdraw",
 };
+//!_______________________________________________________________________
+
+//!        Урок 1. Модуль 5. Перебираючі методи масивів:
+
+//TODO     Колбек - функції
+
+function fnA(num) {
+  return num * 10;
+}
+
+function foo(a, b, callback) {
+  console.log(callback);
+  return a + b;
+}
+
+foo(1, 2, fnA);
+// console.log(foo(1, 2, fnA));
