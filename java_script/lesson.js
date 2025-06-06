@@ -436,3 +436,31 @@ const Transaction = {
 //     return Math.sqrt(value);
 //   })
 // );
+
+//TODO     Стрілочні функції (=>)
+
+// add(10, 20);
+
+// function add() {
+//   console.log(arguments);
+// }
+
+//?_____________________________________
+// const addArrow = (a) => {
+//   return a + 20;
+// };
+//* const addArrow = (a) => a + 20;
+
+// console.log(addArrow(10));
+//?_____________________________________
+
+// function foo(a) {
+//   return a;
+// }
+//? або:
+
+//* const foo = (a) => ({ a });
+
+//* console.log(foo(10));
+
+//?_____________________________________
