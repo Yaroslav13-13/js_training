@@ -385,14 +385,54 @@ const Transaction = {
 
 //TODO     Колбек - функції
 
-function fnA(num) {
-  return num * 10;
-}
-
-function foo(a, b, callback) {
-  console.log(callback);
-  return a + b;
-}
-
-foo(1, 2, fnA);
+// function fnA(num) {
+//   console.log(num * 2);
+// }
+// function foo(a, b, callback) {
+//   console.log(callback);
+//   callback(2);
+//   return a + b;
+// }
 // console.log(foo(1, 2, fnA));
+
+// function calc1(a, b, callback) {
+//   console.log("hello");
+//   console.log("tototo");
+//   const result = callback(a, b);
+//   console.log(result);
+// }
+// function calc2(a, b) {
+//   console.log("hello");
+//   console.log("tototo");
+//   const result = a - b;
+//   console.log(result);
+// }
+// calc1(10, 4, function (x, y) {
+//   return x + y;
+// });
+// calc1(5, 3, function (x, y) {
+//   return x - y;
+// });
+
+// function each(arrey, callback) {
+//   const newArr = [];
+//   for (const num of arrey) {
+//     newArr.push(callback(num));
+//   }
+//   return newArr;
+// }
+// console.log(
+//   each([64, 49, 36, 25, 16], function (value) {
+//     return value * 2;
+//   })
+// );
+// console.log(
+//   each([64, 49, 36, 25, 16], function (value) {
+//     return value - 10;
+//   })
+// );
+// console.log(
+//   each([64, 49, 36, 25, 16], function (value) {
+//     return Math.sqrt(value);
+//   })
+// );
