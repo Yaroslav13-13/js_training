@@ -464,3 +464,94 @@ const Transaction = {
 //* console.log(foo(10));
 
 //?_____________________________________
+
+//TODO     Метод forEach
+//? масив.forEach(function(елемент, індекс, масив) {
+//?    Тіло функції
+//? });
+
+//? Рефакторинг коду (оптимізація)
+//*  const logItems = (arr) => {
+//?    arr.forEach((item, i) => {
+//*      console.log(`${i + 1} : ${item}`);
+//*    });
+//*  };
+//*  logItems(["яблуко", "банан", "апельсин", "груша", "вишня"]);
+//*  logItems(["🍎", "🍌", "🍇", "🍉", "🍓", "🍍"]);
+
+//? Рефакторинг коду з forEach:
+//*   const printContactInfo = (obj) => {
+//*     const namesArr = obj.name.split(",");
+//*     const phonesArr = obj.phone.split(",");
+
+//*     namesArr.forEach((item, index) => {
+//*       console.log(`${item} - ${phonesArr[index]}`);
+//*     });
+//*   };
+
+//*   printContactInfo({
+//*     name: "Оля,Максим,Андрій,Софія",
+//*     phone: "+380931112233,+380501234567,+380671234567,+380991112233",
+//*   });
+
+//? Рефакторинг коду
+
+//*   const calculateTotalPrice = (...rest) => {
+//*     let total = 0;
+//*     rest.forEach((num) => {
+//*       total += num;
+//*     });
+//*     return total / rest.length;
+//*   };
+
+//*   console.log(calculateTotalPrice(12, 85, 37, 4));
+//*   console.log(calculateTotalPrice(164, 48, 291));
+//*   console.log(calculateTotalPrice(412, 371, 94, 63, 176));
+
+//TODO     Метод map:
+
+//? Нехай функція getModels повертає масив моделей.
+
+const allCars = [
+  { make: "Honda", model: "CR-V", amount: 14, prise: 22045 },
+  { make: "Toyota", model: "RAV4", amount: 10, prise: 24000 },
+  { make: "Ford", model: "Escape", amount: 8, prise: 21000 },
+  { make: "Mazda", model: "CX-5", amount: 12, prise: 23000 },
+  { make: "Nissan", model: "Rogue", amount: 15, prise: 22500 },
+  { make: "Chevrolet", model: "Equinox", amount: 9, prise: 21500 },
+  { make: "Hyundai", model: "Tucson", amount: 11, prise: 21800 },
+  { make: "Kia", model: "Sportage", amount: 13, prise: 21950 },
+  { make: "Volkswagen", model: "Tiguan", amount: 7, prise: 25000 },
+  { make: "Subaru", model: "Forester", amount: 10, prise: 23500 },
+];
+
+// const getModels = (cars) => {
+//   const arr = [];
+//   cars.forEach((item) => {
+//     arr.push(item.model);
+//   });
+//   return arr;
+// };
+// console.log(getModels(arr));
+
+//* const getModels = (cars) => {
+//*   return cars.map((item) => item.model);
+//* };
+//* console.log(getModels(allCars));
+
+//?______________________________________________________________________
+
+// const makeCarsWithDiscount = (card, discount) => {
+//   return card.map((item) => {
+//     console.log(item);
+//     return {
+//       ...item,
+//       prise: item.prise * (1 - discount),
+//     };
+//   });
+// };
+
+// console.table(makeCarsWithDiscount(allCars, 0.2));
+//?______________________________________________________________________
+
+const players = [];
