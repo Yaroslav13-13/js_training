@@ -556,22 +556,27 @@ const allCars = [
 
 //? Збільшуємо кількість годин грапвця за id:
 
-const players = [
-  { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: true },
-  { id: "player-2", name: "Poly", timePlayed: 470, points: 92, online: false },
-  { id: "player-3", name: "Ajax", timePlayed: 180, points: 48, online: true },
-  { id: "player-4", name: "Kiwi", timePlayed: 250, points: 61, online: false },
-  { id: "player-5", name: "Luna", timePlayed: 375, points: 80, online: true },
-];
+// const players = [
+//   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: true },
+//   { id: "player-2", name: "Poly", timePlayed: 470, points: 92, online: false },
+//   { id: "player-3", name: "Ajax", timePlayed: 180, points: 48, online: true },
+//   { id: "player-4", name: "Kiwi", timePlayed: 250, points: 61, online: false },
+//   { id: "player-5", name: "Luna", timePlayed: 375, points: 80, online: true },
+// ];
 
-const playerid = "player-3";
+// const playerid = "player-3";
 
-const update = (arr, id) => {
-  return arr.map((item) => {
-    if (item.id === id) {
-      return { ...item, timePlayed: item.timePlayed + 100 };
-    }
-    return item;
-  });
-};
-console.table(update(players, playerid));
+// const update = (arr, id) => {
+//   return arr.map((item) => {
+//     // if (item.id === id) {
+//     //   return { ...item, timePlayed: item.timePlayed + 100 };
+//     // }
+//     // return item;
+
+//     return item.id === id
+//       ? { ...item, timePlayed: item.timePlayed + 100 }
+//       : item; //тернарним оператором
+//   });
+// };
+
+// console.table(update(players, playerid));
