@@ -375,10 +375,10 @@
 
 // console.log(objC);
 
-const Transaction = {
-  DEPOSIT: "deposide",
-  WITHDRAW: " withdraw",
-};
+// const Transaction = {
+//   DEPOSIT: "deposide",
+//   WITHDRAW: " withdraw",
+// };
 //!_______________________________________________________________________
 
 //!        Урок 1. Модуль 5. Перебираючі методи масивів:
@@ -512,18 +512,18 @@ const Transaction = {
 
 //? Нехай функція getModels повертає масив моделей.
 
-const allCars = [
-  { make: "Honda", model: "CR-V", amount: 14, prise: 22045 },
-  { make: "Toyota", model: "RAV4", amount: 10, prise: 24000 },
-  { make: "Ford", model: "Escape", amount: 8, prise: 21000 },
-  { make: "Mazda", model: "CX-5", amount: 12, prise: 23000 },
-  { make: "Nissan", model: "Rogue", amount: 15, prise: 22500 },
-  { make: "Chevrolet", model: "Equinox", amount: 9, prise: 21500 },
-  { make: "Hyundai", model: "Tucson", amount: 11, prise: 21800 },
-  { make: "Kia", model: "Sportage", amount: 13, prise: 21950 },
-  { make: "Volkswagen", model: "Tiguan", amount: 7, prise: 25000 },
-  { make: "Subaru", model: "Forester", amount: 10, prise: 23500 },
-];
+// const allCars = [
+//   { make: "Honda", model: "CR-V", amount: 14, prise: 22045 },
+//   { make: "Toyota", model: "RAV4", amount: 10, prise: 24000 },
+//   { make: "Ford", model: "Escape", amount: 8, prise: 21000 },
+//   { make: "Mazda", model: "CX-5", amount: 12, prise: 23000 },
+//   { make: "Nissan", model: "Rogue", amount: 15, prise: 22500 },
+//   { make: "Chevrolet", model: "Equinox", amount: 9, prise: 21500 },
+//   { make: "Hyundai", model: "Tucson", amount: 11, prise: 21800 },
+//   { make: "Kia", model: "Sportage", amount: 13, prise: 21950 },
+//   { make: "Volkswagen", model: "Tiguan", amount: 7, prise: 25000 },
+//   { make: "Subaru", model: "Forester", amount: 10, prise: 23500 },
+// ];
 
 // const getModels = (cars) => {
 //   const arr = [];
@@ -568,10 +568,10 @@ const allCars = [
 
 // const update = (arr, id) => {
 //   return arr.map((item) => {
-//     // if (item.id === id) {
-//     //   return { ...item, timePlayed: item.timePlayed + 100 };
-//     // }
-//     // return item;
+//      if (item.id === id) {
+//        return { ...item, timePlayed: item.timePlayed + 100 };
+//      }
+//      return item;
 
 //     return item.id === id
 //       ? { ...item, timePlayed: item.timePlayed + 100 }
@@ -580,3 +580,26 @@ const allCars = [
 // };
 
 // console.table(update(players, playerid));
+//TODO_________________________________________________________________
+
+// //TODO     Метод flatMap:
+
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 12, tags: ["html", "css"] },
+//   { id: "002", likes: 7, tags: ["react", "frontend"] },
+//   { id: "003", likes: 20, tags: ["js", "express"] },
+//   { id: "004", likes: 3, tags: ["nodejs", "mongodb"] },
+// ];
+
+// const tags = tweets.flatMap((item) => item.tags);
+// console.log(tags);
+
+//!        Урок 1. Модуль 5. Перебираючі методи масивів:
+
+//TODO     Метод filter
+
+const numbers = [5, 10, 15, 20, 25];
+const filteredNum = numbers.filter((number) => {
+  console.log(number);
+});
