@@ -599,7 +599,52 @@
 
 //TODO     Метод filter
 
-const numbers = [5, 10, 15, 20, 25];
-const filteredNum = numbers.filter((number) => {
-  console.log(number);
-});
+// const numbers = [5, 10, 15, 20, 25];
+// const filteredNum = numbers.filter((number) => {
+//   console.log(number);
+// });
+
+const fruits = [
+  { name: "Яблуко", emoji: "🍎" },
+  { name: "Банан", emoji: "🍌" },
+  { name: "Апельсин", emoji: "🍊" },
+  { name: "Кавун", emoji: "🍉" },
+  { name: "Полуниця", emoji: "🍓" },
+  { name: "Ананас", emoji: "🍍" },
+  { name: "Виноград", emoji: "🍇" },
+  { name: "Лимон", emoji: "🍋" },
+  { name: "Черешня", emoji: "🍒" },
+  { name: "Манго", emoji: "🥭" },
+];
+
+const numbers = [1, 5, 7, 9, 90, 65, 32];
+
+//! forEach:
+//? fruits.forEach((item, index) => {
+//   console.log(`${index + 1} - ${item.name} ${item.emoji}`);
+// });
+
+//! map:
+//? const doublednumbers = numbers.map((num) => num * 2);
+// console.log(doublednumbers); //[2, 10, 14, 18, 180, 130, 64]
+
+//! filter:
+//? const filtered = numbers.filter((num) => num < 33);
+// console.log(filtered); // [1, 5, 7, 9, 32]
+
+//! find:
+//? const result = numbers.find((num) => num > 10);
+// console.log(result); // 90
+
+//! some, every:
+//? console.log(numbers.some((num) => num < 5));// true (num=1, 1<5)
+//? console.log(numbers.every((num) => num < 91)); //true(num=90, 90<91)
+
+//! reduce:
+//? const total = numbers.reduce((acc, num) => acc + num, 0);
+// console.log(total); //209 (1+5+7+9+90+65+32)
+
+//! toSorted:
+const sorted = numbers.toSorted();
+console.log(sorted); // [1, 32, 5, 65, 7, 9, 90]
+console.log(numbers); //[1, 5, 7, 9, 90, 65, 32]
