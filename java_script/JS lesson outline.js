@@ -78,5 +78,3 @@
 //   });
 //   return totalPrice;
 // };
-
-//TODO     Методи map і flatMap

@@ -644,7 +644,7 @@ const numbers = [1, 5, 7, 9, 90, 65, 32];
 //? const total = numbers.reduce((acc, num) => acc + num, 0);
 // console.log(total); //209 (1+5+7+9+90+65+32)
 
-//! toSorted:
-const sorted = numbers.toSorted();
-console.log(sorted); // [1, 32, 5, 65, 7, 9, 90]
-console.log(numbers); //[1, 5, 7, 9, 90, 65, 32]
+//! toSorted створює копію):
+//? const sorted = numbers.toSorted();
+// console.log(sorted); // [1, 32, 5, 65, 7, 9, 90]
+// console.log(numbers); //[1, 5, 7, 9, 90, 65, 32]

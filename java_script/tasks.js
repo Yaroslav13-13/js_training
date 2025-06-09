@@ -182,3 +182,118 @@
 
 // console.log(averageConsumption(trips));
 //!______________________________________________________________
+
+// function getProductPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+//   for (const product of products) {
+//     if (productName === product.name) {
+//       return product.price;
+//     }
+//   }
+// }
+// console.log(getProductPrice("Radar"));
+
+// const books = [
+//   { title: "The Last Kingdom", author: "Bernard Cornwell", rating: 8.2 },
+//   { title: "Beside Still Waters", author: "Robert Sheckley", rating: 9 },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 6.8,
+//   },
+// ];
+//? let totalRating = 0;
+//? for (const book of books) {
+//?   totalRating += book.rating;
+// }
+// const averageRating = totalRating / books.length;
+// console.log(averageRating); // 8
+
+// function getAllPropValues(propName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+//   const values = [];
+//   for (const product of products) {
+//     if (product.hasOwnProperty(propName)) {
+//       values.push(product[propName]);
+//     }
+//   }
+//   return values;
+// }
+// console.log(getAllPropValues("price"));
+// console.log(getAllPropValues("name"));
+// console.log(getAllPropValues("quantity"));
+// console.log(getAllPropValues("category"));
+
+// function calculateTotalPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price * product.quantity;
+//     }
+//   }
+
+//   return `Product ${productName} not found!`;
+// }
+
+// console.log(calculateTotalPrice("Blaster"));
+// console.log(calculateTotalPrice("Radar"));
+// console.log(calculateTotalPrice("Droid"));
+// console.log(calculateTotalPrice("Scanner"));
+
+//?______________________________________________________________
+
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// const planetsLengths = planets.map((planet) => planet.length);
+// console.log(planetsLengths);
+
+//?_______________________________________________________________
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const titles = books.map((book) => book.title);
+// console.log(titles);
+//?______________________________________________________________________
+const players = [
+  { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+  { name: "Poly", playtime: 469, gamesPlayed: 2 },
+  { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+  { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+];
+
+const totalAveragePlaytimePerGame = players.reduce((acc, time) => {
+  return (acc += time.playtime);
+});
