@@ -287,17 +287,33 @@
 // const titles = books.map((book) => book.title);
 // console.log(titles);
 //?______________________________________________________________________
-const players = [
-  { name: "Mango", playtime: 1270, gamesPlayed: 4 },
-  { name: "Poly", playtime: 469, gamesPlayed: 2 },
-  { name: "Ajax", playtime: 690, gamesPlayed: 3 },
-  { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+
+// const totalAveragePlaytimePerGame = players
+//   .map((player) => player.playtime / player.gamesPlayed)
+//   .reduce((total, time) => {
+//     return total + time;
+//   }, 0);
+
+// console.log(totalAveragePlaytimePerGame);
+//?______________________________________________________________________
+
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
 ];
 
-const totalAveragePlaytimePerGame = players
-  .map((player) => player.playtime / player.gamesPlayed)
-  .reduce((total, time) => {
-    return total + time;
-  }, 0);
-
-console.log(totalAveragePlaytimePerGame);
+const ascendingReleaseDates = releaseDates.toSorted();
+const alphabeticalAuthors = authors.toSorted();
+console.log(ascendingReleaseDates);
+console.log(alphabeticalAuthors);
+//?______________________________________________________________________
