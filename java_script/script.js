@@ -1275,18 +1275,18 @@
 // showThis.apply(obj, ["David", 3, [1, 2, 3]]);// apply
 //? ________________________________________________________
 
-function changeColor(newColor) {
-  console.log("this", this);
-  this.color = newColor;
-}
+// function changeColor(newColor) {
+//   console.log("this", this);
+//   this.color = newColor;
+// }
 
-const hat = {
-  color: "black",
-};
+// const hat = {
+//   color: "black",
+// };
 
-const sweter = {
-  color: "green",
-};
+// const sweter = {
+//   color: "green",
+// };
 
 //!           call
 //* changeColor.call(hat, "red");
@@ -1304,12 +1304,25 @@ const sweter = {
 
 const counter = {
   value: 0,
-  increment() {
+  increment(num) {
     console.log("increment", this);
     this.value += num;
   },
-  decrement() {
+  decrement(num) {
     console.log("decrement", this);
     this.value -= num;
   },
 };
+
+function foo(number, callback) {
+  //   console.log(callback);
+
+  callback(number);
+}
+
+foo(10, counter.increment.bind(counter));
+foo(1, counter.increment.bind(counter));
+console.log(counter);
+foo(3, counter.decrement.bind(counter));
+
+console.log(counter);
