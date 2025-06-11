@@ -1222,39 +1222,94 @@
 
 // foo(user.showThis);
 
-const timePlayers = {
-  players: [
-    {
-      id: "player-1",
-      name: "Mango",
-      timePlayed: 310,
-      points: 54,
-      online: true,
-    },
-    {
-      id: "player-2",
-      name: "Poly",
-      timePlayed: 470,
-      points: 92,
-      online: false,
-    },
-    { id: "player-3", name: "Ajax", timePlayed: 180, points: 48, online: true },
-    {
-      id: "player-4",
-      name: "Kiwi",
-      timePlayed: 250,
-      points: 61,
-      online: false,
-    },
-    { id: "player-5", name: "Luna", timePlayed: 375, points: 80, online: true },
-  ],
-  calcTimePlayers(playersName) {
-    const player = this.players.find((item) => item.name === playersName);
-    if (!player) {
-      return `${playersName} not found`;
-    }
-    return player.timePlayed / player.points;
-  },
+// const timePlayers = {
+//   players: [
+//     {
+//       id: "player-1",
+//       name: "Mango",
+//       timePlayed: 310,
+//       points: 54,
+//       online: true,
+//     },
+//     {
+//       id: "player-2",
+//       name: "Poly",
+//       timePlayed: 470,
+//       points: 92,
+//       online: false,
+//     },
+//     { id: "player-3", name: "Ajax", timePlayed: 180, points: 48, online: true },
+//     {
+//       id: "player-4",
+//       name: "Kiwi",
+//       timePlayed: 250,
+//       points: 61,
+//       online: false,
+//     },
+//     { id: "player-5", name: "Luna", timePlayed: 375, points: 80, online: true },
+//   ],
+//   calcTimePlayers(playersName) {
+//     const player = this.players.find((item) => item.name === playersName);
+//     if (!player) {
+//       return `${playersName} not found`;
+//     }
+//     return player.timePlayed / player.points;
+//   },
+// };
+// console.log(timePlayers.calcTimePlayers("Ajax"));
+//? _________________________________________________________________________
+
+//TODO     Методи: call , apply, bind
+
+// function showThis(a, b, arr) {
+//   console.log(a, b, arr);
+//   console.log("this", this);
+// }
+
+// const obj = {
+//   a: 5,
+//   b: 10,
+// };
+
+// showThis.call(obj, "Alice", 2, [1, 2, 3]); // call
+// showThis.apply(obj, ["David", 3, [1, 2, 3]]);// apply
+//? ________________________________________________________
+
+function changeColor(newColor) {
+  console.log("this", this);
+  this.color = newColor;
+}
+
+const hat = {
+  color: "black",
 };
 
-console.log(timePlayers.calcTimePlayers("Ajax"));
+const sweter = {
+  color: "green",
+};
+
+//!           call
+//* changeColor.call(hat, "red");
+//* console.log(hat);
+
+//!           apply
+//* changeColor.apply(sweter, ["yellow"]);
+//* console.log(sweter);
+
+//!           bind
+//* const changeHatColor = changeColor.bind(hat, "yellow"); //bind
+//* changeHatColor();
+//* console.log(hat);
+// ?_______________________________________________________
+
+const counter = {
+  value: 0,
+  increment() {
+    console.log("increment", this);
+    this.value += num;
+  },
+  decrement() {
+    console.log("decrement", this);
+    this.value -= num;
+  },
+};
