@@ -78,3 +78,17 @@
 //   });
 //   return totalPrice;
 // };
+
+//!         Урок 1. Модуль 6. ООП. Класи
+
+const user = {
+  userName: "Alice",
+  //   show() {
+  //     console.log(this);
+  //   },
+  showThis: () => {
+    console.log(this);
+  },
+};
+
+user.showThis();
