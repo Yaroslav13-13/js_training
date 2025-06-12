@@ -1302,27 +1302,27 @@
 //* console.log(hat);
 // ?_______________________________________________________
 
-const counter = {
-  value: 0,
-  increment(num) {
-    console.log("increment", this);
-    this.value += num;
-  },
-  decrement(num) {
-    console.log("decrement", this);
-    this.value -= num;
-  },
-};
+// const counter = {
+//   value: 0,
+//   increment(num) {
+//     console.log("increment", this);
+//     this.value += num;
+//   },
+//   decrement(num) {
+//     console.log("decrement", this);
+//     this.value -= num;
+//   },
+// };
 
-function foo(number, callback) {
-  //   console.log(callback);
+// function foo(number, callback) {
 
-  callback(number);
-}
+//   callback(number);
+// }
 
-foo(10, counter.increment.bind(counter));
-foo(1, counter.increment.bind(counter));
-console.log(counter);
-foo(3, counter.decrement.bind(counter));
+//? foo(10, counter.increment.bind(counter));
+//? foo(1, counter.increment.bind(counter));
+// console.log(counter);
+//? foo(3, counter.decrement.bind(counter));
 
-console.log(counter);
+// console.log(counter);
+// ?_______________________________________________________
