@@ -1413,56 +1413,112 @@
 // ?_______________________________________________________
 
 //!         Урок 2. Модуль 6. ООП. Класи
+
 //TODO                   Класи
 
-class Car {
-  #price;
+//? class Car {
+//?   static qty = 0;
 
+//?   static increment() {
+//?     Car.qty += 1;
+//?   }
+
+//?   #price;
+
+//?   constructor(obj) {
+//?     this.brand = obj.brand;
+//?     this.model = obj.modal;
+//?     this.#price = obj.price;
+//?     Car.increment();
+//?   }
+//*   getPrice() {
+//*     return this.#price;
+//*   }
+//*   changePrise(newPrice) {
+//*     this.#price = newPrice;
+//*   }
+
+//*   get price() {
+//*     return this.#price;
+//*   }
+
+//*   set price(newPrice) {
+//*     return this.#checkType(newPrice, "number")
+//*       ? (this.#price += newPrice)
+//*       : console.log("OOOPS!");
+//     // if (this.checkType(newPrice, "number")) {
+//     //   this.#price += newPrice;
+//     //   return;
+//     // }
+//     // console.log("OOOPS!");
+//*   }
+
+//*   #checkType(data, type) {
+//*     return typeof data !== type ? false : true;
+//     // if (typeof data !== type) {
+//     //   return false;
+//     // }
+//     // return true;
+//*   }
+//* }
+
+//? const bmw = new Car({ brand: "bmw", modal: "x5", price: 55000 }); // bmw.construktor()
+//? const audi = new Car({ brand: "Audi", modal: "q7", price: 48000 }); // bmw.construktor()
+// // const audi = new Car("audi"); // audi.construktor()
+//? bmw.price = 8888;
+//* console.log(bmw.price);
+// // bmw.changePrise(59000);
+// // console.log(bmw.price);
+//* console.log(bmw);
+// // console.log(audi);
+//* console.log(Car.qty);
+//* console.log(bmw.qty);
+
+//TODO_______________________________________________________
+
+//TODO           Наслідування класів(extends)
+
+class Hero {
   constructor(obj) {
-    this.brand = obj.brand;
-    this.model = obj.modal;
-    this.#price = obj.price;
+    this.name = obj.name;
+    this.xp = obj.xp;
   }
-  getPrice() {
-    return this.#price;
-  }
-  changePrise(newPrice) {
-    this.#price = newPrice;
-  }
-
-  get price() {
-    return this.#price;
-  }
-
-  set price(newPrice) {
-    return this.#checkType(newPrice, "number")
-      ? (this.#price += newPrice)
-      : console.log("OOOPS!");
-    // if (this.checkType(newPrice, "number")) {
-    //   this.#price += newPrice;
-    //   return;
-    // }
-    // console.log("OOOPS!");
-  }
-
-  #checkType(data, type) {
-    return typeof data !== type ? false : true;
-    // if (typeof data !== type) {
-    //   return false;
-    // }
-    // return true;
+  gainXp(amout) {
+    console.log(`${this.name} received ${amout} xp`);
+    this.xp += amout;
   }
 }
 
-const bmw = new Car({ brand: "bmw", modal: "x5", price: 55000 }); // bmw.construktor()
-// const audi = new Car("audi"); // audi.construktor()
+class Warrior extends Hero {
+  constructor(obj) {
+    super({
+      name: obj.name,
+      xp: obj.xp,
+    });
+    this.weapon = obj.weapon;
+  }
+  attack() {
+    console.log(`${this.name} attack with ${this.weapon}`);
+  }
+}
 
-bmw.price = 8888;
-console.log(bmw.price);
+class Mag extends Hero {
+  constructor(obj) {
+    super({
+      name: obj.name,
+      xp: obj.xp,
+    });
+    this.spells = obj.spells;
+  }
+  cast() {
+    console.log(`${this.name} is casting a spell`);
+  }
+}
 
-// bmw.changePrise(59000);
+const arthas = new Warrior({ name: "Arthas", xp: 1000, weapon: "sword" });
+const khadgar = new Mag({ name: "Khadgar", xp: 500, spells: ["firebool"] });
 
-// console.log(bmw.price);
+khadgar.gainXp(200);
+khadgar.cast();
 
-console.log(bmw);
-// console.log(audi);
+console.log(khadgar);
