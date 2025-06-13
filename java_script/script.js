@@ -1341,3 +1341,41 @@
 
 // hotel.showThis((hotel.username = "Andora"));
 // username.showThis();
+
+// ?_______________________________________________________
+
+//TODO     Прототипи обєкта
+
+// const animal = {
+//   lengs: 4,
+// };
+
+// const dog = Object.create(animal);
+
+// dog.name = "Patron";
+// console.log(dog);
+// // console.log(dog.hasOwnProperty("name"));
+// // console.log(dog.hasOwnProperty("legn"));
+
+// for (const key in dog) {
+//   if (dog.hasOwnProperty(key)) {
+//     console.log(dog);
+//   }
+// }
+
+const cruiseControl = {
+  speed: 0,
+  brand: "Audi",
+  accelarate() {
+    this.spead += 10;
+    console.log(`Автомобіль ${this.brand} має швидкість ${this.speed}`);
+  },
+  decrease() {
+    if (this.speed <= 0) {
+      console.log("Авто зупинилось");
+      return;
+    }
+    this.speed -= 10;
+    console.log(`Автомобіль ${this.brand} гальмує ${this.speed}`);
+  },
+};
