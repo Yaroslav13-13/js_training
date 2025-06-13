@@ -1551,37 +1551,62 @@
 // }
 //?___________________________________________________
 
-class Bloger {
-  constructor(obj) {
-    this.email = obj.email;
-    this.age = obj.age;
-    this.numberOfPosts = obj.numberOfPosts;
-    this.topics = obj.topics;
-  }
-  getInfo() {
-    return `User ${this.email} is ${this.age} years old and has ${this.numberOfPosts}`;
-  }
-  updatePostCount(value) {
-    this.numberOfPosts += value;
-  }
-}
+//? class Bloger {
+//?   constructor(obj) {
+//?     this.email = obj.email;
+//?     this.age = obj.age;
+//?     this.numberOfPosts = obj.numberOfPosts;
+//?     this.topics = obj.topics;
+//?   }
+//?   getInfo() {
+//?     return `User ${this.email} is ${this.age} years old and has ${this.numberOfPosts}`;
+//?   }
+//?   updatePostCount(value) {
+//?     this.numberOfPosts += value;
+//?   }
+//? }
 
-const alice = new Bloger({
-  email: "alice@gmail.com",
-  age: 28,
-  numberOfPosts: 20,
-  topics: ["sports", "gaming"],
-});
+//* const alice = new Bloger({
+//*   email: "alice@gmail.com",
+//*   age: 28,
+//*   numberOfPosts: 20,
+//*   topics: ["sports", "gaming"],
+//* });
+//* alice.updatePostCount(7);
+//* console.log(alice.getInfo());
 
-// alice.updatePostCount(7);
-// console.log(alice.getInfo());
+//* const yaroslav = new Bloger({
+//*   email: "yaroslav@gmail.com",
+//*   age: 37,
+//*   numberOfPosts: 33,
+//*   topics: ["programming", "JavaScript"],
+//* });
+//* yaroslav.updatePostCount(8);
+//* console.log(yaroslav.getInfo());
+//?___________________________________________________
 
-const yaroslav = new Bloger({
-  email: "yaroslav@gmail.com",
-  age: 37,
-  numberOfPosts: 33,
-  topics: ["programming", "JavaScript"],
-});
-
-yaroslav.updatePostCount(8);
-console.log(yaroslav.getInfo());
+//* class User {
+//*   #login;
+//*   #email;
+//*   constructor(myLogin, myEmail) {
+//*     this.#login = myLogin;
+//*     this.#email = myEmail;
+//*   }
+//*   get login() {
+//*     return this.#login;
+//*   }
+//*   set login(newLogin) {
+//*     this.#login = newLogin;
+//*   }
+//*   get email() {
+//*     return this.#email;
+//*   }
+//*   set email(newEmail) {
+//*     this.#email = newEmail;
+//*   }
+//* }
+//* const yaroslav = new User("Yarik", "yaroslav@gmail.com");
+//* yaroslav.email = "syperYaroslav@gmail.con";
+//* yaroslav.login = "syperYarik";
+//* console.log(yaroslav);
+//?___________________________________________________
