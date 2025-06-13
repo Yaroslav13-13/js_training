@@ -1363,19 +1363,80 @@
 //   }
 // }
 
-const cruiseControl = {
-  speed: 0,
-  brand: "Audi",
-  accelarate() {
-    this.spead += 10;
-    console.log(`Автомобіль ${this.brand} має швидкість ${this.speed}`);
-  },
-  decrease() {
-    if (this.speed <= 0) {
-      console.log("Авто зупинилось");
-      return;
-    }
-    this.speed -= 10;
-    console.log(`Автомобіль ${this.brand} гальмує ${this.speed}`);
-  },
-};
+// ?_______________________________________________________
+// const cruiseControl = {
+//   speed: 0,
+//   brand: "Audi",
+//   accelarate() {
+//     this.spead += 10;
+//     console.log(`Автомобіль ${this.brand} має швидкість ${this.speed}`);
+//   },
+//   decrease() {
+//     if (this.speed <= 0) {
+//       console.log("Авто зупинилось");
+//       return;
+//     }
+//     this.speed -= 10;
+//     console.log(`Автомобіль ${this.brand} гальмує ${this.speed}`);
+//   },
+// };
+// cruiseControl.accelarate();
+// cruiseControl.accelarate();
+// cruiseControl.decrease();
+// console.log(cruiseControl);
+// ?_______________________________________________________
+
+// const SPEED = 60;
+
+// const bmw = {
+//   brand: "BMW",
+//   speed: 80,
+// };
+
+// const audi = {
+//   brand: "Audi",
+//   speed: 55,
+// };
+
+//* function speedSensor(maxSpeed) {
+//   //   if (this.speed <= maxSpeed) {
+//   //     return `Автомобіль ${this.brand} рухається з безпечною швидкістю`;
+//   //   }
+//   //   return `${this.brand} перевищує швидкість`;
+//*   return this.speed <= maxSpeed
+//*     ? `Автомобіль ${this.brand} рухається з безпечною швидкістю`
+//*     : `${this.brand} перевищує швидкість`;
+//* }
+
+// console.log(speedSensor.call(bmw, SPEED));
+// console.log(speedSensor.call(audi, SPEED));
+// ?_______________________________________________________
+
+//!         Урок 2. Модуль 6. ООП. Класи
+//TODO                   Класи
+
+class Car {
+  #price;
+
+  constructor(obj) {
+    this.brand = obj.brand;
+    this.model = obj.modal;
+    this.#price = obj.price;
+  }
+  getPrice() {
+    return this.#price;
+  }
+  changePrise(newPrice) {
+    this.#price = newPrice;
+  }
+}
+
+const bmw = new Car({ brand: "bmw", modal: "x5", price: 55000 }); // bmw.construktor()
+// const audi = new Car("audi"); // audi.construktor()
+
+bmw.changePrise(59000);
+
+console.log(bmw.getPrice());
+
+console.log(bmw);
+// console.log(audi);
