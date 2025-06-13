@@ -1429,14 +1429,40 @@ class Car {
   changePrise(newPrice) {
     this.#price = newPrice;
   }
+
+  get price() {
+    return this.#price;
+  }
+
+  set price(newPrice) {
+    return this.#checkType(newPrice, "number")
+      ? (this.#price += newPrice)
+      : console.log("OOOPS!");
+    // if (this.checkType(newPrice, "number")) {
+    //   this.#price += newPrice;
+    //   return;
+    // }
+    // console.log("OOOPS!");
+  }
+
+  #checkType(data, type) {
+    return typeof data !== type ? false : true;
+    // if (typeof data !== type) {
+    //   return false;
+    // }
+    // return true;
+  }
 }
 
 const bmw = new Car({ brand: "bmw", modal: "x5", price: 55000 }); // bmw.construktor()
 // const audi = new Car("audi"); // audi.construktor()
 
-bmw.changePrise(59000);
+bmw.price = 8888;
+console.log(bmw.price);
 
-console.log(bmw.getPrice());
+// bmw.changePrise(59000);
+
+// console.log(bmw.price);
 
 console.log(bmw);
 // console.log(audi);
