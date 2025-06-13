@@ -1478,47 +1478,74 @@
 
 //TODO           Наслідування класів(extends)
 
-class Hero {
-  constructor(obj) {
-    this.name = obj.name;
-    this.xp = obj.xp;
-  }
-  gainXp(amout) {
-    console.log(`${this.name} received ${amout} xp`);
-    this.xp += amout;
-  }
-}
+//? class Hero {
+//?   constructor(obj) {
+//?     this.name = obj.name;
+//?     this.xp = obj.xp;
+//?   }
+//?   gainXp(amout) {
+//?     console.log(`${this.name} received ${amout} xp`);
+//?     this.xp += amout;
+//?   }
+//? }
 
-class Warrior extends Hero {
-  constructor(obj) {
-    super({
-      name: obj.name,
-      xp: obj.xp,
-    });
-    this.weapon = obj.weapon;
-  }
-  attack() {
-    console.log(`${this.name} attack with ${this.weapon}`);
-  }
-}
+//* class Warrior extends Hero {
+//*   constructor(obj) {
+//*     super({
+//*       name: obj.name,
+//*       xp: obj.xp,
+//*     });
+//*     this.weapon = obj.weapon;
+//*   }
+//*   attack() {
+//*     console.log(`${this.name} attack with ${this.weapon}`);
+//*   }
+//* }
 
-class Mag extends Hero {
-  constructor(obj) {
-    super({
-      name: obj.name,
-      xp: obj.xp,
-    });
-    this.spells = obj.spells;
-  }
-  cast() {
-    console.log(`${this.name} is casting a spell`);
-  }
-}
+//* class Mag extends Hero {
+//*   constructor(obj) {
+//*     super({
+//*       name: obj.name,
+//*       xp: obj.xp,
+//*     });
+//*     this.spells = obj.spells;
+//*   }
+//*   cast() {
+//*     console.log(`${this.name} is casting a spell`);
+//*   }
+//* }
 
-const arthas = new Warrior({ name: "Arthas", xp: 1000, weapon: "sword" });
-const khadgar = new Mag({ name: "Khadgar", xp: 500, spells: ["firebool"] });
+// const arthas = new Warrior({ name: "Arthas", xp: 1000, weapon: "sword" });
+// const khadgar = new Mag({ name: "Khadgar", xp: 500, spells: ["firebool"] });
+// khadgar.gainXp(200);
+// khadgar.cast();
+// console.log(khadgar);
+//?__________________________________________________________________
 
-khadgar.gainXp(200);
-khadgar.cast();
+// class Warrior {
+//   constructor(obj) {
+//     this.name = obj.name;
+//     this.xp = obj.xp;
+//   }
+// }
 
-console.log(khadgar);
+// class Mage {
+//   constructor(obj) {
+//     this.name = obj.name;
+//     this.xp = obj.xp;
+//   }
+// }
+
+// class Warlock {
+//   constructor(obj) {
+//     this.name = obj.name;
+//     this.xp = obj.xp;
+//   }
+// }
+
+// class Paladin {
+//   constructor(obj) {
+//     this.name = obj.name;
+//     this.xp = obj.xp;
+//   }
+// }
