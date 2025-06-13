@@ -1326,3 +1326,18 @@
 
 // console.log(counter);
 // ?_______________________________________________________
+
+// const hotel = {
+//   username: "Resort hotel",
+//   showThis() {
+//     const foo = () => {
+//       console.log("this in foo: ", this);
+//     };
+
+//     foo();
+//     console.log("this in showThis: ", this);
+//   },
+// };
+
+// hotel.showThis((hotel.username = "Andora"));
+// username.showThis();
