@@ -1656,9 +1656,12 @@
 //? console.log(dog.hasOwnProperty("legs")); // false
 
 //?___________________________________________________________________
+
+// TODO     Статичні властивості
+
 // class Car {
 //   #price;
-//   static maxPrice = 50000;
+//?   static maxPrice = 50000;
 
 //   constructor(params) {
 //     this.#price = params.price;
@@ -1669,9 +1672,9 @@
 //   }
 
 //   set price(newPrice) {
-//     if (newPrice <= Car.maxPrice) {
-//       this.#price = newPrice;
-//     }
+//?     if (newPrice <= Car.maxPrice) {
+//?       this.#price = newPrice;
+//?     }
 //   }
 // }
 
@@ -1685,15 +1688,16 @@
 // console.log(audi.price); // 49000
 
 //?___________________________________________________________________
+
+// TODO     Статичні методи
 // class Car {
 //   static #maxPrice = 50000;
-//   static checkPrice(price) {
-//     // if(price>)
+//?   static checkPrice(price) {
 
-//     return price > Car.#maxPrice
-//       ? "Error! Price exceeds the maximum"
-//       : "Success! Price is within acceptable limits";
-//   }
+//?     return price > Car.#maxPrice
+//?       ? "Error! Price exceeds the maximum"
+//?       : "Success! Price is within acceptable limits";
+//?   }
 
 //   constructor(params) {
 //     this.price = params.price;
@@ -1708,6 +1712,7 @@
 
 //?___________________________________________________________________
 
+// TODO     Наслідування класів - extends
 // class User {
 //   constructor(email) {
 //     this.email = email;
@@ -1721,6 +1726,47 @@
 //     this.email = newEmail;
 //   }
 // }
-// class Admin extends User {
+//? class Admin extends User {
 //   static role = { BASIC: "basic", SUPERUSER: "superuser" };
 // }
+//?___________________________________________________________________
+
+// TODO     Конструктор дочірнього класу - super
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//?   constructor(params) {
+//?     super(params.email);
+//?     this.access = params.access;
+//?   }
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email);
+// console.log(mango.access);
+
+//?___________________________________________________________________
