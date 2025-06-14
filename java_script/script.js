@@ -1610,3 +1610,44 @@
 //* yaroslav.login = "syperYarik";
 //* console.log(yaroslav);
 //?___________________________________________________
+
+//TODO  Прототипи (це резервне сховище властивостей і методів об'єкта)
+//TODO   Метод create()
+//? Завдання:
+//? Зміни код таким чином, щоб об'єкт parent став прототипом
+//? для об'єкта у змінній сhild.
+
+//* const parent = {
+//*   name: "Stacey",
+//*   surname: "Moore",
+//*   age: 54,
+//*   heritage: "Irish",
+//* };
+//? const child = Object.create(parent);
+//* child.name = "Jason";
+//* child.age = 27;
+//?___________________________________________________
+
+//TODO   Перевірка прототипу  isPrototypeOf()
+// const customer = {
+// 	username: "Jacob"
+// };
+// const animal = {
+// 	legs: 4
+// };
+// const dog = Object.create(animal);
+// dog.name = "Mango";
+// console.log(dog); // { name: "Mango", [[Prototype]]: animal }
+//? console.log(animal.isPrototypeOf(dog)); // true
+//? console.log(dog.isPrototypeOf(animal)); // false
+//? console.log(customer.isPrototypeOf(dog)); // false
+
+//TODO   метод obj.hasOwnProperty(key)
+const animal = {
+  legs: 4,
+};
+const dog = Object.create(animal);
+dog.name = "Mango";
+console.log(dog); // {name: "Mango", [[Prototype]]: animal}
+console.log(dog.name); // "Mango"
+console.log(dog.legs); // 4

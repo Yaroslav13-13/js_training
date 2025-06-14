@@ -264,7 +264,26 @@ const fruit = "apple";
 
 //TODO              Метод slice() - повертає новий масив
 //? Приклад:
+//* const planets = ["Earth", "Mars", "Venus", "Jupiter", "Saturn"];
+//* console.log(planets.slice(0, 2)); // ['Earth', 'Mars']
+//* console.log(planets.slice(0, 4)); // ['Earth', 'Mars', 'Venus', 'Jupiter']
+//* console.log(planets.slice(1, 3)); // ['Mars', 'Venus']
 
+//?     Завдання:
+//? Доповни код таким чином, щоб змінні містили часткові копії вихідного масиву fruits.
+//? firstTwoEls - масив із перших двох елементів
+//? nonExtremeEls - масив з усіх елементів, крім першого та останнього
+//? lastThreeEls - масив із трьох останніх елементів
+
+// const fruits = ["apple", "plum", "pear", "orange", "banana"];
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, 4);
+// const lastThreeEls = fruits.slice(2);
+// console.log(firstTwoEls);
+// console.log(nonExtremeEls);
+// console.log(lastThreeEls);
+
+//TODO              Метод
 //!======================== this ==================================!\\
 
 //! ✅ Як запам’ятати!!!
