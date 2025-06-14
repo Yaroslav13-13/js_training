@@ -595,7 +595,7 @@
 // const tags = tweets.flatMap((item) => item.tags);
 // console.log(tags);
 
-//!        Урок 1. Модуль 5. Перебираючі методи масивів:
+//!        Урок 2. Модуль 5. Перебираючі методи масивів:
 
 //TODO     Метод filter
 

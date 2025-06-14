@@ -97,6 +97,24 @@
 //*   console.log(findMax([3, 7, 2, 9, 5])); // 9
 //*   console.log(findMax([-10, -3, -1])); // -1
 //!______________________________________________________________
+//? Напиши функцію, яка повертає найбільше число з масиву.
+//? Якщо на вхід передано не масив — поверни "Sorry, it is not an array!"
+
+//* function findBiggestNumber(numbers) {
+//*   if (!Array.isArray(numbers)) {
+//*     return "Sorry, it is not an array!";
+//*   }
+//*   let maxNumber = numbers[0];
+//*   for (let i = 1; i < numbers.length; i = i + 1) {
+//*     if (numbers[i] > maxNumber) {
+//*       maxNumber = numbers[i];
+//*     }
+//*   }
+//*   return maxNumber;
+//* }
+//* console.log(findBiggestNumber([2, 5, 35, 1, 56]));
+//* console.log(findBiggestNumber("MaxNumber"));
+//!______________________________________________________________
 
 //TODO   Використовуючи синтаксис обчислювальних властивостей,
 //TODO   доповни код оголошення об'єкта credentials таким чином,
@@ -359,21 +377,3 @@
 
 // console.table(names);
 //?______________________________________________________________________
-
-//!======================== this ==================================!\\
-
-//! ✅ Як запам’ятати!!!
-//TODO Виклик через…:	        this буде…:
-//?    obj.method()	            obj
-//?    function()	            window або undefined
-//?    new Func()	            новий об’єкт
-//?    Стрілочна функція	    як у батьківському контексті
-//?    DOM обробник (звичайна)	елемент, що спрацював
-
-// const user = {
-//   name: "Софія",
-//   sayHi() {
-//     console.log(`Hello i am ${this.name}`);
-//   },
-// };
-// user.sayHi();

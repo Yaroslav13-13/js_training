@@ -210,4 +210,75 @@ const fruit = "apple";
 //*     const lastElementIndex = planets.length - 1;
 //*     console.log(planets[lastElementIndex]); // "Venus"
 
-//TODO                 Індекс останнього елемента
+//!===============  Методи масиву ================!\\
+
+//TODO              Метод join() - об'єднює елементи масиву в рядок
+
+//* const words = ["JavaScript", "is", "amazing"];
+//* console.log(words.join("")); // 'JavaScriptisamazing'
+//* console.log(words.join(" ")); // 'JavaScript is amazing'
+//* console.log(words.join("-")); // 'JavaScript-is-amazing'
+
+//?      Завдання:
+//?      Функція getLength(array) очікує один параметр array - масив довільних значень.
+//?      Доповни код функції так, щоб вона перетворювала масив у рядок, без роздільників,
+//?       і повертала кількість символів в отриманому рядку.
+
+//       unction getLength(array) {
+//        let arreyLength = array.join("").length;
+//        return arreyLength;
+//
+//       onsole.log(getLength(["Mango", "hurries", "to", "the", "train"]));
+//       onsole.log(getLength(["M", "a", "n", "g", "o"]));
+//       onsole.log(getLength(["top", "picks", "for", "you"]));
+
+//TODO              Метод split() - перетворює рядок на масив
+//? Приклад:
+//* const name = "Mango";
+//? const letters = name.split("");
+//* console.log(letters); // ["M", "a", "n", "g", "o"]
+
+//* const message = "JavaScript essentials";
+//? const words = message.split(" ");
+//* console.log(words); // ["JavaScript", "essentials"]
+
+//* const slug = "amazing-french-recipes";
+//? const slugParts = slug.split("-");
+//* console.log(slugParts); // ["amazing", "french", "recipes"]
+
+//?     Завдання:
+//?     Сервісу гравірування прикрас потрібна функція, яка б автоматично рахувала ціну гравірування,
+//?      залежно від кількості слів і ціни за слово.
+//?     Оголошена функція calculateEngravingPrice(message, pricePerWord).
+//?     Ця функція приймає першим параметром рядок, що складається зі слів, розділених лише пробілами (параметр message) та другим параметром - число, що містить ціну гравірування за одне слово (параметр pricePerWord).
+//?     Доповни тіло функції так, щоб вона повертала загальну вартість гравірування усіх слів в рядку.
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//   const words = message.split(" ").length;
+//   let totalPrice = words * pricePerWord;
+//   return totalPrice;
+// }
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 20));
+// console.log(calculateEngravingPrice("Web-development is creative work", 40));
+
+//TODO              Метод slice() - повертає новий масив
+//? Приклад:
+
+//!======================== this ==================================!\\
+
+//! ✅ Як запам’ятати!!!
+//TODO Виклик через…:	        this буде…:
+//?    obj.method()	            obj
+//?    function()	            window або undefined
+//?    new Func()	            новий об’єкт
+//?    Стрілочна функція	    як у батьківському контексті
+//?    DOM обробник (звичайна)	елемент, що спрацював
+
+// const user = {
+//   name: "Софія",
+//   sayHi() {
+//     console.log(`Hello i am ${this.name}`);
+//   },
+// };
+// user.sayHi();
