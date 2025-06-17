@@ -8,7 +8,8 @@
  - trim
 */
 
-//todo   toLowerCase
+//!                             toLowerCase
+
 //? 1. Зроби все слово маленькими:
 //* const word = "HELLO";
 //* const str = word.toLowerCase();
@@ -24,14 +25,51 @@
 //* userName("AdMINsdf");
 
 //? 3. Приведи всі слова в реченні до нижнього регістру:
-const sentence = "JavaScript Is AWESOME";
-const word = sentence.toLocaleLowerCase();
-console.log(word);
+//* const sentence = "JavaScript Is AWESOME";
+//* const word = sentence.toLowerCase();
+//* console.log(word);
 
 //? 4. Зроби логін маленькими літерами:
-const login = "User123";
+//* const login = "User123";
+//* const loginLowerCase = login.toLowerCase();
+//* console.log(loginLowerCase);
 
-//todo _______________________
+//? 5. Порівняй два рядки без урахування регістру:
+//* const str1 = "Hello";
+//* const str2 = "HELLO";
+//* const result = str1.toLocaleLowerCase() === str2.toLocaleLowerCase();
+//* console.log(result);
+//!==================================================================
+
+//!                             toUpperCase
+
+//? 1. Перетвори слово в великі літери:
+//* const word = "hello";
+//* const result = word.toUpperCase();
+//* console.log(result);
+
+//? 2. Привітайся гучно:
+//* const name = "yaroslav";
+//* const word = `HELLO, ${name.toUpperCase()}!`;
+//* console.log(word);
+
+//? 3. Зроби всі слова в реченні великими:
+//* const sentence = "coding is fun";
+//* console.log(sentence.toUpperCase());
+
+//? 4. Порівняй два рядки без урахування регістру:
+// const a = "Test";
+// const b = "test";
+// const result = a.toUpperCase === b.toUpperCase;
+// console.log(result);
+
+//? 5. Перевір, чи введений код збігається з "SECRET", не зважаючи на регістр:
+const userInput = "SeCrEt";
+const result = userInput.toUpperCase() === "SECRET";
+console.log(result);
+//!==================================================================
+
+//!                             toUpperCase
 
 // function isAdult(age) {
 //   return age >= 18;
