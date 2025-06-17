@@ -1,3 +1,38 @@
+//! Методт рядків
+/* 
+ - slice
+ - toLowerCase / toUpperCase
+ - icludes
+ - startsWith / endWith
+ - indexOf
+ - trim
+*/
+
+//todo   toLowerCase
+//? 1. Зроби все слово маленькими:
+//* const word = "HELLO";
+//* const str = word.toLowerCase();
+//* console.log(str);
+
+//? 2. Перевір, чи слово користувача дорівнює "admin" (ігноруючи регістр):
+
+//* function userName(name) {
+//*   return name.toLowerCase() === "admin"
+//*     ? console.log("Access allowed")
+//*     : console.log("Access denied");
+//* }
+//* userName("AdMINsdf");
+
+//? 3. Приведи всі слова в реченні до нижнього регістру:
+const sentence = "JavaScript Is AWESOME";
+const word = sentence.toLocaleLowerCase();
+console.log(word);
+
+//? 4. Зроби логін маленькими літерами:
+const login = "User123";
+
+//todo _______________________
+
 // function isAdult(age) {
 //   return age >= 18;
 // }
