@@ -129,7 +129,75 @@
 //?   5. Чи починається пароль з "123":
 //*   const password = "123qwerty";
 //*   console.log(password.startsWith("123qwerty"));
+//!==================================================================
+//!                             Метод endsWith()
 
+//?   1. Перевір, чи слово закінчується на "t":
+//*   const word = "JavaScript";
+//*   console.log(word.endsWith("t"));
+//?   2. Чи закінчується фраза на "!":
+//*   const phrase = "Hello, world!";
+//*   console.log(phrase.endsWith("!"));
+//?   3. Чи закінчується адреса на ".com":
+//*   const url = "https://example.com";
+//*   console.log(url.endsWith(".com"));
+//?   4. Перевір, чи ім’я закінчується на "ian":
+//*   const name = "Maximilian";
+//*   console.log(name.endsWith("ian"));
+//?   5. Чи закінчується пароль на "qwerty":
+//*   const password = "123qwerty";
+//*   console.log(password.endsWith("qwerty"));
+//!==================================================================
+//!                             Метод replace(), replaceAll()
+
+//?   1. Замінити "cat" на "dog":
+//*   const text = "I have a cat.";
+//*   console.log(text.replace("cat", "dog"));
+//?   2. Заміни "world" на "JavaScript":
+//*   const phrase = "Hello world!";
+//*   console.log(phrase.replace("world", "JavaScript"));
+// ?   3. Заміни "-" на " ":
+//*   const slug = "front-end-developer";
+//*   console.log(slug.replaceAll("-", " "));
+//?   4. Заміни ім’я "Ann" на "Mary":
+//*   const greeting = "Hi, Ann!";
+//*   console.log(greeting.replace("Ann", "Mary"));
+//?   5. Заміни слово "bad" на "good":
+//* const feedback = "That was a bad idea.";
+//* console.log(feedback.replace("bad", "good"));
+//!==================================================================
+//!                             Метод slice()
+//?   1. Виріж "Java" зі слова:
+//*   const word = "JavaScript";
+//*   console.log(word.slice(0, 4));
+//?   2. Виріж "Script":
+//* const word = "JavaScript";
+//* console.log(word.slice(-6));
+//?   3. Виріж останні 3 символи:
+//* const text = "developer";
+//* console.log(text.slice(-3));
+//?   4. Виріж "world" з фрази:
+//* const phrase = "Hello world!";
+//* console.log(phrase.slice(6, 11));
+//?   5. Виріж "JS" з кінця рядка:
+//* const str = "I love JS";
+//* console.log(str.slice(-2));
+
+//!==================================================================
+//!                             Метод split()
+//?   1. Розбий рядок "JavaScript is awesome" на слова:
+// const str1 = "JavaScript is awesome";
+// console.log(str.split());
+//?   2. Розбий "apple,banana,orange" по комі:
+// const str2 = "apple,banana,orange";
+// console.log(str.split(" "));
+//?   3. Розбий "12345" на окремі цифри:
+// const str3 = "12345";
+// console.log(str3.split(""));
+//?   4. Витягни ім'я з рядка "Name: Yaroslav":
+const str4 = "Name: Yaroslav";
+console.log(str4.split());
+//?   15. Розбий "hello world" тільки на 1 слово:
 // function isAdult(age) {
 //   return age >= 18;
 // }
