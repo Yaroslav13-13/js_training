@@ -8,7 +8,7 @@
  - trim
 */
 
-//!                             toLowerCase
+//!                           Метод toLowerCase ()
 
 //?    1. Зроби все слово маленькими:
 //*    const word = "HELLO";
@@ -40,7 +40,7 @@
 //*    console.log(result);
 //!==================================================================
 
-//!                             toUpperCase
+//!                            Метод toUpperCase ()
 
 //?    1. Перетвори слово в великі літери:
 //*    const word = "hello";
@@ -68,7 +68,7 @@
 //*    console.log(result);
 //!==================================================================
 
-//!                             trim
+//!                            Метод trim ()
 
 //?   1. Прибери зайві пробіли:
 //    onst word = "   hello   ";
@@ -80,9 +80,55 @@
 //*    console.log(result);
 
 //?    3. Порахуй довжину рядка до і після trim():
-const str = "   JavaScript   ";
-console.log(str.length);
-console.log(str.trim().length);
+//*    const str = "   JavaScript   ";
+//*    console.log(str.length);
+//*    console.log(str.trim().length);
+
+//?    4. Виведи речення без пробілів на початку і в кінці:
+//*    const sentence = "   I love JS!   ";
+//*    console.log(sentence.trim());
+
+//?    5. Очисти введене ім’я:
+//*    const name = "   Yaroslav   ";
+//*    console.log(name.trim());
+
+//!==================================================================
+//!                             Метод includes()
+
+//?    1. Перевір, чи слово містить літеру "a":
+//*    const word = "javascript";
+//*    console.log(word.includes("a"));
+
+//?   2. Чи є в реченні слово "fun"?:
+//*   const sentence = "Learning JavaScript is fun!";
+//*   console.log(sentence.includes("fun"));
+//?   3. Перевір, чи містить логін "admin":
+//*   const login = "superadmin123";
+//*   console.log(login.includes("admin"));
+//?   4. Чи містить рядок "error":
+//*   const message = "No errors found";
+//*   console.log(message.includes("error"));
+//?   5. Перевір, чи є в слові "hello" підрядок "ll":
+//*   const greeting = "hello";
+//*   console.log(greeting.includes("ll"));
+//!==================================================================
+//!                             Метод startsWith()
+
+//?   1. Перевір, чи слово починається з "J":
+//*   const word = "JavaScript";
+//*   console.log(word.startsWith("J"));
+//?   2. Чи починається фраза з "Hello":
+//*   const phrase = "Hello, world!";
+//*   console.log(phrase.startsWith("Hello"));
+//?   3. Чи починається адреса з "https":
+//*   const url = "https://example.com";
+//*   console.log(url.startsWith("https"));
+//?   4. Перевір, чи ім’я починається з "Max":
+//*   const name = "Maximilian";
+//*   console.log(name.startsWith("Max"));
+//?   5. Чи починається пароль з "123":
+//*   const password = "123qwerty";
+//*   console.log(password.startsWith("123qwerty"));
 
 // function isAdult(age) {
 //   return age >= 18;
