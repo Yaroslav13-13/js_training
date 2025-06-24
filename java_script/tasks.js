@@ -93,6 +93,7 @@
 //*    console.log(name.trim());
 
 //!==================================================================
+
 //!                             Метод includes()
 
 //?    1. Перевір, чи слово містить літеру "a":
@@ -112,6 +113,7 @@
 //*   const greeting = "hello";
 //*   console.log(greeting.includes("ll"));
 //!==================================================================
+
 //!                             Метод startsWith()
 
 //?   1. Перевір, чи слово починається з "J":
@@ -130,6 +132,7 @@
 //*   const password = "123qwerty";
 //*   console.log(password.startsWith("123qwerty"));
 //!==================================================================
+
 //!                             Метод endsWith()
 
 //?   1. Перевір, чи слово закінчується на "t":
@@ -148,6 +151,7 @@
 //*   const password = "123qwerty";
 //*   console.log(password.endsWith("qwerty"));
 //!==================================================================
+
 //!                             Метод replace(), replaceAll()
 
 //?   1. Замінити "cat" на "dog":
@@ -166,7 +170,9 @@
 //* const feedback = "That was a bad idea.";
 //* console.log(feedback.replace("bad", "good"));
 //!==================================================================
+
 //!                             Метод slice()
+
 //?   1. Виріж "Java" зі слова:
 //*   const word = "JavaScript";
 //*   console.log(word.slice(0, 4));
@@ -182,22 +188,110 @@
 //?   5. Виріж "JS" з кінця рядка:
 //* const str = "I love JS";
 //* console.log(str.slice(-2));
-
 //!==================================================================
 //!                             Метод split()
+
 //?   1. Розбий рядок "JavaScript is awesome" на слова:
-// const str1 = "JavaScript is awesome";
-// console.log(str.split());
+//*   const str1 = "JavaScript is awesome";
+//*   console.log(str1.split(" "));
 //?   2. Розбий "apple,banana,orange" по комі:
-// const str2 = "apple,banana,orange";
-// console.log(str.split(" "));
+//*   const str2 = "apple,banana,orange";
+//*   console.log(str2.split(","));
 //?   3. Розбий "12345" на окремі цифри:
-// const str3 = "12345";
-// console.log(str3.split(""));
+//*   const str3 = "12345";
+//*   console.log(str3.split(""));
 //?   4. Витягни ім'я з рядка "Name: Yaroslav":
-const str4 = "Name: Yaroslav";
-console.log(str4.split());
-//?   15. Розбий "hello world" тільки на 1 слово:
+//*   const str4 = "Name: Yaroslav";
+//*   console.log(str4.split(": "));
+//?   5. Розбий "hello world" тільки на 1 слово:
+//*   const str5 = "hello world";
+//*   console.log(str5.split(" ", 2));
+//!==================================================================
+//!                             Метод join()
+//?   Задача 1: Простий join:
+// const letters = ["H", "e", "l", "l", "o"];
+// console.log(letters.join(""));
+//?    Задача 2: Дата:
+// const date = ["2025", "06", "23"]; // Очікується: "2025/06/23"
+// console.log(date.join("/"));
+//?   Задача 3: Імена через кому:
+// const names = ["Іван", "Оля", "Тарас"]; // Очікується: "Іван, Оля, Тарас"
+// console.log(names.join(","));
+//?    Задача 4: Побудуй URL:
+// const parts = ["https:", "", "site.com", "about", "contacts"]; // Очікується: "https://site.com/about/contacts"
+// console.log(parts.join(""));
+//?    Задача 5: Масив чисел у вигляді телефона:
+// const phone = [0, 6, 7, "-", 1, 2, 3, "-", 4, 5, 6]; // Очікується: "067-123-456"
+// console.log(phone.join(""));
+//!==================================================================
+//!              Метод push() – додати елемент в кінець масиву
+//?  ✅ Задача 1:
+// const names = ["Оля", "Ігор"]; // Додай "Анна"
+// names.push("Анна");
+// console.log(names);
+//?  ✅ Задача 2:
+// const numbers = [1, 2, 3]; // Додай число 4 і 5
+// numbers.push(4, 5);
+// console.log(numbers);
+//?  ✅ Задача 3:
+// const tasks = []; // Додай три завдання: "встати", "вмитися", "поснідати"
+// tasks.push("встати", "вмитися", "поснідати");
+// console.log(tasks);
+//?  ✅ Задача 4:
+// const letters = ["A", "B"]; // Додай "C", а потім виведи довжину масиву
+// letters.push("C");
+// console.log(letters);
+// console.log(letters.length);
+//?  ✅ Задача 5:
+// const basket = ["яблуко"]; // Додай в кінець "груша", "банан", "слива" і виведи весь масив
+// basket.push("груша", "банан", "слива");
+// console.log(basket);
+//!==================================================================
+//!              Метод pop() – видалити останній елемент
+//?  ✅ Задача 1:
+// const fruits = ["яблуко", "банан", "вишня"]; // Видали останній фрукт
+// fruits.pop();
+// console.log(fruits);
+//?  ✅ Задача 2:
+// const colors = ["red", "green", "blue", "yellow"]; // Видали останній елемент і виведи його окремо
+// const deletedColor = colors.pop();
+// console.log(deletedColor);
+//?  ✅ Задача 3:
+// const numbers = [10, 20, 30, 40, 50]; // Видали останній елемент тричі
+// for (let i = 0; i < 3; i++) {
+//   numbers.pop();
+// }
+// console.log(numbers);
+// //?  ✅ Задача 4:
+// const tasks = ["прокинутись", "прибрати", "повчити JS"]; // Після видалення останнього завдання виведи нову довжину масиву
+// tasks.pop();
+// console.log(`${tasks} : ${tasks.length}`);
+//?  ✅ Задача 5:
+// const queue = ["перший", "другий", "третій"]; // Видали останнього й додай нового: "новенький"
+// queue.pop();
+// queue.push("новенький");
+// console.log(queue);
+//!==================================================================
+//!              Метод includes() - перевіряє, чи є в масиві певне значення
+//? ✅ Задача 1:
+const fruits = ["яблуко", "банан", "груша"];
+// Перевір, чи є "банан" у масиві
+//? ✅ Задача 2:
+const numbers = [10, 20, 30, 40];
+// Чи є у масиві число 25?
+//? ✅ Задача 3:
+const users = ["Оля", "Ігор", "Таня"];
+// Чи є користувач "Максим"?
+//? ✅ Задача 4:
+const letters = ["a", "b", "c"];
+// Чи є буква "c"?
+//? ✅ Задача 5:
+const tasks = [];
+// Чи є у масиві завдання "помити посуд"?
+
+//!==================================================================
+//!              Метод includes() - перевіряє, чи є в масиві певне значення
+
 // function isAdult(age) {
 //   return age >= 18;
 // }
@@ -576,4 +670,119 @@ console.log(str4.split());
 //   .toSorted((a, b) => a.localeCompare(b));
 
 // console.table(names);
+//?______________________________________________________________________
+
+//!==================== if...else =====================!\\
+
+//* if (number > 10) {
+//*   console.log("Більше 10");
+//* } else {
+//*   console.log("10 або менше");
+//* }
+
+//* function number(numbers) {
+//*   numbers > 10 ? console.log("Більше 10") : console.log("10 або менше");
+//* }
+//* number(12);
+//?______________________________________________________________________
+
+//* function userName(name) {
+//*   if (name === "Yaroslav") {
+//*     console.log("Привіт Ярослав");
+//*   } else if (name === "") {
+//*     console.log("Привіт гість");
+//*   } else {
+//*     console.log("Вхід заборонено");
+//*   }
+//* }
+
+//* userName("Yaroslav");
+//* userName();
+//* userName("");
+//?______________________________________________________________________
+
+//* function checkEvenOdd(number) {
+//*   return number % 2 === 0 ? console.log("парне") : console.log("непарне");
+//* }
+
+//* checkEvenOdd(7); // "непарне"
+//* checkEvenOdd(12); // "парне"
+//?______________________________________________________________________
+
+//* function checkAccess(age) {
+//*   if (age <= 12) {
+//*     console.log("Доступ заборонено: занадто молодий");
+//*   } else if (age > 12 && age <= 17) {
+//*     console.log("Доступ обмежений: потрібен нагляд");
+//*   } else if (age > 18) {
+//*     console.log("Повний доступ");
+//*   }
+//* }
+//* checkAccess(11);
+//* checkAccess(13);
+//* checkAccess(19);
+
+//?______________________________________________________________________
+
+//* function grade(score) {
+//*   if (score >= 90) {
+//*     console.log("Оцінка: A");
+//*   } else if (score >= 80 && score <= 89) {
+//*     console.log("Оцінка: B");
+//*   } else if (score >= 70 && score <= 79) {
+//*     console.log("Оцінка: C");
+//*   } else if (score >= 60 && score <= 69) {
+//*     console.log("Оцінка: D");
+//*   } else {
+//*     console.log("Оцінка: F");
+//*   }
+//* }
+//* grade(92);
+//* grade(85);
+//* grade(77);
+//* grade(66);
+//* grade(51);
+//?______________________________________________________________________
+
+//* function guessNumber(secret, guess) {
+//*   if (secret === guess) {
+//*     console.log("Вітаю! Ти вгадав!");
+//*   } else if (secret > guess) {
+//*     console.log("Занадто мало");
+//*   } else if (secret < guess) {
+//*     console.log("Занадто багато");
+//*   }
+//* }
+//* guessNumber(7, 5); // "Занадто мало"
+//* guessNumber(7, 9); // "Занадто багато"
+//* guessNumber(7, 7); // "Вітаю! Ти вгадав!"
+//?______________________________________________________________________
+
+//!=========================== for =================================!\\
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(i + 1);
+// }
+
+//?______________________________________________________________________
+
+//* let total = 0;
+//* for (let i = 0; i < 10; i++) {
+//*   total += i + 1;
+//* }
+//* console.log(total);
+//?______________________________________________________________________
+
+//* const fruits = ["яблуко", "банан", "апельсин"];
+//* for (let i = 0; i < fruits.length; i++) {
+//*   console.log(fruits[i]);
+//* }
+//?______________________________________________________________________
+
+//* const numbers = [5, 10, 3, 8];
+//* let total = 0;
+//* for (let i = 0; i < numbers.length; i++) {
+//*   total += numbers[i];
+//* }
+//* console.log(total);
 //?______________________________________________________________________

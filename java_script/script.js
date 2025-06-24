@@ -1818,6 +1818,30 @@
 // console.log(mango.access); // "superuser"
 
 // mango.blacklist("poly@mail.com");
-// console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.blacklistedEmails); // ["poly@mail.com" b ]
 // console.log(mango.isBlacklisted("mango@mail.com")); // false
 // console.log(mango.isBlacklisted("poly@mail.com")); // true
+//!===============================================================================
+
+//!         Урок 1. Mодуль 7. DOM. Події
+//todo             querySelector
+
+// const idTitle = document.querySelector("#title-1");
+// console.log(idTitle);
+// const tegTitle = document.querySelector("h1");
+// console.log(tegTitle);
+// const classTitle = document.querySelector(".title");
+// console.log(classTitle);
+// const allUl = document.querySelectorAll(".list-item");
+// console.log(allUl);
+
+// const navUl = document.querySelector(".list-item");
+// console.log(navUl.firstElementChild);
+// console.log(navUl.lastElementChild);
+// console.log(navUl.children);
+
+// const portfolioEL = navUl.children[2];
+// console.log(portfolioEL);
+// console.log(portfolioEL.nextElementSibling);
+// console.log(portfolioEL.previousElementSibling);
+// console.log(portfolioEL.parentNode);
