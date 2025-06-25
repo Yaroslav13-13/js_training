@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Завдання</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #7afc98;
+      }
+
+      section {
+        background: rgb(170, 242, 154);
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .item {
+        margin: 5px 0;
+        padding: 5px;
+      }
+
+      .active {
+        background-color: lightgreen !important;
+      }
+
+      #hover-box {
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        transition: background 0.3s ease;
+      }
+
+      button {
+        background-color: #4bfbef;
+        margin-top: 10px;
+        padding: 6px 12px;
+        cursor: pointer;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      input {
+        padding: 5px;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 10px;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎯 Практика DOM</h1>
+
+    <!-- 1. querySelector / querySelectorAll -->
+    <section>
+      <h2>1. querySelector / querySelectorAll</h2>
+      <h3 class="title">Оригінальний заголовок</h3>
+      <ul>
+        <li class="item">Елемент 1</li>
+        <li class="item">Елемент 2</li>
+      </ul>
+    </section>
+
+    <!-- 2. textContent / innerHTML -->
+    <section>
+      <h2>2. textContent / innerHTML</h2>
+      <button id="log-btn">Натисни мене</button>
+    </section>
+
+    <!-- 3. classList -->
+    <section>
+      <h2>3. classList.add / remove / toggle</h2>
+      <div id="box">Я коробка</div>
+      <button id="toggle-btn">Toggle Active</button>
+    </section>
+
+    <!-- 4. style -->
+    <section>
+      <h2>4. style</h2>
+      <div
+        id="hover-box"
+        style="width: 200px; height: 100px; background: white"
+      >
+        Наведи сюди
+      </div>
+    </section>
+
+    <!-- 5. getAttribute / setAttribute -->
+    <section>
+      <h2>5. getAttribute / setAttribute</h2>
+      <a id="my-link" href="https://google.com" target="_blank">Йти в Google</a
+      ><br />
+      <button id="change-link">Змінити посилання</button>
+    </section>
+
+    <!-- 6. createElement / append -->
+    <section>
+      <h2>6. createElement / append</h2>
+      <ul id="list">
+        <li>Перший</li>
+      </ul>
+      <button id="add-item">Додати елемент</button>
+    </section>
+
+    <!-- 7. .value -->
+    <section>
+      <h2>7. .value</h2>
+      <input type="text" id="name-input" placeholder="Введи своє ім'я" />
+    </section>
+
+    <!-- 8. dataset -->
+    <section>
+      <h2>8. dataset</h2>
+      <button data-id="123" id="data-btn">Клікни мене</button>
+    </section>
+    <script type="module" src="./java_script/practice-DOM.js"></script>
+  </body>
+</html>
