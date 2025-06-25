@@ -25,5 +25,14 @@ color.forEach((item) => {
 
 //todo=====================================================================
 
-//todo🔹 Завдання 2:
-//? Знайди всі елементи з класом "item" і зміни їхній колір фону на жовтий.
+//!    2. .textContent / .innerHTML
+
+//todo🔹 Завдання:
+//? Виведи текст кнопки у консоль, коли на неї натискають.
+const btn = document.querySelectorAll("#log-btn");
+console.log(btn);
+btn.forEach((baton) =>
+  baton.addEventListener("click", () => {
+    console.log(baton.textContent);
+  })
+);
