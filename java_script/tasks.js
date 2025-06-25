@@ -1109,6 +1109,37 @@
 // link.innerHTML = "<strong>Перейти</strong>";
 // console.log(link);
 
-//! Зміна стилів через JavaScript
-//? Ми використовуватимемо .style для зміни CSS напряму через JS.
-// ✅ Завдання 1 — Зміни колір тексту
+//!          Зміна стилів через JavaScript
+//todo       Ми використовуватимемо .style для зміни CSS напряму через JS.
+
+//? ✅ Завдання 1 — Зміни колір тексту
+// Зміни колір тексту на "blue"
+// const title = document.querySelector(".title");
+// title.style.color = "blue";
+
+//? ✅ Завдання 2 — Задай фон для елемента
+// Задай фоновий колір: lightyellow
+// const backround = document.querySelector(".desc");
+// backround.style.backgroundColor = "lightyellow";
+
+//? ✅ Завдання 3 — Зроби шрифт більшим
+// Зміни розмір шрифту на "24px"
+// const box = document.querySelector(".box");
+// box.style.fontSize = "24px";
+
+//? ✅ Завдання 4 — Жирний текст:
+// const bold = document.querySelector(".note");
+// bold.style.fontWeight = "bold";
+
+//? ✅ Завдання 5 — Рамка кнопки:
+// const button = document.querySelector(".btn");
+// button.style.border = "2px solid green";
+
+//!                classList
+//todo    Це дозволяє:
+//todo    ✅ Додавати / забирати класи CSS
+//todo    ✅ Робити перемикання стилів
+//todo    ✅ Реалізовувати ефекти, теми, анімації, переключення
+
+//? ✅ Завдання 1 — Додай клас
+// Додай клас "highlight"
