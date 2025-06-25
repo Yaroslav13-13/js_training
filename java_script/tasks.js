@@ -994,7 +994,121 @@
 //?____________________________________________________________
 
 //!                            forEach
-const numbers = [5, 10, 15, 20];
-let total = numbers.forEach((num) => {
-  console.log(num);
-});
+
+//? ✅ Задача 1 — Виведи всі числа
+// const numbers = [5, 10, 15];
+// let number = numbers.forEach((num) => {
+//   console.log(num);
+// });
+
+//? ✅ Задача 2 — Привітай кожного користувача
+// const users = ["Оля", "Ігор", "Таня"];
+// const userHello = users.forEach((user) => {
+//   console.log(`< Привіт, ${user} >`);
+// });
+
+//? ✅ Задача 3 — Виведи елементи з індексом
+// const fruits = ["яблуко", "банан", "вишня"];
+// const fruit = fruits.forEach((fruct, i) => {
+//   console.log(`${i + 1}. ${fruct}`);
+// });
+
+//? ✅ Задача 4 — Порахуй суму чисел
+// const nums = [1, 2, 3, 4];
+// let total = 0;
+// const result = nums.forEach((num) => {
+//   total += num;
+// });
+// console.log(total);
+
+//? ✅ Задача 5 — Виведи довжину кожного слова
+// const words = ["привіт", "світ", "javascript"];
+// const lengWords = words.forEach((word) => {
+//   console.log(`${word}: ${word.length}`);
+// });
+
+//? ✅ Задача: Вивести тільки слова, довші за 5 символів
+
+// const words = ["привіт", "світ", "javascript", "ок", "майбутнє"];
+// const wordsLeng = words.forEach((word) => {
+//   if (word.length > 5) {
+//     console.log(`${word}: ${word.length}`);
+//   }
+// });
+
+//? ✅ Задача: Виведи тільки імена, які довші за 4 символи
+// const names = ["Оля", "Максим", "Таня", "Олександр", "Іра"];
+// names.forEach((name) => {
+//   if (name.length > 4) {
+//     console.log(`${name}: ${name.length}`);
+//   }
+// });
+
+//? Виведи тільки назви міст, які містять літеру "о"
+// const cityes = ["Київ", "Львів", "Одеса", "Житомир", "Ужгород"];
+// cityes.forEach((city) => {
+//   if (city.includes("о")) {
+//     console.log(city);
+//   }
+// });
+
+//!               Пошук елементів через querySelector
+
+//todo ✅ Завдання 1:
+//? Знайди елемент h1 і виведи його в консоль
+// const title = document.querySelector("h1");
+// console.log(title);
+// title.textContent = "Java Script";
+
+//todo ✅ Завдання 2:
+//? Знайди елемент з класом .title і виведи його текст
+// const title = document.querySelector(".title");
+// console.log(title.textContent);
+
+//todo ✅ Завдання 3:
+//? Знайди елемент з id main і виведи його HTML вміст
+// const main = document.querySelector("#main");
+// console.log(main);
+
+//todo ✅ Завдання 4:
+//? Знайди кнопку і виведи в консоль її текст
+// const button = document.querySelector(".btn");
+// console.log(button.textContent);
+
+//todo ✅ Завдання 5:
+//? Знайди посилання з класом .link і зміни його текст на "Новий текст"
+// const link = document.querySelector(".link");
+// link.textContent = "Новий текст";
+// console.log(link.textContent);
+
+//!              Зміна тексту та HTML: textContent, innerHTML
+//todo          textContent — для зміни тексту в елементі
+//todo          innerHTML — для зміни HTML-вмісту (з тегами всередині)
+
+//? ✅ Завдання 1 — Заміни текст заголовка
+// const title = document.querySelector(".title");
+// title.textContent = "Новий заголовок!";
+
+//? ✅ Завдання 2 — Завдання 2 — Додай емодзі в абзац
+// const text = document.querySelector("#about");
+// text.innerHTML = "Я вивчаю JavaScript 🚀";
+// console.log(text.textContent);
+
+//? ✅ Завдання 3 — Встав HTML в div
+// const info = document.querySelector(".info");
+// info.innerHTML = "<strong>Важливо:</strong> Вивчай щодня";
+// console.log(info);
+
+//? ✅ Завдання 4 — Очисти елемент
+// const clearElement = document.querySelector(".box");
+// clearElement.innerHTML = "";
+// console.log(clearElement);
+
+//? ✅ Завдання 5 — Замініть посилання
+// const link = document.querySelector(".link");
+// link.innerHTML = "<strong>Перейти</strong>";
+// console.log(link);
+
+//! Зміна стилів через JavaScript
+//? Ми використовуватимемо .style для зміни CSS напряму через JS.
+// ✅ Завдання 1 — Зміни колір тексту
