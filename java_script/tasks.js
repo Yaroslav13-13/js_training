@@ -1324,3 +1324,40 @@
 
 //? ✅ Завдання 5 — Перевірка пароля
 // Якщо введено 6 і більше символів — покажи "Пароль надійний"
+
+// const password = document.querySelector(".password");
+// const status = document.querySelector(".status");
+
+// password.addEventListener("input", () => {
+//   const length = password.value.length;
+//   if (length >= 6) {
+//     status.textContent = "Пароль надійний";
+//   } else {
+//     status.textContent = "Пароль занадто короткий";
+//   }
+// });
+
+//todo                         submit
+
+//? 🔰 Завдання 1 — Перехопи відправку форми
+// const loginForm = document.querySelector(".login-form");
+// loginForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   console.log("Форма відправлена ✅");
+// });
+
+//? ✅ Завдання 2:
+// При відправці форми (submit) — зупини стандартну дію.
+// Отримай значення з полів username і password.
+// Виведи їх у консоль.
+
+const loginForm = document.querySelector(".login-form");
+loginForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formEl = event.target.elements;
+  const username = formEl.username.value;
+  const password = formEl.password.value;
+
+  console.log("Ім'я користувача: ", username);
+  console.log("Пароль: ", password);
+});
