@@ -1351,13 +1351,13 @@
 // Отримай значення з полів username і password.
 // Виведи їх у консоль.
 
-const loginForm = document.querySelector(".login-form");
-loginForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const formEl = event.target.elements;
-  const username = formEl.username.value;
-  const password = formEl.password.value;
+// const loginForm = document.querySelector(".login-form");
+// loginForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   const formEl = event.target.elements;
+//   const username = formEl.username.value;
+//   const password = formEl.password.value;
 
-  console.log("Ім'я користувача: ", username);
-  console.log("Пароль: ", password);
-});
+//   console.log("Ім'я користувача: ", username);
+//   console.log("Пароль: ", password);
+// });
