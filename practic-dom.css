@@ -11,3 +11,12 @@
   font-size: 42px;
   color: blue;
 }
+
+.bold {
+  font-weight: bold;
+}
+
+.active {
+  color: white;
+  transform: scale(1.02);
+}

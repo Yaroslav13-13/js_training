@@ -1141,5 +1141,80 @@
 //todo    ✅ Робити перемикання стилів
 //todo    ✅ Реалізовувати ефекти, теми, анімації, переключення
 
+const bodyColor = document.querySelector("body");
+bodyColor.style.backgroundColor = "lightgreen";
+
 //? ✅ Завдання 1 — Додай клас
 // Додай клас "highlight"
+// const title = document.querySelector(".title");
+// title.classList.add("highlight");
+
+//? ✅ Завдання 2 — Видали клас
+// const text = document.querySelector(".text");
+// text.classList.remove("bold");
+
+//? ✅ Завдання 3 — Перевір наявність класу
+// const activClass = document.querySelector(".active");
+// activClass.classList.contains("active")
+//   ? console.log("АКТИВНИЙ")
+//   : console.log("НЕ АКТИВНИЙ");
+
+//? ✅ Завдання 4 — Перемикач класу (toggle)
+// const button = document.querySelector(".btn");
+// button.addEventListener("click", () => {
+//   button.classList.toggle("on");
+// });
+
+//? ✅ Завдання 5 — Натискання: змінити клас заголовка
+// const hederTitle = document.querySelector(".header");
+// const changerBtn = document.querySelector(".changer");
+// changerBtn.addEventListener("click", () => {
+//   hederTitle.classList.toggle("active-header");
+// });
+
+//!            Події в DOM  addEventListener
+//? click — натискання кнопки
+//? input — введення тексту
+//? submit — надсилання форми
+
+// const message = document.querySelector(".message");
+// const button = document.querySelector(".btn");
+
+// button.addEventListener("click", () => {
+//   message.textContent = "Ви натиснули кнопку!";
+//   const isActive = button.classList.toggle("active");
+//   button.style.backgroundColor = isActive ? "red" : "initial";
+// });
+
+//?   Завдання 1 — Зміна тексту при кліку
+//?   Є кнопка та заголовок.
+//? Коли ти натискаєш на кнопку — текст заголовка змінюється на "Текст змінено!".
+
+// const message = document.querySelector(".title");
+// const button = document.querySelector(".btn");
+
+// button.addEventListener("click", () => {
+//   message.textContent = "Текст змінено!";
+//   const activeBtn = button.classList.toggle("active");
+//   button.style.backgroundColor = activeBtn ? "red" : "initial";
+// });
+
+//? Завдання 2
+// Зміни колір тексту заголовка на зелений при кліку на кнопку
+// Знайди кнопку і заголовок
+// Додай слухача події click на кнопку
+// При кліку змінюй стиль заголовка color на "green"
+
+const button = document.querySelector(".btn");
+const title = document.querySelector(".title");
+
+button.addEventListener("click", () => {
+  title.style.color = "green";
+  const isActive = title.classList.toggle("active");
+  title.style.color = isActive ? "green" : "initial";
+});
+
+//? Завдання 3
+// При кліку на кнопку покажи повідомлення в <p> — "Кнопка натиснута!"
+// Знайди кнопку і елемент <p> для повідомлення
+// Встанови текст елемента <p> при кліку
