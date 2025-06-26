@@ -1205,16 +1205,26 @@ bodyColor.style.backgroundColor = "lightgreen";
 // Додай слухача події click на кнопку
 // При кліку змінюй стиль заголовка color на "green"
 
-const button = document.querySelector(".btn");
-const title = document.querySelector(".title");
+// const button = document.querySelector(".btn");
+// const title = document.querySelector(".title");
 
-button.addEventListener("click", () => {
-  title.style.color = "green";
-  const isActive = title.classList.toggle("active");
-  title.style.color = isActive ? "green" : "initial";
-});
+// const activeButton = () => {
+//   const isActive = title.classList.toggle("active");
+//   title.style.color = isActive ? "green" : "initial";
+// };
+// button.addEventListener("click", activeButton);
 
 //? Завдання 3
 // При кліку на кнопку покажи повідомлення в <p> — "Кнопка натиснута!"
 // Знайди кнопку і елемент <p> для повідомлення
 // Встанови текст елемента <p> при кліку
+
+const button = document.querySelector(".btn");
+const message = document.querySelector(".message");
+
+const clickText = () => {
+  message.textContent = "Кнопку натиснуто!";
+  message.classList.toggle("active");
+};
+
+button.addEventListener("click", clickText);
