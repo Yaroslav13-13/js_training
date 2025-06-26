@@ -1141,8 +1141,8 @@
 //todo    ✅ Робити перемикання стилів
 //todo    ✅ Реалізовувати ефекти, теми, анімації, переключення
 
-const bodyColor = document.querySelector("body");
-bodyColor.style.backgroundColor = "lightgreen";
+// const bodyColor = document.querySelector("body");
+// bodyColor.style.backgroundColor = "lightgreen";
 
 //? ✅ Завдання 1 — Додай клас
 // Додай клас "highlight"
@@ -1176,6 +1176,8 @@ bodyColor.style.backgroundColor = "lightgreen";
 //? click — натискання кнопки
 //? input — введення тексту
 //? submit — надсилання форми
+
+//todo                         click
 
 // const message = document.querySelector(".message");
 // const button = document.querySelector(".btn");
@@ -1219,12 +1221,106 @@ bodyColor.style.backgroundColor = "lightgreen";
 // Знайди кнопку і елемент <p> для повідомлення
 // Встанови текст елемента <p> при кліку
 
-const button = document.querySelector(".btn");
-const message = document.querySelector(".message");
+// const button = document.querySelector(".btn");
+// const message = document.querySelector(".message");
 
-const clickText = () => {
-  message.textContent = "Кнопку натиснуто!";
-  message.classList.toggle("active");
-};
+// const clickText = () => {
+//   message.textContent = "Кнопку натиснуто!";
+//   message.classList.toggle("active");
+// };
 
-button.addEventListener("click", clickText);
+// button.addEventListener("click", clickText);
+
+//? Зміни колір фону body при кліку на кнопку,
+//? а також напиши, який колір зараз встановлено в span.color.
+
+// const color = document.querySelector(".color");
+// const button = document.querySelector(".btn");
+// const body = document.querySelector("body");
+
+// function getRandomColorBtn() {
+//   return "#" + Math.floor(Math.random() * 16777215).toString(16);
+// }
+
+// function getRandomColorBody() {
+//   const r = Math.floor(Math.random() * 256); // від 0 до 255
+//   const g = Math.floor(Math.random() * 256);
+//   const b = Math.floor(Math.random() * 256);
+//   return `rgb(${r}, ${g}, ${b})`;
+// }
+
+// button.addEventListener("click", () => {
+//   const randomColor1 = getRandomColorBody();
+//   const randomColor2 = getRandomColorBtn();
+//   body.style.backgroundColor = randomColor1;
+//   button.style.backgroundColor = randomColor2;
+//   color.style.color = randomColor2;
+//   color.textContent = `Color body: ${randomColor1} | Color button: ${randomColor2}`;
+// });
+
+//?_________________________________________________________________________
+
+// const buttonEl = document.querySelector(".toggle-btn");
+// const textEl = document.querySelector(".text");
+
+// buttonEl.addEventListener("click", () => {
+//   textEl.classList.toggle("hide-show");
+//   textEl.style.color = "orange";
+//   buttonEl.style.borderColor = "red";
+//   buttonEl.style.color = "green";
+// });
+
+//?_________________________________________________________________________
+
+// const buttonEl = document.querySelector(".toggle-btn");
+// const textEl = document.querySelector(".text");
+// textEl.textContent = "🔞 18+";
+// buttonEl.addEventListener("click", () => {
+//   const hideShow = textEl.classList.toggle("hide-show");
+//   buttonEl.textContent = hideShow ? "Показати" : "Приховати";
+// });
+
+//?_________________________________________________________________________
+
+//todo                         input
+
+//? ✅ Завдання 1 — Виведи в консоль те, що вводить користувач
+
+// const input = document.querySelector(".input");
+// input.addEventListener("input", () => {
+//   console.log(input.value);
+// });
+
+//? ✅ Завдання 2 — Показуй текст одразу на екрані
+
+// const input = document.querySelector(".input");
+// const output = document.querySelector(".output");
+
+// input.addEventListener("input", () => {
+//   output.textContent = input.value;
+// });
+
+//? ✅ Завдання 3 — Якщо поле порожнє — покажи "Anonymous"
+
+// const nameUser = document.querySelector(".name");
+// const greeting = document.querySelector(".greeting");
+
+// nameUser.addEventListener("input", () => {
+//   const userName = nameUser.value.trim();
+//   greeting.textContent = userName === "" ? "Anonymous" : userName;
+// });
+
+//? ✅ Завдання 4 — Порахуй скільки символів введено
+// Виводь кількість символів в <p> при кожному вводі
+
+// const textInput = document.querySelector(".text-input");
+// const lengthInfo = document.querySelector(".length-info");
+
+// textInput.addEventListener("input", () => {
+//   const length = textInput.value.length;
+//   lengthInfo.textContent = `Кількість символів: ${length}`;
+//   lengthInfo.style.color = length >= 10 ? "red" : "black";
+// });
+
+//? ✅ Завдання 5 — Перевірка пароля
+// Якщо введено 6 і більше символів — покажи "Пароль надійний"

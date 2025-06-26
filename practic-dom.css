@@ -20,3 +20,14 @@
   color: white;
   transform: scale(1.02);
 }
+body {
+}
+
+body,
+.btn {
+  transition: background-color 0.3s ease;
+}
+
+.hide-show {
+  display: none;
+}
