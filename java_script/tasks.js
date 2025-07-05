@@ -1528,3 +1528,102 @@
 
 // console.log(keys);
 // console.log(values);
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// const keys = Object.keys(apartment);
+
+// for (let key of keys) {
+//   values.push(apartment[key]);
+// }
+// console.log(keys);
+// console.log(values);
+
+const userProfile = {
+  name: "Ярослав 👨‍💻",
+  age: 28,
+  country: "Україна 🇺🇦",
+  hobby: "Кодування 💻",
+  isOnline: true,
+  favoriteEmoji: "🔥",
+};
+
+// function countProps(object) {
+//   let propCount = 0;
+
+//   for (const key in object) {
+//     if (object.hasOwnProperty(key)) {
+//       propCount += 1;
+//     }
+//   }
+
+//   return propCount;
+// }
+
+// console.log(countProps(userProfile));
+
+// function countProps(object) {
+//   let propCount = 0;
+//   const keys = Object.keys(object);
+//   for (let key of keys) {
+//     if (object.hasOwnProperty(key)) {
+//       propCount += 1;
+//     }
+//   }
+//   return propCount;
+// }
+// console.log(countProps(userProfile));
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   const valuesObject = Object.values(salaries);
+//   for (let key of valuesObject) {
+//     totalSalary += key;
+//   }
+//   return totalSalary;
+// }
+
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (let key of colors) {
+//   hexColors.push(key.hex);
+//   rgbColors.push(key.rgb);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+function getProductPrice(productName) {
+  const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+  ];
+  for (const key of products) {
+    if (productName === key.name) {
+      return key.price;
+    }
+  }
+  return null;
+}
+
+console.log(getProductPrice("Radar"));
+console.log(getProductPrice("Grip"));
+console.log(getProductPrice("Scanner"));
+console.log(getProductPrice("Droid"));
+console.log(getProductPrice("Engine"));
