@@ -1640,3 +1640,209 @@ const userProfile = {
 
 // console.log(atTheOldToad.addPotion("Invisibility"));
 // console.log(atTheOldToad.addPotion("Power potion"));
+
+// const bookShelf = {
+//   books: [
+//     { title: "The Last Kingdom", rating: 8 },
+//     { title: "The Mist", rating: 6 },
+//   ],
+//   getBooks() {
+//     return this.books;
+//   },
+// };
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     this.potions.push(newPotion);
+//   },
+//   getTotalPrice() {
+//     let totalPrice = 0;
+//     for (let potion of this.potions) {
+//       totalPrice += potion.price;
+//     }
+//     return totalPrice;
+//   },
+// };
+
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
+// console.log(atTheOldToad.getTotalPrice());
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (const potion of this.potions) {
+//       if (potion.name === oldName) {
+//         potion.name = newName;
+//       }
+//     }
+//   },
+// };
+
+// function add(...args) {
+//   let total = 0;
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+// }
+
+// console.log(add(32, 6, 13, 19, 8));
+
+// function addOverNum(value, ...args) {
+//   let result = 0;
+//   for (const num of args) {
+//     if (num > value) {
+//       result += num;
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+
+// function getExtremeScores(scores) {
+//   return {
+//     best: Math.max(...scores),
+//     worst: Math.min(...scores),
+//   };
+// }
+
+// console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26]));
+
+// function isEnoughCapacity(products, containerSize) {
+//   const price = Object.values(products);
+//   let totalPrice = 0;
+//   for (const num of price) {
+//     totalPrice += num;
+//   }
+//   return totalPrice <= containerSize ? true : false;
+// }
+
+// console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)); // true
+// console.log(isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)); // false
+// console.log(isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)); // true
+// console.log(isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)); // false
+
+// function calcAverageCalories(days) {
+//   let result = 0;
+//   const totalCalories = Object.values(days);
+//   for (const num of totalCalories) {
+//     result += num.calories;
+//   }
+//   return result / 7;
+// }
+
+// console.log(
+//   calcAverageCalories([
+//     { day: "monday", calories: 3010 },
+//     { day: "tuesday", calories: 3200 },
+//     { day: "wednesday", calories: 3120 },
+//     { day: "thursday", calories: 2900 },
+//     { day: "friday", calories: 3450 },
+//     { day: "saturday", calories: 3280 },
+//     { day: "sunday", calories: 3300 },
+//   ])
+// ); // 3180
+
+// console.log(
+//   calcAverageCalories([
+//     { day: "monday", calories: 2040 },
+//     { day: "tuesday", calories: 2270 },
+//     { day: "wednesday", calories: 2420 },
+//     { day: "thursday", calories: 1900 },
+//     { day: "friday", calories: 2370 },
+//     { day: "saturday", calories: 2280 },
+//     { day: "sunday", calories: 2610 },
+//   ])
+// ); // 2270
+
+// console.log(calcAverageCalories([])); // 0
+
+// const profile = {
+//   username: "Jacob",
+//   playTime: 300,
+//   changeUsername(newName) {
+//     return (this.username = newName);
+//   },
+//   updatePlayTime(hours) {
+//     return (this.playTime += hours);
+//   },
+//   getInfo() {
+//     return `${this.username} has ${this.playTime} active hours!`;
+//   },
+// };
+
+// console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+
+// profile.changeUsername("Marco");
+// console.log(profile.getInfo()); // "Marco has 300 active hours!"
+
+// profile.updatePlayTime(20);
+// console.log(profile.getInfo()); // "Marco has 320 active hours!"
+
+// const profile = {
+//   username: "Jacob",
+//   playTime: 300,
+//   changeUsername(newName) {
+//     return (this.username = newName);
+//   },
+//   updatePlayTime(hours) {
+//     return this.playTime * hours;
+//   },
+//   getInfo() {
+//     return `${this.username} has ${this.playTime} active hours!`;
+//   },
+// };
+
+// console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+
+// profile.changeUsername("Marco");
+// console.log(profile.getInfo()); // "Marco has 300 active hours!"
+
+// profile.updatePlayTime(20);
+// console.log(profile.getInfo()); // "Marco has 320 active hours!"
+
+// const player = {
+//   name: "Max",
+//   level: 1,
+//   experience: 0,
+//   energy: 100,
+
+//   gainExperience(points) {
+//     this.experience += points;
+//     while (this.experience >= 100) {
+//       this.level += 1;
+//       this.experience -= 100;
+//     }
+//   },
+//   useEnergy(amount) {
+//     this.energy -= amount;
+//     if (this.energy < 0) {
+//       this.energy = 0;
+//     }
+//   },
+//   getStatus() {
+//     return `Player: ${this.name} | Level: ${this.level} | XP: ${this.experience} | Energy: ${this.energy}`;
+//   },
+// };
+// player.gainExperience(40);
+// player.useEnergy(30);
+// console.log(player.getStatus());
+// // Player: Max | Level: 1 | XP: 40 | Energy: 70
+// player.gainExperience(70);
+// console.log(player.getStatus());
+// // Player: Max | Level: 2 | XP: 10 | Energy: 70
