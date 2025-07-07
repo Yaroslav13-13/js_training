@@ -1607,23 +1607,36 @@ const userProfile = {
 // console.log(hexColors);
 // console.log(rgbColors);
 
-function getProductPrice(productName) {
-  const products = [
-    { name: "Radar", price: 1300, quantity: 4 },
-    { name: "Scanner", price: 2700, quantity: 3 },
-    { name: "Droid", price: 400, quantity: 7 },
-    { name: "Grip", price: 1200, quantity: 9 },
-  ];
-  for (const key of products) {
-    if (productName === key.name) {
-      return key.price;
-    }
-  }
-  return null;
-}
+// function getProductPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+//   for (const key of products) {
+//     if (productName === key.name) {
+//       return key.price;
+//     }
+//   }
+//   return null;
+// }
 
-console.log(getProductPrice("Radar"));
-console.log(getProductPrice("Grip"));
-console.log(getProductPrice("Scanner"));
-console.log(getProductPrice("Droid"));
-console.log(getProductPrice("Engine"));
+// console.log(getProductPrice("Radar"));
+// console.log(getProductPrice("Grip"));
+// console.log(getProductPrice("Scanner"));
+// console.log(getProductPrice("Droid"));
+// console.log(getProductPrice("Engine"));
+
+// const atTheOldToad = {
+//   potions: [],
+//   getPotions() {
+//     return "List of all available potions";
+//   },
+//   addPotion(potionName) {
+//     return `Adding ${potionName}`;
+//   },
+// };
+
+// console.log(atTheOldToad.addPotion("Invisibility"));
+// console.log(atTheOldToad.addPotion("Power potion"));
