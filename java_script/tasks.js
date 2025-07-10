@@ -1994,3 +1994,25 @@
 
 // console.log(evenNumbers);
 // console.log(oddNumbers);
+
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244,
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// const totalPlayTime = playtimes.reduce((playTime, player) => playTime + player);
+// const averagePlayTime = totalPlayTime / playtimes.length;
+// console.log(playtimes);
+// console.log(totalPlayTime);
+// console.log(averagePlayTime);
+
+const cart = [
+  { name: "🍎", price: 30, quantity: 2 },
+  { name: "🍌", price: 20, quantity: 5 },
+  { name: "🍇", price: 50, quantity: 1 },
+];
+
+const totalPrice = cart.reduce((acc, num) => acc + num.price, 0);
+console.log(totalPrice);
