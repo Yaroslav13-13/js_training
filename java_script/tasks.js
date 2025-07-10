@@ -1543,14 +1543,14 @@
 // console.log(keys);
 // console.log(values);
 
-const userProfile = {
-  name: "Ярослав 👨‍💻",
-  age: 28,
-  country: "Україна 🇺🇦",
-  hobby: "Кодування 💻",
-  isOnline: true,
-  favoriteEmoji: "🔥",
-};
+// const userProfile = {
+//   name: "Ярослав 👨‍💻",
+//   age: 28,
+//   country: "Україна 🇺🇦",
+//   hobby: "Кодування 💻",
+//   isOnline: true,
+//   favoriteEmoji: "🔥",
+// };
 
 // function countProps(object) {
 //   let propCount = 0;
@@ -1972,3 +1972,25 @@ const userProfile = {
 
 // const titles = books.map((book) => book.title);
 // console.log(titles);
+
+// const products = [
+//   { name: "🍕 Піца", price: 200 },
+//   { name: "🍔 Бургер", price: 150 },
+//   { name: "🥗 Салат", price: 120 },
+// ];
+
+// const prodPrice = products.map((product) => {
+//   return {
+//     name: product.name,
+//     price: product.price - (product.price * 20) / 100,
+//   };
+// });
+// console.log(prodPrice);
+
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+
+// const evenNumbers = numbers.filter((num) => num % 2 === 0);
+// const oddNumbers = numbers.filter((num) => num % 2 === 1);
+
+// console.log(evenNumbers);
+// console.log(oddNumbers);
