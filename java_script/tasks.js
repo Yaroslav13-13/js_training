@@ -1936,10 +1936,39 @@ const userProfile = {
 // console.log(filterArray([1, 2, 3, 4, 5], 3));
 // console.log(filterArray([12, 24, 8, 41, 76], 38));
 
-function changeEven(numbers, value) {
-  for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] % 2 === 0) {
-      numbers[i] = numbers[i] + value;
-    }
-  }
-}
+// const changeEven = (numbers, value) => {
+//   const newArrey = [];
+//   numbers.forEach((number) => {
+//     if (number % 2 === 0) {
+//       let result = number + value;
+//       newArrey.push(result);
+//     } else {
+//       newArrey.push(number);
+//     }
+//   });
+//   return newArrey;
+// };
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const titles = books.map((book) => book.title);
+// console.log(titles);
