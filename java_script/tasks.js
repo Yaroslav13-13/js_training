@@ -1846,3 +1846,100 @@ const userProfile = {
 // player.gainExperience(70);
 // console.log(player.getStatus());
 // // Player: Max | Level: 2 | XP: 10 | Energy: 70
+
+// function add(x, y) {
+//   return x + y;
+// }
+// function multiply(x, y, callback) {
+//   return callback(x, y);
+// }
+// console.log(multiply(5, 6, add));
+
+// function divide(x, y) {
+//   return x / y;
+// }
+// function getMax(x, y) {
+//   return x > y ? x : y;
+// }
+// function calculator(x, y, callback) {
+//   return callback(x, y);
+// }
+
+// console.log(calculator(10, 2, divide)); // 👉 5
+// console.log(calculator(10, 2, getMax)); // 👉 10
+
+// function filterArray(numbers, value) {
+//   const array = [];
+//   numbers.forEach(function (element) {
+//     if (element > value) {
+//       array.push(element);
+//     }
+//   });
+//   return array;
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
+
+// const names = ["Оля", "Іван", "Марія", "Петро"];
+// names.forEach(function (element) {
+//   console.log(element);
+// });
+
+// const numbers = [3, 7, 10, 5];
+// let total = 0;
+// numbers.forEach(function (num) {
+//   total += num;
+// });
+// console.log(total);
+
+// const words = ["яблуко", "груша", "кавун", "ананас", "персик"];
+// words.forEach(function (word) {
+//   console.log(Math.max(word.length));
+// });
+
+// const mixed = [-2, 5, -10, 0, 8, 4];
+// let totalNum = 0;
+// mixed.forEach(function (element) {
+//   if (element > 0) {
+//     totalNum += element;
+//   }
+// });
+// console.log(totalNum);
+
+// const users = ["Анна", "Богдан", "Катя"];
+// users.forEach(function (user) {
+//   console.log(`Привіт ${user}`);
+// });
+
+// const calculateTotalPrice = (orderedItems) => {
+//   let totalPrice = 0;
+//   orderedItems.forEach((item) => {
+//     totalPrice += item;
+//   });
+//   return totalPrice;
+// };
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// const filterArray = (numbers, value) => {
+//   const filteredNumbers = [];
+
+//   numbers.forEach((number) => {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
+//   return filteredNumbers;
+// };
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+
+function changeEven(numbers, value) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 2 === 0) {
+      numbers[i] = numbers[i] + value;
+    }
+  }
+}
