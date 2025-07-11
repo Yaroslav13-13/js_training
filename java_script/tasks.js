@@ -2029,4 +2029,76 @@
 // }, 0);
 // console.log(totalAveragePlaytimePerGame);
 
-const calculateTotalBalance = (users) => {};
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+// ];
+
+// const ascendingReleaseDates = releaseDates.toSorted((a, b) => a - b);
+
+// const alphabeticalAuthors = authors.toSorted();
+
+// console.log(ascendingReleaseDates);
+// console.log(alphabeticalAuthors);
+
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+
+// const authorsInAlphabetOrder = authors.toSorted();
+
+// const authorsInReversedOrder = authors.toSorted((a, b) => b.localeCompare(a));
+// console.log(authorsInAlphabetOrder);
+// console.log(authorsInReversedOrder);
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     rating: 7.94,
+//   },
+//   {
+//     title: "Enemy of God",
+//     author: "Bernard Cornwell",
+//     rating: 8.67,
+//   },
+// ];
+
+// const sortedByAuthorName = books.toSorted((a, b) =>
+//   a.author.localeCompare(b.author)
+// );
+
+// const sortedByReversedAuthorName = books.toSorted(
+//   (a, b) => b.author - a.author
+// );
+
+// const sortedByAscendingRating = books.toSorted((a, b) => a.rating - b.rating);
+
+// const sortedByDescentingRating = books.toSorted((a, b) => b.rating - a.rating);
+
+// console.log(sortedByAuthorName);
+// console.log(sortedByReversedAuthorName);
+// console.log(sortedByAscendingRating);
+// console.log(sortedByDescentingRating);
