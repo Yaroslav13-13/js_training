@@ -2008,11 +2008,25 @@
 // console.log(totalPlayTime);
 // console.log(averagePlayTime);
 
-const cart = [
-  { name: "🍎", price: 30, quantity: 2 },
-  { name: "🍌", price: 20, quantity: 5 },
-  { name: "🍇", price: 50, quantity: 1 },
-];
+// const cart = [
+//   { name: "🍎", price: 30, quantity: 2 },
+//   { name: "🍌", price: 20, quantity: 5 },
+//   { name: "🍇", price: 50, quantity: 1 },
+// ];
 
-const totalPrice = cart.reduce((acc, num) => acc + num.price, 0);
-console.log(totalPrice);
+// const totalPrice = cart.reduce((acc, num) => acc + num.price, 0);
+// console.log(totalPrice);
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+
+// const totalAveragePlaytimePerGame = players.reduce((acc, play) => {
+//   return (acc += play.playtime / play.gamesPlayed);
+// }, 0);
+// console.log(totalAveragePlaytimePerGame);
+
+const calculateTotalBalance = (users) => {};
