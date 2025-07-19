@@ -36,3 +36,40 @@
 //     console.log(baton.textContent);
 //   })
 // );
+
+//!     ✅ Етапи практики DOM з вправами
+
+//todo  🔹 Етап 1: Пошук елементів
+//?      Знайди всі .item і виведи їх у консоль.
+
+// const fruits = document.querySelectorAll(".item");
+// fruits.forEach((fruit) => {
+//   //   console.log(fruit.textContent);
+// });
+
+//todo  🔹 Етап 2: Зміна вмісту
+//?     Завдання 2:
+//?     Зміни вміст <li> на інший фрукт або текст.
+
+// fruits[2].textContent = "🍇";
+// fruits[1].insertAdjacentHTML("beforebegin", "<li class=item>🍍</li>");
+// const updatedFruits = document.querySelectorAll(".item");
+// updatedFruits.forEach((fruit) => {
+//   console.log(fruit.textContent);
+// });
+// console.log(fruits);
+
+//todo 🔹 Етап 3: Зміна стилів
+
+//?    Завдання 3:
+//?    При натисканні на <li> змінюй йому фон.
+
+const fruits = document.querySelectorAll(".item");
+fruits.forEach((fruct) => {
+  fruct.addEventListener("click", () => {
+    fruct.style.cursor = "pointer";
+    // fruct.style.backgroundColor = "lightgreen";
+    fruct.classList.toggle("highlight");
+  });
+});
+console.log(fruits);
