@@ -114,3 +114,18 @@
 //*     fruitInput.value = "";
 //*   }
 //* });
+//! ____________________________________________________________________
+
+const title = document.querySelector(".title");
+const inputTitle = document.querySelector(".input-title");
+const btnTitle = document.querySelector(".btn-title");
+const inputColor = document.querySelector(".input-color");
+const btnColor = document.querySelector(".btn-color");
+
+btnTitle.addEventListener("click", () => {
+  title.textContent = inputTitle.value;
+});
+
+btnColor.addEventListener("click", () => {
+  title.style.color = inputColor.value;
+});
