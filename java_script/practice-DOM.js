@@ -150,6 +150,9 @@ const fruits = document.querySelector("#fruitList");
 const inputFruits = document.querySelector(".input");
 
 fruits.addEventListener("click", (event) => {
-  inputFruits.value = event.target.textContent;
-  event.target.style.color = "lightgreen";
+  if (event.target.tagName === "LI") {
+    inputFruits.value = event.target.textContent;
+    event.target.style.color = "red";
+    event.target.style.cursor = "pointer";
+  }
 });
