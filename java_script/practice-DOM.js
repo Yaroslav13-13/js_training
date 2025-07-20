@@ -122,10 +122,34 @@ const btnTitle = document.querySelector(".btn-title");
 const inputColor = document.querySelector(".input-color");
 const btnColor = document.querySelector(".btn-color");
 
-btnTitle.addEventListener("click", () => {
+// btnTitle.addEventListener("click", () => {
+//   if (inputTitle.value.trim() !== "") {
+//     title.textContent = inputTitle.value;
+//   } else {
+//     alert("Введіть текст");
+//   }
+// });
+
+// btnColor.addEventListener("click", () => {
+//   if (inputColor.value.trim() !== "") {
+//     title.style.color = inputColor.value;
+//   } else {
+//     alert("Введіть колір");
+//   }
+// });
+
+inputTitle.addEventListener("input", () => {
   title.textContent = inputTitle.value;
 });
 
-btnColor.addEventListener("click", () => {
+inputColor.addEventListener("input", () => {
   title.style.color = inputColor.value;
+});
+
+const fruits = document.querySelector("#fruitList");
+const inputFruits = document.querySelector(".input");
+
+fruits.addEventListener("click", (event) => {
+  inputFruits.value = event.target.textContent;
+  event.target.style.color = "lightgreen";
 });
