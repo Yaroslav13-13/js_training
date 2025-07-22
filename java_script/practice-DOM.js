@@ -163,6 +163,17 @@ inputFruits.addEventListener(focus, (event) => {
 const text = document.querySelector("p");
 text.innerHTML = "<p>HTML,CSS, <strong>JavaScript</strong></p>";
 
+// !=================================================================
+
+const container = document.querySelector("#container");
+
+container.addEventListener("click", (event) => {
+  if (event.target.tagName === "BUTTON") {
+    console.log("Клік по кнопці:", event.target.textContent);
+    console.log("Обробник висить на:", event.currentTarget.id);
+  }
+});
+
 // const categories = document.querySelectorAll("#categories .item");
 // const item = document.querySelectorAll(".item");
 // console.log(`Numbers of category: ${categories.length}`);
@@ -210,13 +221,96 @@ text.innerHTML = "<p>HTML,CSS, <strong>JavaScript</strong></p>";
 
 // gallery.insertAdjacentHTML("beforeend", marcup);
 
-const book = {
-  title: "JS для початківців",
-  author: "Іван Петренко",
-  year: 2024,
+//! ======================   Деструктуризація =========================
+
+// const book = {
+//   title: "JS для початківців",
+//   author: "Іван Петренко",
+//   year: 2024,
+// };
+// function foo({ title, year }) {
+//   console.log(`${title} ${year}`);
+// }
+// console.log(foo(book));
+
+//?_______________________________________________________________________
+
+// const user = {
+//   name: "Іван",
+//   age: 25,
+//   city: "Львів",
+// };
+
+//* const { name, city } = user;
+//?_______________________________________________________________________
+// const product = {
+//   title: "Смартфон",
+//   price: 12000,
+//   info: {
+//     color: "black",
+//     warranty: "1 рік",
+//   },
+// };
+
+//* const {
+//*   title,
+//*   price,
+//*   info: { color },
+//* } = product;
+
+//?_______________________________________________________________________
+
+// const colors = ["red", "green", "blue", "yellow"];
+
+//* const [a, , c, d] = colors;
+//* console.log(a, c, d);
+//?_______________________________________________________________________
+// const points = [100, 200];
+//* conat[(x, y)] = points;
+//* console.log(x);
+//* console.log(y);
+//?_______________________________________________________________________
+
+function showUser({ name, email }) {
+  console.log(`name:${name} email:${email}`);
+}
+
+const userData = {
+  name: "Марія",
+  email: "maria@example.com",
+};
+showUser(userData);
+
+//?_______________________________________________________________________
+
+//* function calculateArea({ width, height }) {
+//*   console.log(`P = ${width * height}`);
+//* }
+
+// const rectangle = {
+//   width: 5,
+//   height: 10,
+// };
+//* calculateArea(rectangle);
+
+//!====================================================================
+
+const colorPalette = document.querySelector(".color-palette");
+const output = document.querySelector("#colorName");
+colorPalette.addEventListener("click", (event) => {
+  output.textContent = event.target.dataset.color;
+});
+
+//! =============================== JSON ============================
+const dog = {
+  name: "Mango",
+  age: 3,
+  isGoodBoy: true,
 };
 
-function foo({ title, year }) {
-  console.log(`${title} ${year}`);
-}
-console.log(foo(book));
+const json = JSON.stringify(dog);
+console.log(json); // '{"name":"Mango","age":3,"isGoodBoy":true}'
+
+//!====================================================================
+
+console.log(window.localStorage);
