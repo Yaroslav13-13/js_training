@@ -2412,8 +2412,50 @@
 // }
 // logUppercase(["apple", "banana", "cherry"]);
 
-function hasNegative(numbers) {
-  numbers.some((negative) => );
-}
+// function hasNegative(numbers) {
+//   return numbers.some((elem) => elem < 0);
+// }
 
-console.log(hasNegative([1, 2, -3, 4]));
+// function allPositive(arr) {
+//   return arr.every((value) => value >= 0);
+// }
+
+// console.log(allPositive([1, 2, -3, 4]));
+// console.log(allPositive([1, 2, 4]));
+//!___________________________________________________________
+
+// const products = [
+//   { name: "Телефон", price: 10000 },
+//   { name: "Ноутбук", price: 25000 },
+//   { name: "Навушники", price: 3000 },
+//   { name: "Монітор", price: 8000 },
+// ];
+// function filterByPrice(arr, maxPrice) {
+//     return arr.filter((value) => value.price <= maxPrice)
+//         .;
+// }
+// console.log(filterByPrice(products, 8000));
+
+const products = [
+  { name: "Телефон", price: 10000 },
+  { name: "Ноутбук", price: 25000 },
+  { name: "Навушники", price: 3000 },
+  { name: "Монітор", price: 8000 },
+];
+
+const priceInput = document.querySelector("#priceInput");
+const filterBtn = document.querySelector("#filterBtn");
+const productList = document.querySelector("#productList");
+
+filterBtn.addEventListener("click", () => {
+  const maxPrice = Number(priceInput.value);
+  const filtered = products.filter((product) => product.price <= maxPrice);
+
+  productList.innerHTML = ""; // очищаємо попередній список
+
+  filtered.forEach((product) => {
+    const li = document.createElement("li");
+    li.textContent = `${product.name} — ${product.price} грн`;
+    productList.appendChild(li);
+  });
+});
