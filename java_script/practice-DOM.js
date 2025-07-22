@@ -271,15 +271,15 @@ container.addEventListener("click", (event) => {
 //* console.log(y);
 //?_______________________________________________________________________
 
-function showUser({ name, email }) {
-  console.log(`name:${name} email:${email}`);
-}
+// function showUser({ name, email }) {
+//   console.log(`name:${name} email:${email}`);
+// }
 
-const userData = {
-  name: "Марія",
-  email: "maria@example.com",
-};
-showUser(userData);
+// const userData = {
+//   name: "Марія",
+//   email: "maria@example.com",
+// };
+// showUser(userData);
 
 //?_______________________________________________________________________
 
@@ -295,22 +295,20 @@ showUser(userData);
 
 //!====================================================================
 
-const colorPalette = document.querySelector(".color-palette");
-const output = document.querySelector("#colorName");
-colorPalette.addEventListener("click", (event) => {
-  output.textContent = event.target.dataset.color;
-});
+// const colorPalette = document.querySelector(".color-palette");
+// const output = document.querySelector("#colorName");
+// colorPalette.addEventListener("click", (event) => {
+//   output.textContent = event.target.dataset.color;
+// });
 
 //! =============================== JSON ============================
-const dog = {
-  name: "Mango",
-  age: 3,
-  isGoodBoy: true,
-};
+// const dog = {
+//   name: "Mango",
+//   age: 3,
+//   isGoodBoy: true,
+// };
 
-const json = JSON.stringify(dog);
-console.log(json); // '{"name":"Mango","age":3,"isGoodBoy":true}'
+// const json = JSON.stringify(dog);
+// console.log(json); // '{"name":"Mango","age":3,"isGoodBoy":true}'
 
 //!====================================================================
-
-console.log(window.localStorage);

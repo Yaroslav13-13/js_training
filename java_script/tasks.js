@@ -2353,3 +2353,67 @@
 
 // audi.price = 51000;
 // console.log(audi.price); // 49000
+
+// function getEvenNumbers(arr) {
+//   let eventNumbers = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//       eventNumbers.push(arr[i]);
+//     }
+//   }
+//   return eventNumbers;
+// }
+
+// function getEvenNumbers(arr) {
+//   return arr.filter((num) => num % 2 === 0);
+// }
+
+// console.log(getEvenNumbers([1, 2, 3, 4, 5, 6]));
+// console.log(getEvenNumbers([10, 15, 20]));
+//?__________________________________________________________
+
+// function filterLongWords(arr) {
+//   return arr.filter((num) => num.length > 4);
+// }
+
+// function filterLongWords(arr) {
+//   let longWords = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].length > 4) {
+//       longWords.push(arr[i]);
+//     }
+//   }
+//   return longWords;
+// }
+
+// console.log(filterLongWords(["cat", "banana", "tree", "elephant"]));
+
+//?__________________________________________________________
+// function getSquares(arr) {
+//   return arr.map((num) => num * num);
+// }
+
+// console.log(getSquares([1, 2, 3]));
+
+//?__________________________________________________________
+
+// function findFirstEven(numbers) {
+//   return numbers.find((num) => num % 2 === 0);
+// }
+
+// console.log(findFirstEven([1, 3, 7, 4, 6]));
+// console.log(findFirstEven([5, 9, 11, 8]));
+//?__________________________________________________________
+
+// function logUppercase(words) {
+//   words.forEach((word) => {
+//     console.log(word.toUpperCase());
+//   });
+// }
+// logUppercase(["apple", "banana", "cherry"]);
+
+function hasNegative(numbers) {
+  numbers.some((negative) => );
+}
+
+console.log(hasNegative([1, 2, -3, 4]));
