@@ -2436,26 +2436,131 @@
 // }
 // console.log(filterByPrice(products, 8000));
 
-const products = [
-  { name: "Телефон", price: 10000 },
-  { name: "Ноутбук", price: 25000 },
-  { name: "Навушники", price: 3000 },
-  { name: "Монітор", price: 8000 },
-];
+// const products = [
+//   { name: "Телефон", price: 10000 },
+//   { name: "Ноутбук", price: 25000 },
+//   { name: "Навушники", price: 3000 },
+//   { name: "Монітор", price: 8000 },
+// ];
 
-const priceInput = document.querySelector("#priceInput");
-const filterBtn = document.querySelector("#filterBtn");
-const productList = document.querySelector("#productList");
+// const priceInput = document.querySelector("#priceInput");
+// const filterBtn = document.querySelector("#filterBtn");
+// const productList = document.querySelector("#productList");
 
-filterBtn.addEventListener("click", () => {
-  const maxPrice = Number(priceInput.value);
-  const filtered = products.filter((product) => product.price <= maxPrice);
+// filterBtn.addEventListener("click", () => {
+//   const maxPrice = Number(priceInput.value);
+//   const filtered = products.filter((product) => product.price <= maxPrice);
 
-  productList.innerHTML = ""; // очищаємо попередній список
+//   productList.innerHTML = ""; // очищаємо попередній список
 
-  filtered.forEach((product) => {
-    const li = document.createElement("li");
-    li.textContent = `${product.name} — ${product.price} грн`;
-    productList.appendChild(li);
-  });
+//   filtered.forEach((product) => {
+//     const li = document.createElement("li");
+//     li.textContent = `${product.name} — ${product.price} грн`;
+//     productList.appendChild(li);
+//   });
+// });
+
+//! 1
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(i + 1);
+// }
+
+//! 2
+
+// for (let i = 1; i < 11; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+// }
+
+//! 3
+// let result = 0;
+// for (let i = 0; i < 100; i++) {
+//   result += i + 1;
+// }
+// console.log(result);
+
+//! 4
+
+// const fruits = ["apple", "banana", "cherry"];
+// for (let i = 0; i < fruits.length; i++) {
+//   console.log(fruits[i]);
+// }
+
+//! 5
+// const numbers = [3, 17, 4, 28, 6];
+// for (let i = 0; i < numbers.length; i++) {
+//   const res = numbers.slice(numbers[i]);
+//   console.log(Math.max(res[i]));
+// }
+
+//! 6
+
+// const str = "JavaScript is awesome!";
+// const vofels = "a, a, i, i, a, e, o";
+// let count = 0;
+
+// for (const word of str.toLowerCase()) {
+//   if (vofels.includes(word)) {
+//     count++;
+//   }
+// }
+// console.log(count);
+//! 7
+// const arr = [1, 2, 3];
+// let arrNums = [];
+// for (const num of arr) {
+//   arrNums.push(num * 2);
+// }
+// console.log(arrNums);
+//! 8
+// const nums = [4, -2, 9, 0];
+// const numbers = (arr) => arr.some((num) => num < 0);
+// console.log(numbers(nums));
+
+// for (const num of nums) {
+//   if (num < 0) {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// }
+//! 9
+// for (let i = 1; i <= 4; i++) {
+//   let line = "";
+//   for (let j = 0; j < i; j++) {
+//     line += "*";
+//   }
+//   console.log(line);
+// }
+
+// for (let i = 1; i <= 4; i++) {
+//   console.log("*".repeat(i));
+// }
+
+// const jsonString = '{"name":"Yaroslav","age":25,"skills":["JS","HTML","CSS"]}';
+
+// const parsString = JSON.parse(jsonString);
+// console.log(parsString);
+
+// const user = {
+//   name: "Anna",
+//   age: 30,
+//   online: true,
+// };
+
+// const userJson = JSON.stringify(user);
+// console.log(userJson);
+
+// fetch("https://jsonplaceholder.typicode.com/users").then(response=>);
+
+const modalBtn = document.querySelector(".open-modal");
+modalBtn.addEventListener("click", () => {
+  const instance = basicLightbox.create(
+    `<div class="modal">
+            <h2>Hello World</h2>
+            </div>`
+  );
+  instance.show();
 });
