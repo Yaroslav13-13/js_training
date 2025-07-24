@@ -312,3 +312,26 @@ container.addEventListener("click", (event) => {
 // console.log(json); // '{"name":"Mango","age":3,"isGoodBoy":true}'
 
 //!====================================================================
+
+// const textBtn = document.querySelector(".btn-text");
+// const textP = document.querySelector(".p-text");
+
+// textBtn.addEventListener("click", () => {
+//   text.textContent = "Привіт, подіє!";
+// });
+
+// const inputName = document.querySelector(".input-name");
+// const outputName = document.querySelector(".output-name");
+// inputName.addEventListener("input", () => {
+//   outputName.textContent = inputName.value;
+// });
+
+const form = document.querySelector(".my-form");
+const nameField = document.querySelector(".name-field");
+const btnForm = document.querySelector(".btn-form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let userName = nameField.value;
+  alert(`Hello ${userName}`);
+});
