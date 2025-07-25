@@ -326,6 +326,7 @@
 //   outputName.textContent = inputName.value;
 // });
 
+<<<<<<< HEAD
 // const form = document.querySelector(".my-form");
 // const nameField = document.querySelector(".name-field");
 // const btnForm = document.querySelector(".btn-form");
@@ -396,7 +397,7 @@ function foo(products) {
     .join("");
   productCard.innerHTML = marcup;
 }
-
 foo(products);
 
 //!================================================================================
+
