@@ -2555,12 +2555,12 @@
 
 // fetch("https://jsonplaceholder.typicode.com/users").then(response=>);
 
-const modalBtn = document.querySelector(".open-modal");
-modalBtn.addEventListener("click", () => {
-  const instance = basicLightbox.create(
-    `<div class="modal">
-            <h2>Hello World</h2>
-            </div>`
-  );
-  instance.show();
-});
+// const modalBtn = document.querySelector(".open-modal");
+// modalBtn.addEventListener("click", () => {
+//   const instance = basicLightbox.create(
+//     `<div class="modal">
+//             <h2>Hello World</h2>
+//             </div>`
+//   );
+//   instance.show();
+// });

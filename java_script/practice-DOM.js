@@ -116,63 +116,63 @@
 //* });
 //! ____________________________________________________________________
 
-const title = document.querySelector(".title");
-const inputTitle = document.querySelector(".input-title");
-const btnTitle = document.querySelector(".btn-title");
-const inputColor = document.querySelector(".input-color");
-const btnColor = document.querySelector(".btn-color");
+// const title = document.querySelector(".title");
+// const inputTitle = document.querySelector(".input-title");
+// const btnTitle = document.querySelector(".btn-title");
+// const inputColor = document.querySelector(".input-color");
+// const btnColor = document.querySelector(".btn-color");
 
-btnTitle.addEventListener("click", () => {
-  if (inputTitle.value.trim() !== "") {
-    title.textContent = inputTitle.value;
-  } else {
-    alert("Введіть текст");
-  }
-});
+// btnTitle.addEventListener("click", () => {
+//   if (inputTitle.value.trim() !== "") {
+//     title.textContent = inputTitle.value;
+//   } else {
+//     alert("Введіть текст");
+//   }
+// });
 
-btnColor.addEventListener("click", () => {
-  if (inputColor.value.trim() !== "") {
-    title.style.color = inputColor.value;
-  } else {
-    alert("Введіть колір");
-  }
-});
+// btnColor.addEventListener("click", () => {
+//   if (inputColor.value.trim() !== "") {
+//     title.style.color = inputColor.value;
+//   } else {
+//     alert("Введіть колір");
+//   }
+// });
 
-inputTitle.addEventListener("input", () => {
-  title.textContent = inputTitle.value;
-});
+// inputTitle.addEventListener("input", () => {
+//   title.textContent = inputTitle.value;
+// });
 
-inputColor.addEventListener("input", () => {
-  title.style.color = inputColor.value;
-});
+// inputColor.addEventListener("input", () => {
+//   title.style.color = inputColor.value;
+// });
 
-const fruits = document.querySelector("#fruitList");
-const inputFruits = document.querySelector(".input");
+// const fruits = document.querySelector("#fruitList");
+// const inputFruits = document.querySelector(".input");
 
-fruits.addEventListener("click", (event) => {
-  if (event.target.tagName === "LI") {
-    inputFruits.value = event.target.textContent;
-    event.target.style.color = "red";
-    event.target.style.cursor = "pointer";
-  }
-});
+// fruits.addEventListener("click", (event) => {
+//   if (event.target.tagName === "LI") {
+//     inputFruits.value = event.target.textContent;
+//     event.target.style.color = "red";
+//     event.target.style.cursor = "pointer";
+//   }
+// });
 
-inputFruits.addEventListener(focus, (event) => {
-  event.target.style.borderColor = "red";
-});
-const text = document.querySelector("p");
-text.innerHTML = "<p>HTML,CSS, <strong>JavaScript</strong></p>";
+// inputFruits.addEventListener(focus, (event) => {
+//   event.target.style.borderColor = "red";
+// });
+// const text = document.querySelector("p");
+// text.innerHTML = "<p>HTML,CSS, <strong>JavaScript</strong></p>";
 
-// !=================================================================
+// // !=================================================================
 
-const container = document.querySelector("#container");
+// const container = document.querySelector("#container");
 
-container.addEventListener("click", (event) => {
-  if (event.target.tagName === "BUTTON") {
-    console.log("Клік по кнопці:", event.target.textContent);
-    console.log("Обробник висить на:", event.currentTarget.id);
-  }
-});
+// container.addEventListener("click", (event) => {
+//   if (event.target.tagName === "BUTTON") {
+//     console.log("Клік по кнопці:", event.target.textContent);
+//     console.log("Обробник висить на:", event.currentTarget.id);
+//   }
+// });
 
 // const categories = document.querySelectorAll("#categories .item");
 // const item = document.querySelectorAll(".item");
@@ -326,12 +326,77 @@ container.addEventListener("click", (event) => {
 //   outputName.textContent = inputName.value;
 // });
 
-const form = document.querySelector(".my-form");
-const nameField = document.querySelector(".name-field");
-const btnForm = document.querySelector(".btn-form");
+// const form = document.querySelector(".my-form");
+// const nameField = document.querySelector(".name-field");
+// const btnForm = document.querySelector(".btn-form");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  let userName = nameField.value;
-  alert(`Hello ${userName}`);
-});
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   let userName = nameField.value;
+//   alert(`Hello ${userName}`);
+// });
+
+//!================================================================================
+
+// const users = ["Anna", "Bohdan", "Iryna", "Yaroslav"];
+
+// const userList = document.querySelector(".user-list");
+// function renderUsers(users) {
+//   const marcup = users
+//     .map((user) => {
+//       return `<li>name: ${user}</li>`;
+//     })
+//     .join("");
+//   userList.insertAdjacentHTML("beforebegin", marcup);
+// }
+// renderUsers(users);
+
+// const userList = document.querySelector(".user-list");
+// function renderUsers(users) {
+//   const marcup = users
+//     .map((user) => {
+//       return `<li>name: ${user}</li>`;
+//     })
+//     .join("");
+//   userList.innerHTML = marcup;
+//   userList.style.listStyle = "none";
+// }
+// renderUsers(users);
+
+// const userList = document.querySelector(".user-list");
+// function renderUsers(users) {
+//   users.forEach((user) => {
+//     const li = document.createElement("li");
+//     li.textContent = `name: ${user}`;
+//     userList.append(li);
+//     li.style.listStyle = "none";
+//   });
+//   return;
+// }
+// renderUsers(users);
+//!================================================================================
+
+const products = [
+  { name: "Смартфон", price: 8999, inStock: true },
+  { name: "Планшет", price: 5999, inStock: false },
+  { name: "Ноутбук", price: 14999, inStock: true },
+];
+
+const productCard = document.querySelector(".product");
+
+function foo(products) {
+  const marcup = products
+    .map((product) => {
+      return `<div class="card">
+  <h2>${product.name}</h2>
+  <p>Ціна: ${product.price} грн</p>
+  <p>В наявності: ${product.inStock ? "✅" : "❌"}</p>
+</div>`;
+    })
+    .join("");
+  productCard.innerHTML = marcup;
+}
+
+foo(products);
+
+//!================================================================================
