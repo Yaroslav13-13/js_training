@@ -435,29 +435,48 @@ const users = [
 ];
 
 const userContainer = document.querySelector("#users-container");
+const searchInput = document.querySelector("#search-input");
 
-function foo(users) {
-  const marcup = users
+function renderUsers(users) {
+  const markup = users
     .map((user) => {
-      return `<ul><br><li>Name: ${user.name}
-      </li><li>Age: ${user.age}</li>
-    <li><button class="show-address">Show/Hiden Address</button>
-<p hidden><br><strong>Citi: </strong> ${user.address.city}<strong><br>
-Street: </strong> ${user.address.street}<strong><br>
-Zipcode: </strong>${user.address.zipcode}</p></li></ul>
-    `;
+      return `
+        <ul>
+          <li><strong>Name:</strong> ${user.name}</li>
+          <li><strong>Age:</strong> ${user.age}</li>
+          <li>
+            <button class="show-address">Show/Hide Address</button>
+            <div class="address" hidden>
+              <p><strong>City:</strong> ${user.address.city}</p>
+              <p><strong>Street:</strong> ${user.address.street}</p>
+              <p><strong>Zipcode:</strong> ${user.address.zipcode}</p>
+            </div>
+          </li>
+        </ul>
+      `;
     })
     .join("");
-  userContainer.innerHTML = marcup;
-  const btnAddress = document.querySelectorAll(".show-address");
-  btnAddress.forEach((btn) => {
+
+  userContainer.innerHTML = markup;
+
+  document.querySelectorAll(".show-address").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const adress = btn.nextElementSibling;
-      adress.hidden = !adress.hidden;
+      const address = btn.nextElementSibling;
+      address.hidden = !address.hidden;
     });
   });
 }
 
-foo(users);
+renderUsers(users);
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+
+  const filtered = users.filter((user) =>
+    user.name.toLowerCase().includes(query)
+  );
+
+  renderUsers(filtered);
+});
 
 //!================================================================================
