@@ -2,7 +2,7 @@ body {
   background-color: rgb(198, 243, 204);
 }
 
-div {
+div.title-1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +14,7 @@ div {
   background-color: black;
 }
 
-h1 {
+.title-h1 {
   text-align: center;
   display: block;
   font-family: Honk, sans-serif;
@@ -23,7 +23,7 @@ h1 {
   color: rgb(255, 255, 255);
   font-variant-caps: small-caps;
 }
-span {
+.title-h1 {
   color: yellow;
   padding: 5px;
   font-variant-caps: small-caps;
