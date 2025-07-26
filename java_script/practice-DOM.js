@@ -326,7 +326,6 @@
 //   outputName.textContent = inputName.value;
 // });
 
-<<<<<<< HEAD
 // const form = document.querySelector(".my-form");
 // const nameField = document.querySelector(".name-field");
 // const btnForm = document.querySelector(".btn-form");
@@ -377,27 +376,88 @@
 // renderUsers(users);
 //!================================================================================
 
-const products = [
-  { name: "Смартфон", price: 8999, inStock: true },
-  { name: "Планшет", price: 5999, inStock: false },
-  { name: "Ноутбук", price: 14999, inStock: true },
+// const products = [
+//   { name: "Смартфон", price: 8999, inStock: true },
+//   { name: "Планшет", price: 5999, inStock: false },
+//   { name: "Ноутбук", price: 14999, inStock: true },
+// ];
+
+// const productCard = document.querySelector(".product");
+
+// function foo(products) {
+//   const marcup = products
+//     .map((product) => {
+//       return `<div class="card">
+//   <h2>${product.name}</h2>
+//   <p>Ціна: ${product.price} грн</p>
+//   <p>В наявності: ${product.inStock ? "✅" : "❌"}</p>
+// </div>`;
+//     })
+//     .join("");
+//   productCard.innerHTML = marcup;
+// }
+// foo(products);
+
+const users = [
+  {
+    id: 1,
+    name: "Yaroslav",
+    email: "yaroslav@example.com",
+    age: 25,
+    address: {
+      city: "Kyiv",
+      street: "Shevchenka 12",
+      zipcode: "01001",
+    },
+  },
+  {
+    id: 2,
+    name: "Anna",
+    email: "anna@example.com",
+    age: 30,
+    address: {
+      city: "Lviv",
+      street: "Franko 5",
+      zipcode: "79000",
+    },
+  },
+  {
+    id: 3,
+    name: "Ivan",
+    email: "ivan@example.com",
+    age: 22,
+    address: {
+      city: "Odesa",
+      street: "Deribasivska 3",
+      zipcode: "65000",
+    },
+  },
 ];
 
-const productCard = document.querySelector(".product");
+const userContainer = document.querySelector("#users-container");
 
-function foo(products) {
-  const marcup = products
-    .map((product) => {
-      return `<div class="card">
-  <h2>${product.name}</h2>
-  <p>Ціна: ${product.price} грн</p>
-  <p>В наявності: ${product.inStock ? "✅" : "❌"}</p>
-</div>`;
+function foo(users) {
+  const marcup = users
+    .map((user) => {
+      return `<ul><br><li>Name: ${user.name}
+      </li><li>Age: ${user.age}</li>
+    <li><button class="show-address">Show/Hiden Address</button>
+<p hidden><br><strong>Citi: </strong> ${user.address.city}<strong><br>
+Street: </strong> ${user.address.street}<strong><br>
+Zipcode: </strong>${user.address.zipcode}</p></li></ul>
+    `;
     })
     .join("");
-  productCard.innerHTML = marcup;
+  userContainer.innerHTML = marcup;
+  const btnAddress = document.querySelectorAll(".show-address");
+  btnAddress.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const adress = btn.nextElementSibling;
+      adress.hidden = !adress.hidden;
+    });
+  });
 }
-foo(products);
+
+foo(users);
 
 //!================================================================================
-
