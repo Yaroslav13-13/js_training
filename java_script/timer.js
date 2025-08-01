@@ -6,6 +6,13 @@ class Timer {
   constructor({ onTick }) {
     this.onTick = onTick;
     this.isActive = false;
+    this.intervalId = null;
+    this.init();
+  }
+
+  init() {
+    const time = this.getTimeComponent(0);
+    this.onTick(time);
   }
 
   start() {
@@ -16,15 +23,18 @@ class Timer {
     this.isActive = true;
 
     const startTime = Date.now();
-
-    setInterval(() => {
+    this.intervalId = setInterval(() => {
       const currentTime = Date.now();
       const deltaTime = currentTime - startTime;
-
       const time = this.getTimeComponent(deltaTime);
-
       this.onTick(time);
     }, 1000);
+  }
+
+  stop() {
+    clearInterval(this.intervalId);
+    this.init();
+    this.isActive = false;
   }
 
   getTimeComponent(time) {
@@ -44,6 +54,7 @@ class Timer {
 const time = new Timer({ onTick: updateClockface });
 
 startBtn.addEventListener("click", time.start.bind(time));
+stopBtn.addEventListener("click", time.stop.bind(time));
 
 function updateClockface({ hours, mins, secs }) {
   clockface.textContent = `${hours}:${mins}:${secs}`;
