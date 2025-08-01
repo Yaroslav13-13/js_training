@@ -1845,3 +1845,79 @@
 // console.log(portfolioEL.nextElementSibling);
 // console.log(portfolioEL.previousElementSibling);
 // console.log(portfolioEL.parentNode);
+
+//!         Модуль 10. Асинхронний JavaScript і проміси
+
+//todo              Метод setTimeout()
+
+// console.log("before");
+// setTimeout(() => {
+//   console.log("timer-2");
+// }, 2000);
+// setTimeout(() => {
+//   console.log("timer-1");
+// }, 2000);
+// onsole.log("after");
+
+//todo              Метод clearTimeout()
+
+// const logger = () => {
+//   console.log("logger");
+// };
+//  setTimeout(logger, 2000);
+// const timerId = setTimeout(logger, 2000);
+// clearTimeout(timerId);
+
+// const logger = ({ time }) => {
+//   console.log(`logger. ${time}`);
+// };
+// setTimeout(logger, 2000);
+// const timerId = setTimeout(logger, 2000, { time: "2000ms" });
+
+// setTimeout(
+//   ({ time }) => {
+//     console.log(`logger.${time}`);
+//   },
+//   2000,
+//   { time: "2000ms" }
+// );
+
+// for (let i = 3; i > 0; i--) {
+//   const delay = i * 1000;
+//   setTimeout(() => {
+//     console.log(i);
+//   }, delay);
+// }
+
+//todo              Метод setInterval()
+
+// const timerId = setInterval(
+//   (timer) => {
+//     console.log("timer:", timer);
+//   },
+//   2000,
+//   "2s"
+// );
+
+// setTimeout(() => {
+//   clearInterval(timerId);
+// }, 5000);
+
+//todo          class Data    Метод ()
+
+// const currentData = new Date();
+// const day = currentData.getDay();
+// const date = currentData.getDateh();
+// const month = currentData.getMonth();
+// const year = currentData.getFullYear();
+
+// console.log(day);
+// console.log(date);
+// console.log(month);
+// console.log(year);
+
+// currentData.setFullYear(2007);
+// console.log(Date.now());
+// console.log(currentData);
+
+// const startTime = Date.now();

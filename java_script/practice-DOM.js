@@ -398,94 +398,94 @@
 // }
 // foo(products);
 
-const users = [
-  {
-    id: 1,
-    name: "Yaroslav",
-    email: "yaroslav@example.com",
-    age: 25,
-    address: {
-      city: "Kyiv",
-      street: "Shevchenka 12",
-      zipcode: "01001",
-    },
-  },
-  {
-    id: 2,
-    name: "Anna",
-    email: "anna@example.com",
-    age: 30,
-    address: {
-      city: "Lviv",
-      street: "Franko 5",
-      zipcode: "79000",
-    },
-  },
-  {
-    id: 3,
-    name: "Ivan",
-    email: "ivan@example.com",
-    age: 22,
-    address: {
-      city: "Odesa",
-      street: "Deribasivska 3",
-      zipcode: "65000",
-    },
-  },
-];
+// const users = [
+//   {
+//     id: 1,
+//     name: "Yaroslav",
+//     email: "yaroslav@example.com",
+//     age: 25,
+//     address: {
+//       city: "Kyiv",
+//       street: "Shevchenka 12",
+//       zipcode: "01001",
+//     },
+//   },
+//   {
+//     id: 2,
+//     name: "Anna",
+//     email: "anna@example.com",
+//     age: 30,
+//     address: {
+//       city: "Lviv",
+//       street: "Franko 5",
+//       zipcode: "79000",
+//     },
+//   },
+//   {
+//     id: 3,
+//     name: "Ivan",
+//     email: "ivan@example.com",
+//     age: 22,
+//     address: {
+//       city: "Odesa",
+//       street: "Deribasivska 3",
+//       zipcode: "65000",
+//     },
+//   },
+// ];
 
-const userContainer = document.querySelector("#users-container");
-const searchInput = document.querySelector("#search-input");
+// const userContainer = document.querySelector("#users-container");
+// const searchInput = document.querySelector("#search-input");
 
-function renderUsers(users) {
-  const markup = users
-    .map((user) => {
-      return `
-        <ul>
-          <li><strong>Name:</strong> ${user.name}</li>
-          <li><strong>Age:</strong> ${user.age}</li>
-          <li>
-            <button class="show-address">Show/Hide Address</button>
-            <div class="address" hidden>
-              <p><strong>City:</strong> ${user.address.city}</p>
-              <p><strong>Street:</strong> ${user.address.street}</p>
-              <p><strong>Zipcode:</strong> ${user.address.zipcode}</p>
-            </div>
-          </li>
-        </ul>
-      `;
-    })
-    .join("");
+// function renderUsers(users) {
+//   const markup = users
+//     .map((user) => {
+//       return `
+//         <ul>
+//           <li><strong>Name:</strong> ${user.name}</li>
+//           <li><strong>Age:</strong> ${user.age}</li>
+//           <li>
+//             <button class="show-address">Show/Hide Address</button>
+//             <div class="address" hidden>
+//               <p><strong>City:</strong> ${user.address.city}</p>
+//               <p><strong>Street:</strong> ${user.address.street}</p>
+//               <p><strong>Zipcode:</strong> ${user.address.zipcode}</p>
+//             </div>
+//           </li>
+//         </ul>
+//       `;
+//     })
+//     .join("");
 
-  userContainer.innerHTML = markup;
+//   userContainer.innerHTML = markup;
 
-  document.querySelectorAll(".show-address").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const address = btn.nextElementSibling;
-      address.hidden = !address.hidden;
-    });
-  });
-}
+//   document.querySelectorAll(".show-address").forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//       const address = btn.nextElementSibling;
+//       address.hidden = !address.hidden;
+//     });
+//   });
+// }
 
-renderUsers(users);
+// renderUsers(users);
 
-searchInput.addEventListener("input", () => {
-  const query = searchInput.value.toLowerCase();
+// searchInput.addEventListener("input", () => {
+//   const query = searchInput.value.toLowerCase();
 
-  const filtered = users.filter((user) =>
-    user.name.toLowerCase().includes(query)
-  );
+//   const filtered = users.filter((user) =>
+//     user.name.toLowerCase().includes(query)
+//   );
 
-  renderUsers(filtered);
-});
+//   renderUsers(filtered);
+// });
 
-//!================================================================================
+// //!================================================================================
 
-//! localStorage.setItem() - покласти у Локальнe сховище
-//! localStorage.gеtItem() - витягти з Локального сховища
-//! localStorage.removeItem() - видалити з Локального сховища
-//! localStorage.cleare() - видалити ВСЕ з Локального сховища (не рекомендується)
-// ! JSON.parse()
+// //! localStorage.setItem() - покласти у Локальнe сховище
+// //! localStorage.gеtItem() - витягти з Локального сховища
+// //! localStorage.removeItem() - видалити з Локального сховища
+// //! localStorage.cleare() - видалити ВСЕ з Локального сховища (не рекомендується)
+// // ! JSON.parse()
 
 // const LS_KEY = "Array of names";
 // const names = ["Alice", "Kate", "Emma"];
@@ -627,30 +627,30 @@ searchInput.addEventListener("input", () => {
 // getRandomNumber();
 
 //todo==================================================================
-function fetchUser() {
-  const likelihood = Math.random();
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (likelihood <= 0.7) {
-        return resolve({ name: "Yaroslav", age: 25 });
-      } else {
-        return reject("❌ Користувача не знайдено");
-      }
-    }, 1500);
-  });
-}
+// function fetchUser() {
+//   const likelihood = Math.random();
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (likelihood <= 0.7) {
+//         return resolve({ name: "Yaroslav", age: 25 });
+//       } else {
+//         return reject("❌ Користувача не знайдено");
+//       }
+//     }, 1500);
+//   });
+// }
 
-function displayUser(user) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(`👤 Name: ${user.name} | Age: ${user.age}`);
-    }, 1000);
-  });
-}
+// function displayUser(user) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve(`👤 Name: ${user.name} | Age: ${user.age}`);
+//     }, 1000);
+//   });
+// }
 
-fetchUser()
-  .then((user) => displayUser(user))
-  .then((result) => console.log(result))
-  .catch((error) => console.log(error));
+// fetchUser()
+//   .then((user) => displayUser(user))
+//   .then((result) => console.log(result))
+//   .catch((error) => console.log(error));
 
 //todo==================================================================
