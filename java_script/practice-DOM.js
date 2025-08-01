@@ -480,3 +480,177 @@ searchInput.addEventListener("input", () => {
 });
 
 //!================================================================================
+
+//! localStorage.setItem() - покласти у Локальнe сховище
+//! localStorage.gеtItem() - витягти з Локального сховища
+//! localStorage.removeItem() - видалити з Локального сховища
+//! localStorage.cleare() - видалити ВСЕ з Локального сховища (не рекомендується)
+// ! JSON.parse()
+
+// const LS_KEY = "Array of names";
+// const names = ["Alice", "Kate", "Emma"];
+
+// localStorage.setItem(LS_KEY, JSON.stringify(names));
+//!                          ---------------------
+// const value = localStorage.getItem(LS_KEY);
+// console.log(Array.isArray(JSON.parse(value)));
+
+// const date = new Date("2030-02-16T14:25:00");
+// console.log(date.getTime());
+// console.log(new Date(2030, 0, 16, 14, 25, 0, 0));
+// console.log(new Date(15000));
+
+// const time = Date.now();
+// console.log(time);
+
+// const satrtTime = Date.now();
+// for (let i = 0; i <= 160; i += 1) {
+//   console.log(i);
+// }
+// const endTime = Date.now();
+// const elapsedTime = endTime - satrtTime;
+// console.log(`Elapsed time: ${elapsedTime} ms`);
+
+// !                   ПРОМІСИ
+
+// const promise = new Promise((resorve, reject) => {
+//   setTimeout(() => {
+//     resorve("Дані завантажено");
+//   }, 2000);
+// });
+
+// promise
+//   .then((result) => console.log(result))
+//   .catch((error) => console.log(error))
+//   .finally(() => console.log("🔚 Завершено"));
+
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     const success = Math.random() > 0.5;
+//     if (success) {
+//       resolve("🎉 Успіх");
+//     } else {
+//       reject("❌ Помилка");
+//     }
+//   }, 2000);
+// });
+
+// promise
+//   .then((result) => console.log(result))
+//   .catch((error) => console.log(error));
+
+//todo==================================================================
+
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Hello, World!");
+//   }, 1000);
+// });
+
+// promise.then((result) => console.log(result));
+
+//todo==================================================================
+
+// const promiseOne = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     const success = Math.random() > 0.5;
+//     if (success) {
+//       resolve("Успіх");
+//     } else {
+//       reject("Помилка");
+//     }
+//   }, 1500);
+// });
+
+// promiseOne
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+//todo==================================================================
+
+// function delay(ms) {
+//   const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve();
+//     }, ms);
+//   });
+//   return promise;
+// }
+
+// delay(2000).then(() => console.log("Прошло 2 секунди"));
+
+//todo==================================================================
+
+// function getRandomNumber() {
+//   const success1 = Math.random() * 10;
+//   const promiseTwo = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(success1);
+//     }, 1000);
+//   });
+
+//   return promiseTwo.then((result) => {
+//     console.log(Math.round(result));
+//   });
+// }
+// getRandomNumber();
+
+//todo==================================================================
+
+// function getRandomNumber() {
+//   const success1 = Math.random() * 10;
+//   const promiseTwo = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(success1);
+//     }, 1000);
+//   });
+
+//   return promiseTwo
+//     .then((value) => {
+//       const random = Math.round(value);
+//       console.log("Random number:", random);
+//       return random;
+//     })
+//     .then((result) => {
+//       const plusFive = result + 5;
+//       console.log("+5:", plusFive);
+//       return plusFive;
+//     })
+//     .then((final) => {
+//       console.log("Result:", final);
+//     });
+// }
+// getRandomNumber();
+
+//todo==================================================================
+function fetchUser() {
+  const likelihood = Math.random();
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (likelihood <= 0.7) {
+        return resolve({ name: "Yaroslav", age: 25 });
+      } else {
+        return reject("❌ Користувача не знайдено");
+      }
+    }, 1500);
+  });
+}
+
+function displayUser(user) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`👤 Name: ${user.name} | Age: ${user.age}`);
+    }, 1000);
+  });
+}
+
+fetchUser()
+  .then((user) => displayUser(user))
+  .then((result) => console.log(result))
+  .catch((error) => console.log(error));
+
+//todo==================================================================

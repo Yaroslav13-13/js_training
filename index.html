@@ -21,6 +21,20 @@
     <script type="module" src="./java_script/tasks.js"></script>
     <script type="module" src="./java_script/"></script>
     <script type="module" src="./java_script/practice-DOM.js"></script>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+      .active {
+        color: red;
+        font-weight: bold;
+      }
+      .btn {
+        padding: 5px 10px;
+        margin: 5px;
+      }
+    </style>
   </head>
   <body>
     <div class="title-1">
@@ -340,5 +354,30 @@
     <h1>Список користувачів</h1>
     <input type="text" id="search-input" placeholder="Пошук за іменем..." />
     <div id="users-container"></div>
+
+    <!-- ==================================================== -->
+
+    <header id="header">
+      <h1>Мій заголовок</h1>
+      <nav>
+        <a href="https://example.com" class="nav-link">Посилання</a>
+      </nav>
+    </header>
+
+    <section class="info">
+      <p class="text">Це текст у секції.</p>
+      <button class="btn">Натисни</button>
+    </section>
+
+    <ul id="list">
+      <li>Елемент 1</li>
+      <li class="selected">Елемент 2</li>
+      <li>Елемент 3</li>
+    </ul>
+
+    <div class="box hidden" data-user="admin" data-topic="js">
+      Схований блок
+      <img src="https://via.placeholder.com/150" alt="img" />
+    </div>
   </body>
 </html>
