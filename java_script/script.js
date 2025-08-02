@@ -1921,3 +1921,156 @@
 // console.log(currentData);
 
 // const startTime = Date.now();
+
+//todo           ===   Проміси  ===
+
+// const promise = new Promise((resolve, reject) => {
+//   const random = Math.random();
+//   setTimeout(() => {
+//     if (random > 0.5) {
+//       resolve("ok");
+//     } else {
+//       reject("Ooops");
+//     }
+//   }, 2000);
+// });
+// promise
+//   .then((result) => {
+//     console.log("then - ", result);
+//   })
+//   .catch((error) => {
+//     console.log("catch - ", error);
+//   });
+
+// const promise = new Promise((resolve, reject) => {
+//   const random = Math.round(Math.random() * 100);
+//   resolve(random);
+// });
+// promise
+//   .then((res) => {
+//     console.log(res);
+//     return res * 2;
+//   })
+//   .then((value) => {
+//     console.log(value);
+//     return value * 4;
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => console.log(error))
+//   .finally(() => {
+//     console.log("The end");
+//   });
+
+// console.log("step 1"); //! Синхронний код ( 1 )
+// setTimeout(() => {
+//   console.log("step 2"); //! мАкрозадача ( 3 )
+// }, 0);
+// new Promise((resolv) => {
+//   resolv("step 3"); //! мІкрозадача ( 2 )
+// }).then((data) => console.log(data));
+// setTimeout(() => console.log("step 4")); //! мАкрозадача ( 4 )
+
+//todo           ===   Промісифікація  ===
+
+// const makeOrder = (dish, onSuccess, onError) => {
+//   const random = Math.random();
+//   setTimeout(() => {
+//     if (random > 0.5) {
+//       onSuccess(`Ваше замовлення ${dish}`);
+//     } else {
+//       onError("Закінчилися продукти");
+//     }
+//   }, 1000);
+// };
+
+// makeOrder(
+//   "Cacke",
+//   (str) => {
+//     console.log("onSucces", str);
+//   },
+//   (error) => {
+//     console.log("onError", error);
+//   }
+// );
+
+// const makeOrder = (dish) => {
+//   return new Promise((resolv, reject) => {
+//     const random = Math.random();
+//     setTimeout(() => {
+//       if (random > 0.5) {
+//         resolv(`Ваше замовлення ${dish}`);
+//       } else {
+//         reject("Закінчилися продукти");
+//       }
+//     }, 1000);
+//   });
+// };
+
+// makeOrder("Cacke")
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+//todo           ===   promise.all   promise.race  ===
+
+const startTime = Date.now();
+
+const res1 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const currentTime = Date.now();
+      const deltaTime = currentTime - startTime;
+
+      resolve({ title: "first", time: deltaTime });
+    }, 3000);
+  });
+};
+
+const res2 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const currentTime = Date.now();
+      const deltaTime = currentTime - startTime;
+
+      resolve({ title: "second", time: deltaTime });
+    }, 1000);
+  });
+};
+
+const res3 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const currentTime = Date.now();
+      const deltaTime = currentTime - startTime;
+
+      resolve({ title: "third", time: deltaTime });
+    }, 5000);
+  });
+};
+
+const container = document.querySelector(".container");
+container.textContent = "Loading...";
+
+Promise.all([res1(), res2(), res3()])
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+  .finally(() => {
+    container.textContent = "";
+  });
+
+Promise.race([res1(), res2(), res3()])
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
