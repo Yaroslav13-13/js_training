@@ -39,9 +39,9 @@
   <body>
 
 <a href="timer.html">Відкрити таймер</a>
-
+<!-- 
     <div class="title-1">
-      <h1 class="title-h1"><span>J</span>ava <span>S</span>cript</h1>
+      <h1 class="title-h1"><span>J</span>ava <span>S</span>cript</h1> -->
       <!-- <ul class="list-item">
         <li class="first-list"></li>
         <li class="list"></li>
@@ -383,6 +383,70 @@
       <img src="https://via.placeholder.com/150" alt="img" /> -->
 
  <!-- ================= Модуль 10. Асинхронний JavaScript і проміси ================== -->
+
+<button class="start-btn">Start Game</button>
+<div class="container-game">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+<p class="result"></p>
+
+<style>
+  .start-btn {
+    background-color: rgb(96, 96, 228);
+        color: aliceblue;
+        border: none;
+        width: 80px;
+        height: 40px;
+        border-radius: 5%;
+        margin-left: 20px;
+        font-size: 14px;
+        font-family: sans-serif;
+
+        display: flex;
+       align-items: center;
+       margin: 0 auto;
+       margin-top: 50px;
+
+}
+
+.start-btn:active{
+transform: translateY(2px);
+  box-shadow: 0 2px 0 #6e7eea;
+}
+
+.start-btn:hover{
+  background-color: rgb(125, 125, 236);
+}
+
+
+.container-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px
+}
+.item {
+  display: flex;
+  margin-top: 20px;
+  border: black solid 2px;
+  width: 60px;
+  height: 60px;
+  border-radius: 5%;
+align-items: center;
+justify-content: center;
+font-size: 40px;
+}
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: crimson;
+}
+</style>
+
 
 
     </div>

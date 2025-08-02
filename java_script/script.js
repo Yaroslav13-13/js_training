@@ -2018,59 +2018,96 @@
 
 //todo           ===   promise.all   promise.race  ===
 
-const startTime = Date.now();
+// const startTime = Date.now();
 
-const res1 = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const currentTime = Date.now();
-      const deltaTime = currentTime - startTime;
+// const res1 = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const currentTime = Date.now();
+//       const deltaTime = currentTime - startTime;
 
-      resolve({ title: "first", time: deltaTime });
-    }, 3000);
+//       resolve({ title: "first", time: deltaTime });
+//     }, 3000);
+//   });
+// };
+
+// const res2 = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const currentTime = Date.now();
+//       const deltaTime = currentTime - startTime;
+
+//       resolve({ title: "second", time: deltaTime });
+//     }, 1000);
+//   });
+// };
+
+// const res3 = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const currentTime = Date.now();
+//       const deltaTime = currentTime - startTime;
+
+//       resolve({ title: "third", time: deltaTime });
+//     }, 5000);
+//   });
+// };
+
+// const container = document.querySelector(".container");
+// container.textContent = "Loading...";
+
+// Promise.all([res1(), res2(), res3()])
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   })
+//   .finally(() => {
+//     container.textContent = "";
+//   });
+
+// Promise.race([res1(), res2(), res3()])
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+const startBtn = document.querySelector(".start-btn");
+const container = document.querySelector(".container-game");
+const result = document.querySelector(".result");
+startBtn.addEventListener("click", handleStart);
+
+function handleStart() {
+  result.textContent = "";
+  startBtn.disabled = true;
+
+  const promises = [...container.children].map(() => {
+    return new Promise((resolve, reject) => {
+      const random = Math.random();
+      if (random > 0.5) {
+        resolve("🥳");
+      } else {
+        reject("👿");
+      }
+    });
   });
-};
+  Promise.allSettled(promises).then((items) => {
+    const isWinner =
+      items.every((item) => item.status === "fulfilled") ||
+      items.every((item) => item.status === "rejected");
 
-const res2 = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const currentTime = Date.now();
-      const deltaTime = currentTime - startTime;
-
-      resolve({ title: "second", time: deltaTime });
-    }, 1000);
+    items.forEach((item, i) => {
+      container.children[i].textContent = "";
+      setTimeout(() => {
+        container.children[i].textContent = item.value || item.reason;
+        if (i === items.length - 1) {
+          result.textContent = isWinner ? "Winner" : "Looser";
+          startBtn.disabled = false;
+        }
+      }, 1000 * (i + 1));
+    });
   });
-};
-
-const res3 = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const currentTime = Date.now();
-      const deltaTime = currentTime - startTime;
-
-      resolve({ title: "third", time: deltaTime });
-    }, 5000);
-  });
-};
-
-const container = document.querySelector(".container");
-container.textContent = "Loading...";
-
-Promise.all([res1(), res2(), res3()])
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.log(error);
-  })
-  .finally(() => {
-    container.textContent = "";
-  });
-
-Promise.race([res1(), res2(), res3()])
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+}
