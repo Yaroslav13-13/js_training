@@ -654,3 +654,66 @@
 //   .catch((error) => console.log(error));
 
 //todo==================================================================
+
+//!                Модуль 11. HTTP-запити і взаємодія з бекендом
+
+const todoList = document.querySelector(".todo-list");
+
+// const params = new URLSearchParams({
+//   _limit: 7,
+//   _page: 3,
+// });
+
+// fetch(`http://jsonplaceholder.typicode.com/todos?${params}`)
+//   .then((result) => {
+//     if (!result.ok) {
+//       throw new Error(result.status);
+//     }
+//     return result.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//     todoList.insertAdjacentHTML("beforeend", createMarcup(data));
+//   })
+//   .catch((error) => {
+//     console.log("cetch:", error);
+//   });
+
+function createMarcup(todos) {
+  return todos
+    .map(
+      ({ id, title, completed }) => `
+    <li data-id="${id}" claass = 'list-item'>
+    <input type="checkbox" ${completed && "checked"} />
+    <p>${title}</p></li>
+    `
+    )
+    .join("");
+}
+
+function foo(url) {
+  return fetch(url).then((res) => {
+    if (!res.ok) {
+      throw new Error(res.status);
+    }
+    return res.json();
+  });
+}
+
+foo("http://jsonplaceholder.typicode.com/todos?_limit=7")
+  .then((data) => {
+    todoList.insertAdjacentHTML("beforeend", createMarcup(data));
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+foo("http://jsonplaceholder.typicode.com/users")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+//todo==================================================================
