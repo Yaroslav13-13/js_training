@@ -657,7 +657,7 @@
 
 //!                Модуль 11. HTTP-запити і взаємодія з бекендом
 
-const todoList = document.querySelector(".todo-list");
+// const todoList = document.querySelector(".todo-list");
 
 // const params = new URLSearchParams({
 //   _limit: 7,
@@ -679,41 +679,188 @@ const todoList = document.querySelector(".todo-list");
 //     console.log("cetch:", error);
 //   });
 
-function createMarcup(todos) {
-  return todos
+// function createMarcup(todos) {
+//   return todos
+//     .map(
+//       ({ id, title, completed }) => `
+//     <li data-id="${id}" claass = 'list-item'>
+//     <input type="checkbox" ${completed && "checked"} />
+//     <p>${title}</p></li>
+//     `
+//     )
+//     .join("");
+// }
+
+// function foo(url) {
+//   return fetch(url).then((res) => {
+//     if (!res.ok) {
+//       throw new Error(res.status);
+//     }
+//     return res.json();
+//   });
+// }
+
+// foo("http://jsonplaceholder.typicode.com/todos?_limit=7")
+//   .then((data) => {
+//     todoList.insertAdjacentHTML("beforeend", createMarcup(data));
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// foo("http://jsonplaceholder.typicode.com/users")
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+//todo==================================================================
+
+// const API_KEY = "51453330-23ef603bbdd92dbcc1cebb640";
+
+// const todoList = document.querySelector(".todo-list");
+
+// const params = new URLSearchParams({
+//   key: API_KEY,
+//   q: "car bmw",
+// });
+
+// fetch(`http://pixabay.com/api?${params}`)
+//   .then((res) => {
+//     if (!res.ok) {
+//       throw new Error(res.status.Text);
+//     }
+//     return res.json();
+//   })
+//   .then((data) => {
+//     todoList.insertAdjacentHTML("beforeend", createMacup(data.hits));
+//   })
+//   .catch((error) => {
+//     console.log(error.message);
+//   });
+
+// function createMacup(arr) {
+//   return arr
+//     .map(({ previewURL, tags }) => {
+//       return `<li>
+//       <img src="${previewURL}" alt="${tags}" width = "250"  />
+//     </li>`;
+//     })
+//     .join("");
+// }
+
+// fetch(`http://pixabay.com/api?${params}`, {
+//   headers: {
+//     autorization: `Bearer Yaroslav`,
+//   },
+// });
+
+//todo==================================================================
+
+const BASE_URL = "https://api.weatherapi.com/v1";
+const API_Key = "c787fdcfdb3b4cb982f195440250608";
+
+const form = document.querySelector(".js-search-form");
+const list = document.querySelector(".js-list");
+
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  const { city, days } = event.currentTarget.elements;
+
+  serviceWeather(city.value.trim(), days.value)
+    .then((data) => {
+      if (!data.forecast || !data.forecast.forecastday.length) {
+        list.innerHTML = "<li>Дані не знайдено</li>";
+        return;
+      }
+      list.innerHTML = createMarkup(data.forecast.forecastday);
+    })
+    .catch((error) => {
+      console.error(error);
+      list.innerHTML = `<li>Помилка: ${error.message}</li>`;
+    })
+    .finally(() => {
+      event.target.reset();
+    });
+}
+
+function serviceWeather(city = "", days = 1) {
+  const params = new URLSearchParams({
+    key: API_Key,
+    q: city,
+    days: days,
+    lang: "uk",
+  });
+
+  return fetch(`${BASE_URL}/forecast.json?${params}`).then((result) => {
+    if (!result.ok) {
+      console.error("Помилка HTTP:", result.status, result.statusText);
+      throw new Error(result.statusText);
+    }
+    return result.json();
+  });
+}
+
+function createMarkup(arr) {
+  return arr
     .map(
-      ({ id, title, completed }) => `
-    <li data-id="${id}" claass = 'list-item'>
-    <input type="checkbox" ${completed && "checked"} />
-    <p>${title}</p></li>
-    `
+      ({
+        date,
+        day: {
+          avgtemp_c,
+          condition: { icon, text },
+        },
+      }) =>
+        `
+          <li class="weather-card">
+            <img src="https:${icon}" alt="${text}" class="weather-icon"/>
+            <h2 class="weathor-date">${date}</h2>
+            <h3 class="weathor-text">${text}</h3>
+            <h3 class="temperature">${avgtemp_c} °C</h3>
+          </li>
+          `
     )
     .join("");
 }
 
-function foo(url) {
-  return fetch(url).then((res) => {
-    if (!res.ok) {
-      throw new Error(res.status);
-    }
-    return res.json();
-  });
-}
-
-foo("http://jsonplaceholder.typicode.com/todos?_limit=7")
-  .then((data) => {
-    todoList.insertAdjacentHTML("beforeend", createMarcup(data));
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-
-foo("http://jsonplaceholder.typicode.com/users")
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-
 //todo==================================================================
+
+//!====================   Axios   ====================
+
+// const url = "http://jsonplaceholder.typicode.com/todos";
+
+// const list2 = document.querySelector(".list-2");
+
+// fetch(url)
+//   .then((res) => {
+//     if (!res.ok) {
+//       throw new Error("Ooops");
+//     }
+//     return res.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//     list2.insertAdjacentHTML("beforeend", createMarkup(data));
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// axios("https://jsonplaceholder.typicode.com/todos")
+//   .then((res) => {
+//     if (!res.ok) {
+//       throw new Error("Oooops");
+//     }
+//     return res.json();
+//   })
+//   .then((data) => {
+//     data, json();
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });

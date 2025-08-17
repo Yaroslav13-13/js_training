@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Відгуки клієнтів</title>
+    <link rel="stylesheet" href="feedback.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/rateyo/2.3.2/jquery.rateyo.min.css"
+    />
+  </head>
+  <body>
+    <section class="feedback-section">
+      <div class="container">
+        <div class="feedback-header">
+          <h2 class="feedback-title">Відгуки клієнтів</h2>
+          <p class="feedback-subtitle">
+            Дізнайтеся, що кажуть наші задоволені клієнти про нашу меблі
+          </p>
+        </div>
+
+        <div class="feedback-slider-container">
+          <div class="swiper feedback-swiper">
+            <div class="swiper-wrapper" id="feedback-wrapper">
+              <!-- Відгуки будуть додані через JavaScript -->
+            </div>
+          </div>
+
+          <div class="feedback-navigation">
+            <button
+              class="nav-btn nav-prev"
+              type="button"
+              aria-label="Попередній відгук"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 18L9 12L15 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              class="nav-btn nav-next"
+              type="button"
+              aria-label="Наступний відгук"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="feedback-pagination">
+            <!-- Пагінація буде додана через JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateyo/2.3.2/jquery.rateyo.min.js"></script>
+    <script src="feedback.js"></script>
+  </body>
+</html>
+

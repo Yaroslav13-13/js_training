@@ -2111,3 +2111,329 @@ function handleStart() {
     });
   });
 }
+
+// "" + 1 + 0;
+// "" - 1 + 0;
+// true + false;
+// 6 / "3";
+// "2" * "3";
+// 4 + 5 + "px";
+// "$" + 4 + 5;
+// "4" - 2;
+// "4px" - 2;
+// "  -9  " + 5;
+// "  -9  " - 5;
+// null + 1;
+// undefined + 1;
+// " \t \n" - 2;
+
+// console.log("" + 1 + 0); // 10
+// console.log("" - 1 + 0); //-1
+// console.log(true + false); // 1
+// console.log(6 / "3"); // 2
+// console.log("2" * "3"); // 6
+// console.log(4 + 5 + "px"); //9px
+// console.log("$" + 4 + 5); //$45
+// console.log("4" - 2); // 2
+// console.log("4px" - 2); // NaN
+// console.log("  -9  " + 5); // -9 5
+// console.log("  -9  " - 5); // -14
+
+//todo ===============================================================
+
+// function foo(name) {
+//   name = prompt("Яка офіційна назва JavaScript?");
+
+//   if (name === "ECMAScript") {
+//     alert("Правельно");
+//   } else {
+//     alert("Ви не знаєте");
+//   }
+// }
+// foo();
+
+// const number = Number(prompt());
+// if (number > 0) {
+//   alert(1);
+// } else if (number < 0) {
+//   prompt(-1);
+// } else if (number === 0) {
+//   prompt(0);
+// } else {
+//   prompt("NaN");
+// }
+
+// let message;
+// let login = prompt("Введіть логін");
+// message =
+//   login == "Працівник"
+//     ? "Привіт"
+//     : login == "Директор"
+//     ? "Вітаю"
+//     : login === ""
+//     ? "Немає логіну"
+//     : "";
+
+// alert(message);
+
+// let message;
+// let login = prompt("Працівник,Директор");
+// message =
+//   login == "Працівник"
+//     ? "Привіт"
+//     : login == "Директор"
+//     ? "Вітаю"
+//     : login == ""
+//     ? "Немає логіну"
+//     : "";
+// alert(message);
+
+// ===============================================================
+
+// let numbers = prompt();
+// if (numbers > 10 && numbers < 20) {
+//   alert("Входить у діапазон");
+// } else {
+//   alert("Не входить");
+// }
+
+// let user = prompt("Ви студент чи працівник");
+// if (user === "студент" || user === "працівник") {
+//   alert("Доступ дозволено");
+// } else {
+//   alert("Відмова");
+// }
+
+// let age = prompt("Вам є 18? (yes/no)");
+// if (age !== "yes") {
+//   alert("Доступ заборонено");
+// }
+
+// function admin(name, password) {
+//   if (
+//     (name === "admin" && password === "12345") ||
+//     (name === "moderator" && password === "qwerty")
+//   ) {
+//     alert("доступ дозволено");
+//   } else {
+//     alert("Доступ заборонено");
+//   }
+// }
+// admin("admin", "12345");
+// admin("moderator", "qwerty");
+// admin("userr", "NNNN");
+
+// let promtt = prompt("Введіть імя");
+// promtt === "" ? alert(`Привіт Гість`) : alert(`Привіт ${promtt}`);
+
+//! ==============================================================================
+
+// let age = prompt("Введіть число");
+// if (age > 14 && age <= 90) {
+//   alert("Все ок");
+// } else {
+//   alert("Oooops");
+// }
+
+// let name = prompt("Введіть логін");
+// let password = prompt("Введіть пароль");
+// if (name === "admin") {
+//   prompt("Введіть пароль");
+// } else if (name === "" || name === "null") {
+//   alert("Скасовано");
+// } else if (password === "12345") {
+//   alert("Ласкаво просимо");
+// } else if (password === "null" || "undefaind") {
+//   alert("Я вас не знаю");
+// }
+
+//! ==============================================================================
+
+// let i = 0;
+
+// while (i < 10) {
+//   console.log(i + 1);
+//   ++i;
+// }
+
+// for (let j = 10; j >= 1; j--) {
+//   console.log(j);
+// }
+
+// let num = Number(prompt("Введіть число 1 - 10"));
+
+// for (let i = 1; i < num; i++) {
+//   console.log(`result ${num * i}`);
+// }
+//! ==============================================================================
+
+// let number = Number(prompt("Enter a number"));
+
+// for (let i = 0; i < number; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+// }
+
+// let sum = 0;
+
+// for (let n = 1; n <= 100; n++) {
+//   sum += n;
+// }
+// console.log(sum);
+
+// let N = 100;
+// let sumN = (N * (N + 1)) / 2;
+// console.log(sumN);
+
+// let stars = "";
+// for (let i = 5; i > 0; i--) {
+//   // console.log("*".repeat(i));
+//   stars += "*";
+//   console.log(stars);
+// }
+
+// let stars = "";
+
+// for (let i = 1; i < 10; i++) {
+//   console.log("*".repeat(i));
+// }
+
+//! ==============================================================================
+
+// if (browser === "Edge") {
+//   alert("You've got the Edge!");
+// } else if (
+//   browser === "Edge" ||
+//   browser === "Firefox" ||
+//   browser === "Safari" ||
+//   browser === "Opera"
+// ) {
+//   alert("Ми підтримуємо і ці браузери");
+// } else {
+//   alert("Маємо надію, що ця сторінка виглядає добре!");
+// }
+
+// switch (browser) {
+//   case "Edge":
+//     alert("You've got the Edge!");
+//     break;
+
+//   case "Chrome":
+//   case "Firefox":
+//   case "Safari":
+//   case "Opera":
+//     alert("Ми підтримуємо і ці браузери");
+//     break;
+
+//   default:
+//     alert("Маємо надію, що ця сторінка виглядає добре!");
+// }
+
+// let a = +prompt("a?", "");
+
+// if (a == 0) {
+//   alert(0);
+// }
+// if (a == 1) {
+//   alert(1);
+// }
+
+// if (a == 2 || a == 3) {
+//   alert("2,3");
+// }
+
+// switch (a) {
+//   case 0:
+//     alert(0);
+//     break;
+//   case 1:
+//     alert(1);
+//     break;
+//   case 2:
+//   case 3:
+//     alert(2.3);
+//     break;
+// }
+
+// console.log(Array.isArray(["34"]));
+
+// function checkAge(age) {
+//                 1
+//  if (age > 18) {
+//    return true;
+//  } else {
+//    return confirm("Батьки дозволили?");
+//  }
+//                 2
+// return age >= 18 ? true : confirm("Батьки дозволили?");
+//                 3
+// return age >= 18 || confirm("Батьки дозволили?");
+// }
+// checkAge(18);
+
+//! ==============================================================================
+
+// function min(a, b) {
+//   if (a > b) {
+//     return a;
+//   }
+//   return b;
+// }
+
+// console.log(min(2, 5));
+// console.log(min(8, 9));
+// console.log(min(8, 3));
+
+// function pow(x, n) {
+//   let result = 0;
+//   if (n >= 1) {
+//     for (let i = 0; i < n; i++) {
+//       result = x ** n;
+//     }
+//   } else {
+//     alert(`The number ${n} is not correct.`);
+//   }
+//   return result;
+// }
+
+// console.log(pow(4, 5));
+
+//! ==============================================================================
+
+// function ask(questions, yes, no) {
+//   if (confirm(questions)) yes();
+//   else no();
+// }
+
+// function yes() {
+//   alert("Hello");
+// }
+// function no() {
+//   alert("Error");
+// }
+
+// ask("You are redy", yes, no);
+
+// const ask = (question, yes, no) => {
+//   if (confirm(question)) yes();
+//   else no();
+// };
+
+// ask(
+//   "Ви згодні?",
+//   () => {
+//     alert("Ви погодились.");
+//   },
+//   () => {
+//     alert("Ви скасували виконання.");
+//   }
+// );
+
+//! ==============================================================================
+
+// let user = {};
+// user.name = "Ivan";
+// user.username = "Сміт";
+// user.name = "Петро";
+// delete user.name;

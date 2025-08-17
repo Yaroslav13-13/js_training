@@ -11,6 +11,7 @@
     <script type="module" src="./java_script/JS lesson outline.js"></script>
     <script type="module" src="./java_script/text.js"></script>
     <link rel="stylesheet" href="./stules.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- basicLightbox -->
     <!-- <link
       rel="stylesheet"
@@ -49,7 +50,7 @@
         <li class="last-list"></li>
       </ul> -->
     </div>
-    <!-- <button class="btn-modal open-modal">Відкрити модалку</button>
+    <!-- <button class="btn-modal open-modal">Відкрити модалку</button> :
     <style>
       .btn-modal {
         color: white;
@@ -449,7 +450,124 @@ font-size: 40px;
    </div>
  <!-- ================= Модуль 11. HTTP-запити і взаємодія з бекендом ================== -->
 
-<ul class="todo-list"></ul>
+<!-- <ul class="todo-list"></ul> -->
 
+<form class="js-search-form search-form">
+    <div class="form-group">
+      <label for="city" class="label">Введіть назву міста:</label>
+      <input 
+        type="text" 
+        name="city" 
+        class="search-city" 
+        autocomplete="off"  
+        placeholder="Назва міста" 
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="days" class="label days">Виберіть кількість днів:</label>
+      <div class="input-group">
+        <select name="days" class="days-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+        <button type="submit">Пошук</button>
+      </div>
+    </div>
+  </form>
+
+  <ul class="js-list weather-cards"></ul>
+  <ul class="list-2"></ul>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 0 15px;
+      background: #f0f4f8;
+      color: #333;
+    }
+    form {
+      background: #fff;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 18px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      background-color: #0077cc;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    ul.weather-cards {
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+      gap: 15px;
+    }
+    .weather-card {
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+    }
+    .weather-icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 10px;
+    }
+    .weathor-date {
+      margin: 8px 0 4px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .weathor-text {
+      margin: 0 0 6px;
+      font-style: italic;
+      color: #555;
+    }
+    .temperature {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+</div>
   </body>
 </html>
