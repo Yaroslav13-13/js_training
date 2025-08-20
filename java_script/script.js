@@ -2437,3 +2437,58 @@ function handleStart() {
 // user.username = "Сміт";
 // user.name = "Петро";
 // delete user.name;
+
+const workers = [
+  {
+    name: "sahsa",
+    age: 2,
+  },
+  {
+    name: "John",
+    age: 30,
+  },
+  {
+    name: "Jane",
+    age: 25,
+  },
+  {
+    name: "Doe",
+    age: 35,
+  },
+  {
+    name: "Alice",
+    age: 28,
+  },
+  {
+    name: "Bob",
+    age: 32,
+  },
+  {
+    name: "Charlie",
+    age: 45,
+  },
+  {
+    name: "David",
+    age: 50,
+  },
+  {
+    name: "Eve",
+    age: 29,
+  },
+  {
+    name: "Frank",
+    age: 38,
+  },
+];
+
+// const sorted = workers.sort((a, b) => a.age - b.age);
+// const top3 = sorted.slice(7, 10);
+// console.log(top3);
+
+// const top = [];
+// workers.forEach((el) => {
+//   if (el.age > 18 && el.age < 30) {
+//     top.push(el.name);
+//   }
+// });
+// console.log(top);
