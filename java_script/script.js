@@ -2481,6 +2481,12 @@ const workers = [
   },
 ];
 
+const ageWorcs = [];
+workers.forEach((el) => ageWorcs.push(el.age));
+ageWorcs.sort((a, b) => a - b);
+let arr = ageWorcs.slice(7, 10);
+console.log(ageWorcs);
+
 // const sorted = workers.sort((a, b) => a.age - b.age);
 // const top3 = sorted.slice(7, 10);
 // console.log(top3);
@@ -2492,3 +2498,103 @@ const workers = [
 //   }
 // });
 // console.log(top);
+
+// !===============================================================================
+
+// const userr = {
+//   name: "Yaroslav",
+//   age: 25,
+//   isAdmin: true,
+// };
+
+// // 2. Об’єкт товару
+// const product = {
+//   id: 101,
+//   title: "Ноутбук",
+//   price: 35000,
+//   inStock: true,
+// };
+
+// // 3. Об’єкт автомобіля
+// const car = {
+//   brand: "Tesla",
+//   model: "Model 3",
+//   year: 2024,
+//   colors: ["black", "white", "red"],
+// };
+
+// // 4. Об’єкт функцій
+// const calculator = {
+//   add: (a, b) => a + b,
+//   sub: (a, b) => a - b,
+// };
+
+// // 5. Вкладений об’єкт
+// const company = {
+//   name: "TechCorp",
+//   employees: {
+//     frontend: 5,
+//     backend: 3,
+//     qa: 2,
+//   },
+//   location: "Kyiv",
+// };
+
+// let codes = {
+//   49: "Німеччина",
+//   41: "Швейцарія",
+//   44: "Великобританія",
+//   1: "США",
+// };
+
+// for (let code in codes) {
+//   console.log(code);
+// }
+
+// let user = {};
+// user.name = "Ivan";
+// user.username = "Smit";
+// user.name = "Petro";
+// delete user.name;
+// console.log(user);
+
+// let schedule = {};
+
+// function isEmpty(obj) {
+//   for (let key in obj) {
+//     return false;
+//   }
+//   return true;
+// }
+// alert(isEmpty(schedule)); // true
+// schedule["8:30"] = "Вставай";
+// alert(isEmpty(schedule)); // false
+
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+
+// let sum = 0;
+// for (let key in salaries) {
+//   sum += salaries[key];
+// }
+// console.log(sum);
+
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "Моє меню",
+// };
+// console.log(menu);
+// multiplyNumeric(menu);
+
+// function multiplyNumeric(obj) {
+//   for (let key in obj) {
+//     if (typeof obj[key] === "number") {
+//       obj[key] *= 2;
+//     }
+//   }
+// }
+// console.log(menu);
