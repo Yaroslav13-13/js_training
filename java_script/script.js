@@ -2481,6 +2481,18 @@ const workers = [
   },
 ];
 
+// workers.sort((a, b) => b.age - a.age);
+// const [x, y, q, ...rest] = workers;
+// console.log(x);
+// console.log(y);
+// console.log(q);
+// console.log(rest);
+
+// const [x, y, ...rest] = workers;
+// console.log(x);
+// console.log(y);
+// console.log(rest);
+
 // const ageWorcs = [];
 // workers.forEach((el) => ageWorcs.push(el.age));
 // ageWorcs.sort((a, b) => a - b);
@@ -2625,3 +2637,51 @@ const workers = [
 // calculator.read();
 // alert(calculator.sum());
 // alert(calculator.mul());
+
+//todo=========================================================================
+// let zminna = 0;
+// const zminna2 = null;
+
+// function number(num) {
+//   num % 2 === 0
+//     ? console.log(`число ${num} - парне`)
+//     : console.log(`число ${num} - не парне`);
+
+// if (num % 2 === 0) {
+//   console.log(`число ${num} - парне`);
+// } else {
+//   console.log(`число ${num} - не парне`);
+// }
+// }
+// number(57);
+
+// const greet = (name) => console.log(`Hello ${name}`);
+// greet("Yaroslav");
+// greet("Maria");
+// greet("David");
+
+// const user = {
+//   name: "Yaroslav",
+//   age: 38,
+//   city: "Lviv",
+// };
+// console.log(user.name);
+
+// !+++++++++++++++++++++++++++++++++++++++++++++++++++++
+//?    Деструкторизація    //
+
+// const user = { name: "Yaroslav", age: 25, city: "Kyiv" };
+
+// const { name, city } = user;
+// console.log(city);
+// console.log(name);
+
+// const numbers = [5, 10, 15, 20];
+// const [first, second] = numbers;
+
+// const number = [1, 2, 3, 4, 5];
+// const [, a, b] = number;
+
+// const numbers = [100, 200, 300, 400, 500];
+// const [x, ...rest] = numbers;
+// console.log(x);
