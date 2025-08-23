@@ -2481,11 +2481,11 @@ const workers = [
   },
 ];
 
-const ageWorcs = [];
-workers.forEach((el) => ageWorcs.push(el.age));
-ageWorcs.sort((a, b) => a - b);
-let arr = ageWorcs.slice(7, 10);
-console.log(ageWorcs);
+// const ageWorcs = [];
+// workers.forEach((el) => ageWorcs.push(el.age));
+// ageWorcs.sort((a, b) => a - b);
+// let arr = ageWorcs.slice(7, 10);
+// console.log(ageWorcs);
 
 // const sorted = workers.sort((a, b) => a.age - b.age);
 // const top3 = sorted.slice(7, 10);
@@ -2598,3 +2598,30 @@ console.log(ageWorcs);
 //   }
 // }
 // console.log(menu);
+// ================================================================
+
+// const fruits = ["apple", "banana", "cherry"];
+// console.log(fruits.join(","));
+
+// const dataNumber = ["2025", "08", "21"];
+// console.log(dataNumber.join("-"));
+
+// const words = "I love JavaScript";
+// console.log(words.split("  "));
+
+// let calculator = {
+//   read(a, b) {
+//     this.a = +prompt(`a?`, 0);
+//     this.b = +prompt(`b?`, 0);
+//   },
+//   sum() {
+//     return this.a + this.b;
+//   },
+//   mul() {
+//     return this.a * this.b;
+//   },
+// };
+
+// calculator.read();
+// alert(calculator.sum());
+// alert(calculator.mul());
