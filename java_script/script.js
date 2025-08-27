@@ -2952,12 +2952,38 @@ const order = {
 
 //todo ===================================================
 
-const store = {
-  apples: 10,
-  bananas: 5,
-  oranges: 8,
-};
+// const store = {
+//   apples: 10,
+//   bananas: 5,
+//   oranges: 8,
+// };
+// store.lemon = 7;
 
-for (let key in store) {
-  console.log(`${key}: ${store[key]}`);
-}
+// const purchases = [
+//   { name: "apples", quantity: 3 },
+//   { name: "oranges", quantity: 2 },
+//   { name: "bananas", quantity: 5 },
+// ];
+
+// let sum = 0;
+// function fruits() {
+//   for (let key in store) {
+//     console.log(`${key}: ${store[key]}`);
+//     sum += store[key];
+//   }
+//   console.log("Summa: " + sum);
+// }
+// fruits();
+
+// for (let item of purchases) {
+//   if (store[item.name] !== undefined) {
+//     store[item.name] -= item.quantity;
+//   }
+// }
+
+// let sum = 0;
+// for (let key in store) {
+//   console.log(`${key}: ${store[key]}`);
+//   sum += store[key];
+// }
+// console.log("Summa: " + sum);
