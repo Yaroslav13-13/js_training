@@ -2685,3 +2685,279 @@ const workers = [
 // const numbers = [100, 200, 300, 400, 500];
 // const [x, ...rest] = numbers;
 // console.log(x);
+
+// const user = { name: "Anna", age: 30, city: "Lviv" };
+// const { name, city } = user;
+
+// const product = { title: "Phone", price: 500 };
+// const { title: productName, discount = 0 } = product;
+
+// const company = {
+//   name: "TechCorp",
+//   address: { city: "Kyiv", street: "Main St" },
+// };
+
+// const {
+//   address: { city, street },
+// } = company;
+
+// !+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//! 1. Створення та доступ
+//? Створи об’єкт user з властивостями name, age, city. Виведи в консоль місто користувача.
+
+// const user = {
+//   name: "Yaroslav",
+//   age: 37,
+//   city: "Lviv",
+// };
+
+// console.log(user.city);
+//todo===================================================
+
+//! 2. Додавання нової властивості
+//? Є об’єкт:
+// const car = { brand: "Tesla", model: "X" };
+//? Додай до нього властивість year: 2022 і виведи весь об’єкт.
+
+// car.year = 2022;
+// console.log(car);
+
+//todo===================================================
+
+//! 3. Видалення властивості
+//? Є об’єкт:
+// const book = { title: "JS for Beginners", pages: 200, author: "Tom" };
+//? Видали властивість pages і перевір, чи вона існує.
+
+// delete book.pages;
+// console.log(book.pages === undefined);
+// console.log("pages" in book);
+
+//todo===================================================
+//! 4. Перевірка властивості
+//? Є об’єкт:
+// const laptop = { brand: "Apple", price: 2500 };
+//?  Перевір, чи є в ньому властивість price.
+// console.log(laptop.price === undefined);
+
+//todo===================================================
+
+//! 5. Перебір об’єкта
+//? Є об’єкт:
+// const person = { name: "Oleh", age: 30, city: "Lviv" };
+//? Виведи в консоль усі ключі та значення в форматі
+//? name: Oleh, age: 30 ...
+// //todo         варіант -1-
+// for (const key in person) {
+//   console.log(`${key}: ${person[key]}`);
+// }
+// //todo         варіант -2-
+// const objKey = Object.keys(person);
+// const objValue = Object.values(person);
+// for (let i = 0; i < objKey.length; i++) {
+//   console.log(`${objKey[i]} : ${objValue[i]}`);
+// }
+// //todo         варіант -3-
+// const objKey = Object.keys(person);
+// objKey.forEach((el) => console.log(`${el}: ${person[el]}`));
+//todo===================================================
+
+//! 6. Підрахунок властивостей
+//? Є об’єкт:
+// const student = { name: "Ira", math: 95, physics: 88, english: 90 };
+//? Порахуй, скільки предметів (без імені) є в студента.
+
+// let sum = 0;
+// for (const key in student) {
+//   if (typeof student[key] !== "string") {
+//     sum += student[key];
+//   }
+// }
+// console.log(sum);
+
+//todo===================================================
+
+//! 7. Об’єкт у масиві
+//? Є масив:
+// const users = [
+//   { name: "Ivan", age: 20 },
+//   { name: "Oksana", age: 25 },
+//   { name: "Petro", age: 30 },
+// ];
+//? Знайди користувача з ім’ям "Oksana".
+
+// const value = Object.values(users);
+// for (const key of value) {
+//   if (key.name === "Oksana") {
+//     console.log(key);
+//   }
+// }
+
+//todo===================================================
+
+//! 8. Масив в об’єкті
+
+//? Є об’єкт:
+// const company = {
+//   name: "TechCorp",
+//   employees: ["Anna", "Bohdan", "Marta"],
+// };
+//? Додай ще одного працівника "Dmytro" у масив employees.
+// company.employees.push("Dmytro");
+// console.log(company.employees);
+
+//todo===================================================
+
+//!  9. Вкладені об’єкти
+
+//? Є об’єкт:
+// const library = {
+//   book: {
+// title: "Clean Code",
+// author: { firstName: "Robert", lastName: "Martin" },
+//   },
+// };
+//? Виведи в консоль прізвище автора.
+
+// console.log(library.book.author.lastName);
+
+//todo===================================================
+
+//! 10. Оператор розпилення
+
+//? Є два об’єкти:
+// const obj1 = { a: 1, b: 2 };
+// const obj2 = { b: 3, c: 4 };
+//? Об’єднай їх в один об’єкт так, щоб результат був
+//? { a: 1, b: 3, c: 4 }.
+
+// const merge = Object.assign({}, obj1, obj2);
+// console.log(merge);
+
+// const merged = { ...obj1, ...obj2 };
+// console.log(merged);
+//todo===================================================
+
+const order = {
+  id: 101,
+  customer: "Ira",
+  items: [
+    { name: "Laptop", price: 25000 },
+    { name: "Mouse", price: 500 },
+    { name: "Keyboard", price: 1500 },
+  ],
+};
+
+// let sum = 0;
+// for (const key of order.items) {
+//   sum += key.price;
+// }
+// console.log(`Customer ${order.customer} ordered items worth ${sum}`);
+
+// const total = order.items.reduce((acc, item) => (acc += item.price), 0);
+// console.log(`Customer ${order.customer} ordered items worth ${total}`);
+
+//!=================== Конструктори ================================
+//* ✅ Завдання: створити конструктор Car,
+//*    який приймає brand і year, і створити два авто.
+
+// function Car(brand, year) {
+//   this.brand = brand;
+//   this.year = year;
+// }
+
+// let car1 = new Car("Tesla", 2022);
+// let car2 = new Car("BMW", 2018);
+// console.log(car1);
+// console.log(car2);
+
+//todo===================================================
+
+//* ✅ Завдання: додати метод getAge у конструктор Person, який повертає вік.
+
+// function User(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.sayHi = function () {
+//     console.log("Привіт, я " + this.name);
+//   };
+//   this.getAge = function () {
+//     console.log(`${this.name}: ${this.age} age`);
+//   };
+// }
+
+// let john = new User("Джон", 37);
+// john.sayHi(); // Привіт, я Джон
+// john.getAge();
+
+//todo===================================================
+
+//* ✅ Завдання: зробити конструктор Book(title), який працює як з new, так і без нього.
+
+// function Book(title) {
+//   if (!new.target) {
+//     return new Book(title);
+//   }
+//   this.title = title;
+// }
+
+// let bookTitle = Book("JavaScript");
+// console.log(bookTitle.title);
+
+//todo===================================================
+
+//* ✅ Завдання: створити конструктор Animal з name
+//*  і повернути об’єкт {species: "Cat"}. Подивитися, що буде.
+
+// function Animal(name) {
+//   this.name = name;
+//   {
+//     species: this.name;
+//   }
+// }
+
+// let animal = new Animal("Cat");
+// let animal2 = new Animal("Dog");
+// console.log(animal);
+// console.log(animal2);
+
+//todo===================================================
+
+//* ✅ Завдання: створити конструктор Fruit без аргументів і викликати new Fruit.
+
+// function Fruit(name) {
+//   this.name = name;
+// }
+
+// let fruit = new Fruit();
+// console.log(fruit);
+
+//todo===================================================
+
+//* ✅ Завдання: створити анонімний конструктор settings з полями theme та language.
+
+// let settings = function () {
+//   this.theme = "Black";
+//   this.language = "UA";
+//   this.them = function () {
+//     return "Theme: " + this.theme + " | lenguage: " + this.language;
+//   };
+// };
+
+// let userrSeting = new settings();
+
+// userrSeting.them();
+// document.body.innerHTML = userrSeting.them();
+
+//todo ===================================================
+
+const store = {
+  apples: 10,
+  bananas: 5,
+  oranges: 8,
+};
+
+for (let key in store) {
+  console.log(`${key}: ${store[key]}`);
+}
