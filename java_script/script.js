@@ -2987,3 +2987,25 @@ const order = {
 //   sum += store[key];
 // }
 // console.log("Summa: " + sum);
+
+//! ===========================================================
+
+// function filterEven(numbers) {
+//   const sum = [];
+//   for (let i = 0; i <= numbers.length; i++) {
+//     if (numbers[i] % 2 === 0) {
+//       sum.push(numbers[i]);
+//     }
+//   }
+//   return sum;
+// }
+
+function filterEven(numbers) {
+  return numbers.filter((num) => {
+    num % 2 === 0;
+  });
+}
+
+console.log(filterEven([1, 2, 3, 4, 5, 6]));
+console.log(filterEven([11, 13, 15]));
+console.log(filterEven([10, 20, 33]));
