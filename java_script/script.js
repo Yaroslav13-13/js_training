@@ -3002,7 +3002,7 @@ const order = {
 
 function filterEven(numbers) {
   return numbers.filter((num) => {
-    num % 2 === 0;
+    return num % 2 === 0;
   });
 }
 
