@@ -3000,12 +3000,12 @@ const order = {
 //   return sum;
 // }
 
-function filterEven(numbers) {
-  return numbers.filter((num) => {
-    return num % 2 === 0;
-  });
-}
+// function filterEven(numbers) {
+//   return numbers.filter((num) => {
+//     return num % 2 === 0;
+//   });
+// }
 
-console.log(filterEven([1, 2, 3, 4, 5, 6]));
-console.log(filterEven([11, 13, 15]));
-console.log(filterEven([10, 20, 33]));
+// console.log(filterEven([1, 2, 3, 4, 5, 6]));
+// console.log(filterEven([11, 13, 15]));
+// console.log(filterEven([10, 20, 33]));
