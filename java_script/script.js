@@ -3009,3 +3009,9 @@ const order = {
 // console.log(filterEven([1, 2, 3, 4, 5, 6]));
 // console.log(filterEven([11, 13, 15]));
 // console.log(filterEven([10, 20, 33]));
+
+const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+
+const firstTwoEls = ;
+const nonExtremeEls = ;
+const lastThreeEls = ;
