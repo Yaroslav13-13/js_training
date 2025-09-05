@@ -3010,12 +3010,17 @@ const order = {
 // console.log(filterEven([11, 13, 15]));
 // console.log(filterEven([10, 20, 33]));
 
-const fruits = ["apple", "plum", "pear", "orange", "banana"];
+// const fruits = ["apple", "plum", "pear", "orange", "banana"];
 
-const firstTwoEls = fruits.slice(0, 2);
-const nonExtremeEls = fruits.slice(1, length - 1);
-const lastThreeEls = fruits.slice(2, 5);
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, length - 1);
+// const lastThreeEls = fruits.slice(2, 5);
 
-console.log(firstTwoEls);
-console.log(nonExtremeEls);
-console.log(lastThreeEls);
+// console.log(firstTwoEls);
+// console.log(nonExtremeEls);
+// console.log(lastThreeEls);
+
+// const animals = ["bison", "camel", "duck", "elephant"];
+
+let steps = [3, 2, 1];
+for (let n of steps) console.log(n);
