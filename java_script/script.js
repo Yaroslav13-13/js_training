@@ -3022,5 +3022,5 @@ const order = {
 
 // const animals = ["bison", "camel", "duck", "elephant"];
 
-let steps = [3, 2, 1];
-for (let n of steps) console.log(n);
+// let steps = [3, 2, 1];
+// for (let n of steps) console.log(n);
