@@ -3033,6 +3033,8 @@ const order = {
 //* btnColor.addEventListener("click", () => {
 //*   body.style.backgroundColor = "red";
 //* });
+//!___________________________________________________________________________________
+//!============================ Властивість classList ==================================
 
 const xxx = document.querySelector(".days-select");
 // console.log(xxx.classList);
@@ -3070,3 +3072,43 @@ xxx.classList.replace("old-class", "new-class");
 
 // console.log(xxx.classList.contains("old-class")); // false
 // console.log(xxx.classList.contains("new-class")); // true
+
+//!___________________________________________________________________________________
+//!============================ Властивість style ==================================
+
+const javaScr = document.querySelector(".js");
+
+javaScr.style.textAlign = "center";
+javaScr.style.color = "purple";
+javaScr.style.fontSize = "36px";
+
+//!___________________________________________________________________________________
+//!============================ Доступ до атрибутів ==================================
+
+//todo ================= Метод element.hasAttribute(nameAttribute) ==================
+// Перевіряє наявність атрибута true / false
+
+const image = document.querySelector(".image");
+
+console.log(image.hasAttribute("src")); //true
+console.log(image.hasAttribute("href")); //false
+console.log(image.hasAttribute("width")); //true
+console.log(image.hasAttribute("alt")); //true
+
+//todo ================= Метод element.getAttribute(nameAttribute) ==================
+// Метод отримує один аргумент — рядок nameAttribute з іменем атрибута,
+// і повертає значення цього атрибута для вказаного HTML - елемента element.
+// Якщо атрибут не знайдено, метод повертає null.
+
+console.log(image.getAttribute("alt")); //Rocks and waterfall
+console.log(image.getAttribute("width")); //300
+console.log(image.getAttribute("href")); // null
+
+//todo ============== Метод element.setAttribute(nameAttribute, value) ==============
+// Метод приймає два аргументи: рядок nameAttribute з іменем атрибута,
+// який потрібно встановити або змінити, та value зі значенням,
+// яке цьому атрибуту треба присвоїти. Метод встановлює або
+// змінює значення зазначеного атрибута для вказаного HTML - елемента element.
+
+image.setAttribute("alt", "Amazing nature");
+console.log(image.getAttribute("alt"));
