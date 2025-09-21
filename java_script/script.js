@@ -3024,3 +3024,49 @@ const order = {
 
 // let steps = [3, 2, 1];
 // for (let n of steps) console.log(n);
+
+//!=====================================================================================
+//!=================================== Повторення ======================================
+//!=====================================================================================
+//* const btnColor = document.querySelector(".btn-color");
+//* const body = document.querySelector("body");
+//* btnColor.addEventListener("click", () => {
+//*   body.style.backgroundColor = "red";
+//* });
+
+const xxx = document.querySelector(".days-select");
+// console.log(xxx.classList);
+
+//todo ================= Метод classList.contains(className) ==============
+
+// console.log(xxx.classList.contains("new-class"));
+
+//todo ================= Метод classList.add(className) ===================
+
+xxx.classList.add("new-clas", "class-new", "old-class");
+
+// console.log(xxx.classList.contains("new-class")); //  true
+// console.log(xxx.classList.contains("class-new")); //true
+// console.log(xxx.classList.contains("New-new")); //true
+
+//todo ================= Метод classList.remove(className) ==============
+
+xxx.classList.remove("New-new");
+
+// console.log(xxx.classList.contains("new-class"));
+// console.log(xxx.classList.contains("class-new"));
+// console.log(xxx.classList.contains("New-new")); // false
+
+//todo ================= Метод classList.toggle(className) ==============
+
+xxx.classList.toggle("new-clas");
+// console.log(xxx.classList.contains("new-class")); // false
+
+//todo ===== Метод classList.replace(oldClassName, newClassName) ========
+// console.log(xxx.classList.contains("old-class")); // true
+// console.log(xxx.classList.contains("new-class")); // true
+
+xxx.classList.replace("old-class", "new-class");
+
+// console.log(xxx.classList.contains("old-class")); // false
+// console.log(xxx.classList.contains("new-class")); // true
