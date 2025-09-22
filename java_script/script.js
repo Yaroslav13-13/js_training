@@ -3026,13 +3026,14 @@ const order = {
 // for (let n of steps) console.log(n);
 
 //!=====================================================================================
-//!=================================== Повторення ======================================
+//!=============================== 7. Mодуль DOM. Події ================================
 //!=====================================================================================
 //* const btnColor = document.querySelector(".btn-color");
 //* const body = document.querySelector("body");
 //* btnColor.addEventListener("click", () => {
 //*   body.style.backgroundColor = "red";
 //* });
+
 //!___________________________________________________________________________________
 //!============================ Властивість classList ==================================
 
@@ -3135,6 +3136,8 @@ console.log(closeBtn.dataset.action);
 
 savBtn.dataset.action = "я змінив";
 closeBtn.dataset.action = "lalalala";
+savBtn.dataset.role = "admin";
 
 console.log(savBtn.dataset.action);
 console.log(closeBtn.dataset.action);
+console.log(savBtn.dataset.role);
