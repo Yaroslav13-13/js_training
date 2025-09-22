@@ -3112,3 +3112,29 @@ console.log(image.getAttribute("href")); // null
 
 image.setAttribute("alt", "Amazing nature");
 console.log(image.getAttribute("alt"));
+
+//todo ============== Метод element.removeAttribute(nameAttribute) ==============
+// Метод приймає один аргумент — рядок nameAttribute з іменем атрибута,
+//   який потрібно видалити зі вказаного HTML - елемента element — та видаляє його.
+//   Якщо зазначеного атрибута немає на елементі, метод не викликає жодних помилок та не робить нічого.
+
+image.removeAttribute("alt");
+console.log(image.hasAttribute("alt")); //false
+
+//!___________________________________________________________________________________
+//!=============================== Власні атрибути ===================================
+
+//todo ===================== Отримання значень, dataset =======================
+
+const savBtn = document.querySelector('button[data-action="save"]');
+console.log(savBtn.dataset.action); // save
+const closeBtn = document.querySelector('button[data-action="close"]');
+console.log(closeBtn.dataset.action);
+
+//todo ========================= Зміна значень, dataset ==========================
+
+savBtn.dataset.action = "я змінив";
+closeBtn.dataset.action = "lalalala";
+
+console.log(savBtn.dataset.action);
+console.log(closeBtn.dataset.action);
