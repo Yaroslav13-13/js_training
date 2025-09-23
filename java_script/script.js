@@ -3182,3 +3182,12 @@ myList.prepend(li, li2, li3);
 
 //todo ========================================= element.remove() ===========================================
 li3.remove();
+
+const one = document.querySelector("body");
+
+const newEl = document.createElement("li");
+newEl.textContent = "hello";
+newEl.style.listStyle = "none";
+newEl.classList.add("one");
+one.append(newEl);
+console.log(newEl.classList);
