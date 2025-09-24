@@ -3177,17 +3177,13 @@ li.classList.add("list");
 li2.classList.add("list");
 li3.classList.add("list");
 
-myList.append(li, li2, li3);
-myList.prepend(li, li2, li3);
+// myList.append(li, li2, li3);
+// myList.prepend(li, li2, li3);
 
 //todo ========================================= element.remove() ===========================================
 li3.remove();
 
-const one = document.querySelector("body");
-
-const newEl = document.createElement("li");
-newEl.textContent = "hello";
-newEl.style.listStyle = "none";
-newEl.classList.add("one");
-one.append(newEl);
-console.log(newEl.classList);
+//todo ========================================= Властивість innerHTML ===========================================
+const product = document.querySelectorAll("#products li");
+product[0].dataset.price = "111";
+console.log(product[0].dataset.price);
